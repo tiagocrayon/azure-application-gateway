@@ -13,3 +13,7 @@ output "subnet_id" {
 output "resource_group_id" {
   value = data.azurerm_resource_group.resource_group.id
 }
+
+output "azurerm_application_gateway" {
+  value = azurerm_application_gateway.network.id
+}

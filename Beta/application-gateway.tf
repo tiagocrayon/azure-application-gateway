@@ -8,7 +8,7 @@ resource "azurerm_public_ip" "public_ip" {
   zones               = ["1", "2", "3"]
 
   tags = {
-    environment = "Production"
+    environment = "beta"
   }
 }
 
@@ -23,9 +23,12 @@ resource "azurerm_application_gateway" "network" {
   resource_group_name = data.azurerm_resource_group.resource_group.name
   location            = data.azurerm_resource_group.resource_group.location
 
-#   tags {
-
-#   }
+  tags = {
+    environment = "beta"
+    owner = ""
+    createdAt = ""
+    costCenter = ""
+  }
 
   sku {
     name     = "Standard_v2"
@@ -41,102 +44,234 @@ resource "azurerm_application_gateway" "network" {
 
   enable_http2 = true
 
-
   gateway_ip_configuration {
     name      = data.azurerm_subnet.subnet.name
     subnet_id = data.azurerm_subnet.subnet.id
   }
 
-  #Frontends
-  frontend_port {
-    name = local.frontend_port_name
-    port = 80
+
+  #frontend_port
+  dynamic "frontend_port" {
+    for_each = var.frontend_port
+    content {
+      name = frontend_port.value.name
+      port = frontend_port.value.port
+    }
   }
 
   frontend_ip_configuration {
-    name                 = "public-frontend-ip"
+    name         = "public-frontend-ip"
     public_ip_address_id = azurerm_public_ip.public_ip.id
   }
 
-  frontend_ip_configuration {
-    name                   = "private-frontend-ip"
-    private_ip_address     = "10.0.0.4"
-    private_ip_address_allocation = "Static"
-    subnet_id              = data.azurerm_subnet.subnet.id
-  }
+  # frontend_ip_configuration {
+  #   name                   = "private-frontend-ip"
+  #   private_ip_address     = "10.0.0.4"
+  #   private_ip_address_allocation = "Static"
+  #   subnet_id              = data.azurerm_subnet.subnet.id
+  # }
 
 
   #Backends
   dynamic "backend_address_pool" {
     for_each = var.backend_pools
     content {
-      name  = backend_address_pool.value.name
-      fqdns = [backend_address_pool.value.fqdn]
+      name = backend_address_pool.value.name
+      fqdns = backend_address_pool.value.fqdns != null ? [backend_address_pool.value.fqdns] : null
+      ip_addresses = backend_address_pool.value.ip_addresses != null ? backend_address_pool.value.ip_addresses : null
     }
   }
 
-  # backend_address_pool {
-  #   name = "BACKEND.studio360coreapi"
-  #   fqdns = ["storagestaticbackend.z6.web.core.windows.net"]
-  #   # ip_addresses = ["10.7.10.31", "10.7.10.32"]
-  # }
-
-  backend_http_settings {
-    name                  = "BACKEND.studio360coreapi-settings"
-    protocol              = "Https" # Use HTTPS for backend communication
-    port                  = 443     # HTTPS port
-    cookie_based_affinity = "Disabled"
-    connection_draining {
-        enabled = false
-        drain_timeout_sec = 1
-    }
-    request_timeout       = 20
-    path                  = "/" # Path to the static website
-    probe_name            = "static-website-health-probe" # Use HTTPS probe
-    host_name             = "storagestaticbackend.z6.web.core.windows.net"
-#    pick_host_name_from_backend_address = true
-
-  }
-
-
-  # Defining the health probe directly in backend_http_settings
-  probe {
-    name                    = "static-website-health-probe"
-    host                    = "storagestaticbackend.z6.web.core.windows.net"
-    protocol                = "Https"
-    port                    = 443
-    path                    = "/"
-    interval                = 30
-    timeout                 = 20
-    unhealthy_threshold     = 3
-    match {
-        status_code = ["200"]
-        body = ""
+  #Backends Settings
+  dynamic "backend_http_settings" {
+    for_each = var.backend_settings
+    content {
+      name                  = backend_http_settings.value.name
+      cookie_based_affinity = backend_http_settings.value.cookie_based_affinity
+      port                  = backend_http_settings.value.port
+      protocol              = backend_http_settings.value.protocol
+      request_timeout       = backend_http_settings.value.request_timeout
     }
   }
 
-#   ssl_certificate {
+  #Listeners
+  dynamic "http_listener" {
+    for_each = var.listener
+    content {
+      name                           = http_listener.value.name
+      frontend_ip_configuration_name = http_listener.value.frontend_ip_configuration_name
+      frontend_port_name             = http_listener.value.frontend_port_name
+      protocol                       = http_listener.value.protocol
+      ssl_certificate_name           = try(http_listener.value.ssl_certificate_name, null)
+      ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
+    }
+  }
 
-#   }
+  rewrite_rule_set {
+    name = "rewrite-set-rule-hostname"
 
-#   rewrite_rule_set {
+    rewrite_rule {
+      name          = "rewrite-rule-hostname"
+      rule_sequence = 1
 
-#   }
+      condition {
+        variable    = "http_req_Header_host"
+        pattern     = "api.youtrack.360imprimir.com"
+        ignore_case = true
+        negate      = false
+      }
 
-  http_listener {
-    name                           = "BACKEND.studio360coreapi-listener"
-    frontend_ip_configuration_name = "public-frontend-ip"
-    frontend_port_name             = local.frontend_port_name
-    protocol                       = "Http" # Listener uses HTTP
+      condition {
+        variable    = "http_req_Header_bizay-access-token"
+        pattern     = "PBJHf4FhpJgaEAm8"
+        ignore_case = true
+        negate      = false
+      }
+
+      request_header_configuration {
+        header_name  = "X-Forwarded-For" #CONFIRMAR
+        header_value = "192.168.10.196"
+      }
+    }
+  }
+
+  #Redirect Configuration
+  dynamic "redirect_configuration" {
+    for_each = var.redirect_configuration
+    content {
+      name                   = redirect_configuration.value.name
+      redirect_type          = redirect_configuration.value.redirect_type
+      target_listener_name   = redirect_configuration.value.target_listener_name
+      include_query_string   = redirect_configuration.value.include_query_string
+      include_path           = redirect_configuration.value.include_path
+    }
+  }
+
+  #Request Routing RUle
+  dynamic "request_routing_rule" {
+    for_each = var.routing_rule
+    content {
+      name                        = request_routing_rule.value.name
+      priority                    = request_routing_rule.value.priority
+      rule_type                   = request_routing_rule.value.rule_type
+      http_listener_name          = request_routing_rule.value.http_listener_name
+      backend_address_pool_name   = lookup(request_routing_rule.value, "backend_address_pool_name", null)
+      backend_http_settings_name  = lookup(request_routing_rule.value, "backend_http_settings_name", null)
+      redirect_configuration_name = lookup(request_routing_rule.value, "redirect_configuration_name", null)
+    }
   }
 
 
-  request_routing_rule {
-    name                       = "BACKEND.studio360coreapi-route-rule"
-    priority                   = 1
-    rule_type                  = "Basic"
-    http_listener_name         = "BACKEND.studio360coreapi-listener"
-    backend_address_pool_name  = "BACKEND.studio360coreapi"
-    backend_http_settings_name = "BACKEND.studio360coreapi-settings"
+
+  #GLOBAL  #custom_error_configuration
+  dynamic "custom_error_configuration" {
+    for_each = var.error_configuration
+    content {
+      status_code                   = custom_error_configuration.value.status_code
+      custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
+    }
+  }
+
+  ssl_certificate {
+    name   = "certificado-1"
+    data   = filebase64("C:/Users/tiaisabe/OneDrive - Crayon Group/Documentos/Projetos/Bizay/Cert/example_com.pfx")
+    password = "admin123"  # Set the password for your PFX certificate
+    # key_vault_secret_id = ""  # data.azurerm_key_vault.certificate.id
   }
 }
+
+
+
+
+
+  ######################### EXAMPLE WITH STATIC WEB SITE ##################################
+#   backend_address_pool {
+#     name = "BACKEND.studio360coreapi"
+#     fqdns = ["storagestaticbackend.z6.web.core.windows.net"]
+#     # ip_addresses = ["10.7.10.31", "10.7.10.32"]
+#   }
+
+#   backend_http_settings {
+#     name                  = "BACKEND.studio360coreapi-settings"
+#     protocol              = "Https" # Use HTTPS for backend communication
+#     port                  = 443     # HTTPS port
+#     cookie_based_affinity = "Disabled"
+#     connection_draining {
+#         enabled = false
+#         drain_timeout_sec = 1
+#     }
+#     request_timeout       = 20
+#     path                  = "/" # Path to the static website
+#     probe_name            = "static-website-health-probe" # Use HTTPS probe
+#     host_name             = "storagestaticbackend.z6.web.core.windows.net"
+# #    pick_host_name_from_backend_address = true
+
+#   }
+
+
+#   # Defining the health probe directly in backend_http_settings
+#   probe {
+#     name                    = "static-website-health-probe"
+#     host                    = "storagestaticbackend.z6.web.core.windows.net"
+#     protocol                = "Https"
+#     port                    = 443
+#     path                    = "/"
+#     interval                = 30
+#     timeout                 = 20
+#     unhealthy_threshold     = 3
+#     match {
+#         status_code = ["200"]
+#         body = ""
+#     }
+#   }
+
+
+
+#   rewrite_rule_set {
+#     name = "example-rewrite-rule-set"
+
+#     #EXAMPLE SET A CUSTOM RESPONSE HEADER
+#     rewrite_rule {
+#       name          = "response-header-rule"
+#       rule_sequence = 1
+
+#       response_header_configuration {
+#         header_name  = "X-Response-Header"
+#         header_value = "ResponseHeaderValue"
+#       }
+#     }
+
+#     rewrite_rule {
+#       name          = "response-header-rule"
+#       rule_sequence = 1
+
+#       request_header_configuration  {
+#         header_name  = "X-Response-Header"
+#         header_value = "ResponseHeaderValue"
+#       }
+#     }
+#   }
+
+#   http_listener {
+#     name                           = "BACKEND.studio360coreapi-listener"
+#     frontend_ip_configuration_name = "public-frontend-ip"
+#     frontend_port_name             = local.frontend_port_name
+#     protocol                       = "Http" # Listener uses HTTP
+
+
+#     custom_error_configuration {
+#       status_code    = "HttpStatus404"
+#       custom_error_page_url = "https://storagestaticbackend.blob.core.windows.net/$web/error.html"
+#     }
+#   }
+
+#   request_routing_rule {
+#     name                       = "BACKEND.studio360coreapi-route-rule"
+#     priority                   = 1
+#     rule_type                  = "Basic"
+#     http_listener_name         = "BACKEND.studio360coreapi-listener" #LISTENER
+#     rewrite_rule_set_name  = "example-rewrite-rule-set"              #REWRITE RULE SET
+#     backend_address_pool_name  = "BACKEND.studio360coreapi"          #BACKEND
+#     backend_http_settings_name = "BACKEND.studio360coreapi-settings" #BACKEND SETTINGS
+#   }
+  #######################################################
