@@ -15,7 +15,7 @@ variable "routing_rule" {
       rule_type                  = "Basic"
       http_listener_name         = "YOUTRACK-listener-https"
       backend_address_pool_name  = "BACKEND.YOUTRACK"
-      backend_http_settings_name = "Http-settings-8112"
+      backend_http_settings_name = "Http-settings-8112" #"Https-settings-443" #"
       rewrite_rule_set_name      = "rewrite-set-rule-hostname"
     },
     {

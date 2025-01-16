@@ -27,6 +27,7 @@ variable "backend_settings" {
       port                    = 8112
       protocol                = "Http"
       request_timeout         = 20
+      probe_name            = "health-probe"
     },
     {
       name                    = "Http-settings-8181"

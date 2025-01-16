@@ -129,9 +129,25 @@ resource "azurerm_application_gateway" "network" {
       }
 
       request_header_configuration {
-        header_name  = "X-Forwarded-For" #CONFIRMAR
-        header_value = "192.168.10.196"
+        header_name  = "Location"
+        header_value = "127.0.0.1"
       }
+    }
+  }
+  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.31.177.178:443 --insecure
+  # Defining the health probe directly in backend_http_settings
+  probe {
+    name                    = "health-probe"
+    host                    = "40.68.203.166"
+    protocol                = "Http"
+    port                    = 8112
+    path                    = "/$web/index.html"
+    interval                = 30
+    timeout                 = 20
+    unhealthy_threshold     = 3
+    match {
+        status_code = ["200"]
+        body = ""
     }
   }
 
@@ -179,99 +195,3 @@ resource "azurerm_application_gateway" "network" {
     # key_vault_secret_id = ""  # data.azurerm_key_vault.certificate.id
   }
 }
-
-
-
-
-
-  ######################### EXAMPLE WITH STATIC WEB SITE ##################################
-#   backend_address_pool {
-#     name = "BACKEND.studio360coreapi"
-#     fqdns = ["storagestaticbackend.z6.web.core.windows.net"]
-#     # ip_addresses = ["10.7.10.31", "10.7.10.32"]
-#   }
-
-#   backend_http_settings {
-#     name                  = "BACKEND.studio360coreapi-settings"
-#     protocol              = "Https" # Use HTTPS for backend communication
-#     port                  = 443     # HTTPS port
-#     cookie_based_affinity = "Disabled"
-#     connection_draining {
-#         enabled = false
-#         drain_timeout_sec = 1
-#     }
-#     request_timeout       = 20
-#     path                  = "/" # Path to the static website
-#     probe_name            = "static-website-health-probe" # Use HTTPS probe
-#     host_name             = "storagestaticbackend.z6.web.core.windows.net"
-# #    pick_host_name_from_backend_address = true
-
-#   }
-
-
-#   # Defining the health probe directly in backend_http_settings
-#   probe {
-#     name                    = "static-website-health-probe"
-#     host                    = "storagestaticbackend.z6.web.core.windows.net"
-#     protocol                = "Https"
-#     port                    = 443
-#     path                    = "/"
-#     interval                = 30
-#     timeout                 = 20
-#     unhealthy_threshold     = 3
-#     match {
-#         status_code = ["200"]
-#         body = ""
-#     }
-#   }
-
-
-
-#   rewrite_rule_set {
-#     name = "example-rewrite-rule-set"
-
-#     #EXAMPLE SET A CUSTOM RESPONSE HEADER
-#     rewrite_rule {
-#       name          = "response-header-rule"
-#       rule_sequence = 1
-
-#       response_header_configuration {
-#         header_name  = "X-Response-Header"
-#         header_value = "ResponseHeaderValue"
-#       }
-#     }
-
-#     rewrite_rule {
-#       name          = "response-header-rule"
-#       rule_sequence = 1
-
-#       request_header_configuration  {
-#         header_name  = "X-Response-Header"
-#         header_value = "ResponseHeaderValue"
-#       }
-#     }
-#   }
-
-#   http_listener {
-#     name                           = "BACKEND.studio360coreapi-listener"
-#     frontend_ip_configuration_name = "public-frontend-ip"
-#     frontend_port_name             = local.frontend_port_name
-#     protocol                       = "Http" # Listener uses HTTP
-
-
-#     custom_error_configuration {
-#       status_code    = "HttpStatus404"
-#       custom_error_page_url = "https://storagestaticbackend.blob.core.windows.net/$web/error.html"
-#     }
-#   }
-
-#   request_routing_rule {
-#     name                       = "BACKEND.studio360coreapi-route-rule"
-#     priority                   = 1
-#     rule_type                  = "Basic"
-#     http_listener_name         = "BACKEND.studio360coreapi-listener" #LISTENER
-#     rewrite_rule_set_name  = "example-rewrite-rule-set"              #REWRITE RULE SET
-#     backend_address_pool_name  = "BACKEND.studio360coreapi"          #BACKEND
-#     backend_http_settings_name = "BACKEND.studio360coreapi-settings" #BACKEND SETTINGS
-#   }
-  #######################################################

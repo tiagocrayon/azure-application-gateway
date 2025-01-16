@@ -3,3 +3,4 @@ Beta/.terraform*
 Beta/terraform.tfstate
 Beta/terraform.tfstate.backup
 Beta/.terraform.lock.hcl
+APIS-TEST/

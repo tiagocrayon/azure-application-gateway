@@ -7,8 +7,8 @@ variable "backend_pools" {
   default = [
     {
       name         = "BACKEND.YOUTRACK"
-      # ip_addresses = ["192.168.10.196"]
-      fqdns        = "storagestaticbackend.blob.core.windows.net"
+      ip_addresses = ["40.68.203.166"]
+      fqdns        = null #"storagestaticbackend.blob.core.windows.net"
     },
     {
       name         = "BACKEND.nefa_beta"
@@ -58,7 +58,7 @@ variable "backend_pools" {
     {
       name         = "BACKEND.DEF"
       ip_addresses = null
-      fqdns        = null
+      fqdns        = "storagestaticbackend.blob.core.windows.net"
     },
     {
       name         = "BACKEND.OVERLOAD"
