@@ -12,3 +12,9 @@ data "azurerm_subnet" "subnet" {
   virtual_network_name = data.azurerm_virtual_network.vnet.name
   resource_group_name  = data.azurerm_resource_group.resource_group.name
 }
+
+
+data "azurerm_public_ip" "public_ip" {
+  name                = "beta-agw-public-ip"
+  resource_group_name = data.azurerm_resource_group.resource_group.name
+}

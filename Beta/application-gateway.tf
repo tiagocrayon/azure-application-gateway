@@ -1,17 +1,23 @@
 
-resource "azurerm_public_ip" "public_ip" {
-  name                = "beta-agw-public-ip"
-  resource_group_name = data.azurerm_resource_group.resource_group.name
-  location            = data.azurerm_resource_group.resource_group.location
-  allocation_method   = "Static"
-  sku                 = "Standard" 
-  zones               = ["1", "2", "3"]
+# resource "azurerm_public_ip" "public_ip" {
+#   name                = "beta-agw-public-ip"
+#   resource_group_name = data.azurerm_resource_group.resource_group.name
+#   location            = data.azurerm_resource_group.resource_group.location
+#   allocation_method   = "Static"
+#   sku                 = "Standard" 
+#   zones               = ["1", "2", "3"]
 
-  tags = {
-    environment = "beta"
-  }
-}
-
+#   tags = {
+#     environment = "beta"
+#     owner = ""
+#     createdAt = ""
+#     costCenter = ""
+#     application = ""
+#   }
+#   # lifecycle {
+#   #   prevent_destroy = true
+#   # }
+# }
 
 resource "azurerm_application_gateway" "network" {
   name                = "360imprimir-beta-agw"
@@ -26,16 +32,17 @@ resource "azurerm_application_gateway" "network" {
   }
 
   sku {
-    name     = "Standard_v2"
-    tier     = "Standard_v2"
+    name     = "Standard_v2" # "Basic"
+    tier     = "Standard_v2" # "Basic"
+    capacity = 1
   }
 
-  autoscale_configuration  {
-    min_capacity = 1
-    max_capacity = 2
-  }
+  # autoscale_configuration  {
+  #   min_capacity = 1
+  #   max_capacity = 2
+  # }
 
-  zones  = ["1", "2", "3"]
+  # zones  = ["1", "2", "3"]
 
   enable_http2 = true
 
@@ -56,45 +63,8 @@ resource "azurerm_application_gateway" "network" {
 
   frontend_ip_configuration {
     name         = "public-frontend-ip"
-    public_ip_address_id = azurerm_public_ip.public_ip.id
+    public_ip_address_id = data.azurerm_public_ip.public_ip.id
   }
-
-
-  rewrite_rule_set {
-    name = "rewrite-set-rule-hostname"
-
-    rewrite_rule {
-      name          = "rewrite-rule-hostname"
-      rule_sequence = 1
-
-      condition {
-        variable    = "http_req_Header_bizay-access-token"
-        pattern     = "PBJHf4FhpJgaEAm8"
-        ignore_case = true
-        negate      = false
-      }
-
-      url {
-        path ="/default"
-        components = "path_only"
-        reroute = true
-      }
-    }
-  }
-
-
-  url_path_map {
-    name = "YOUTRACK-url-path-map"
-    default_backend_address_pool_name  = "BACKEND.YOUTRACK"
-    default_backend_http_settings_name = "Http-settings-8112"
-    path_rule {
-      name = "YOUTRACK-path-rule-1"
-      paths =  ["/default"]
-      backend_http_settings_name = "Http-settings-default"
-      backend_address_pool_name = "BACKEND.DEFAULT"
-    }
-  }
-
 
   #Backends
   dynamic "backend_address_pool" {
@@ -118,7 +88,7 @@ resource "azurerm_application_gateway" "network" {
     }
   }
 
-  #Listeners
+  #Listeners (referenced in request_routing_rule)
   dynamic "http_listener" {
     for_each = var.listener
     content {
@@ -126,19 +96,28 @@ resource "azurerm_application_gateway" "network" {
       frontend_ip_configuration_name = http_listener.value.frontend_ip_configuration_name
       frontend_port_name             = http_listener.value.frontend_port_name
       protocol                       = http_listener.value.protocol
+      host_names                      = http_listener.value.host_names
       ssl_certificate_name           = try(http_listener.value.ssl_certificate_name, null)
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
+
+      dynamic "custom_error_configuration" {
+        for_each = var.error_configuration
+        content {
+          status_code                   = custom_error_configuration.value.status_code
+          custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
+        }
+      }
     }
   }
 
-  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://4.245.67.206:443 --insecure -i
-  # Defining the health probe directly in backend_http_settings
+  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.50.238.203:443 --insecure -i
+  # Health probe (reference in backend_http_settings )
   probe {
-    name                    = "health-probe"
+    name                    = "youtrack-health-probe"
     host                    = "40.68.203.166"
     protocol                = "Http"
     port                    = 8112
-    path                    = "/$web/index.html"
+    path                    = "/"
     interval                = 30
     timeout                 = 20
     unhealthy_threshold     = 3
@@ -148,7 +127,22 @@ resource "azurerm_application_gateway" "network" {
     }
   }
 
-  #Redirect Configuration
+  probe {
+    name                    = "default-health-probe"
+    host                    = "20.160.204.211"
+    protocol                = "Http"
+    port                    = 8113
+    path                    = "/"
+    interval                = 30
+    timeout                 = 40
+    unhealthy_threshold     = 3
+    match {
+        status_code = ["200"]
+        body = ""
+    }
+  }
+
+  #Redirect Configuration (referenced in request_routing_rule)
   dynamic "redirect_configuration" {
     for_each = var.redirect_configuration
     content {
@@ -174,6 +168,43 @@ resource "azurerm_application_gateway" "network" {
       redirect_configuration_name = lookup(request_routing_rule.value, "redirect_configuration_name", null)
     }
   }
+  
+  #Rewrite Rule Set (referenced in request_routing_rule)
+  rewrite_rule_set {
+    name = "rewrite-set-rule-hostname"
+
+    rewrite_rule {
+      name          = "rewrite-rule-hostname"
+      rule_sequence = 1
+
+      condition {
+        variable    = "http_req_Header_bizay-access-token"
+        pattern     = "PBJHf4FhpJgaEAm8"
+        ignore_case = true
+        negate      = true
+      }
+
+      url {
+        path ="/default"
+        components = "path_only"
+        reroute = false
+      }
+    }
+  }
+
+  #Url path map (referenced in request_routing_rule)
+  url_path_map {
+    name = "YOUTRACK-url-path-map"
+    default_backend_address_pool_name  = "BACKEND.YOUTRACK"
+    default_backend_http_settings_name = "Http-settings-8112"
+    # default_rewrite_rule_set_name = "rewrite-set-rule-hostname"
+    path_rule {
+      name = "default-path-rule-1"
+      paths =  ["/default"]
+      backend_http_settings_name = "Http-settings-default"
+      backend_address_pool_name = "BACKEND.DEFAULT"
+    }
+  }
 
 
   #GLOBAL  #custom_error_configuration
@@ -185,6 +216,7 @@ resource "azurerm_application_gateway" "network" {
     }
   }
 
+  #SSL Certificate (referenced in http_listener)
   ssl_certificate {
     name   = "certificado-1"
     data   = filebase64("C:/Users/tiaisabe/OneDrive - Crayon Group/Documentos/Projetos/Bizay/Cert/example_com.pfx")

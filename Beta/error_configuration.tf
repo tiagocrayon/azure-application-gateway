@@ -18,7 +18,7 @@ variable "error_configuration" {
     # },
     # {
     #   status_code         = "HttpStatus405"
-    #   custom_error_page_url = "https://storagestaticbackend.blob.core.windows.net/$web/400.html"
+    #   custom_error_page_url = ""
     # },
     {
       status_code         = "HttpStatus408"

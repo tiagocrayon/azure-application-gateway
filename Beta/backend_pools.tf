@@ -12,8 +12,8 @@ variable "backend_pools" {
     },
     {
       name         = "BACKEND.DEFAULT"
-      ip_addresses = null
-      fqdns        = "storagestaticbackend.blob.core.windows.net" #/$web/index.html"
+      ip_addresses = ["20.160.204.211"]
+      fqdns        = null #"storagestaticbackend.blob.core.windows.net" #/$web/index.html"
     },
 
     # {

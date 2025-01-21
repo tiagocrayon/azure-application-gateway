@@ -27,14 +27,15 @@ variable "backend_settings" {
       port                    = 8112
       protocol                = "Http"
       request_timeout         = 20
-      probe_name            = "health-probe"
+      probe_name              = "youtrack-health-probe"
     },
     {
       name                    = "Http-settings-default"
       cookie_based_affinity   = "Disabled"
-      port                    = 8183
+      port                    = 8113
       protocol                = "Http"
       request_timeout         = 20
+      probe_name              = "default-health-probe"
     },
     # {
     #   name                    = "Http-settings-8888"
