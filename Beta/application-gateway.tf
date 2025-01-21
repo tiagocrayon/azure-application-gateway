@@ -12,11 +12,6 @@ resource "azurerm_public_ip" "public_ip" {
   }
 }
 
-# LOCAL BLOCK: Use to re-used variables
-locals {
-  frontend_port_name             = "${data.azurerm_virtual_network.vnet.name}-feport"
-  frontend_ip_configuration_name = "${data.azurerm_virtual_network.vnet.name}-feip"
-}
 
 resource "azurerm_application_gateway" "network" {
   name                = "360imprimir-beta-agw"
@@ -64,12 +59,41 @@ resource "azurerm_application_gateway" "network" {
     public_ip_address_id = azurerm_public_ip.public_ip.id
   }
 
-  # frontend_ip_configuration {
-  #   name                   = "private-frontend-ip"
-  #   private_ip_address     = "10.0.0.4"
-  #   private_ip_address_allocation = "Static"
-  #   subnet_id              = data.azurerm_subnet.subnet.id
-  # }
+
+  rewrite_rule_set {
+    name = "rewrite-set-rule-hostname"
+
+    rewrite_rule {
+      name          = "rewrite-rule-hostname"
+      rule_sequence = 1
+
+      condition {
+        variable    = "http_req_Header_bizay-access-token"
+        pattern     = "PBJHf4FhpJgaEAm8"
+        ignore_case = true
+        negate      = false
+      }
+
+      url {
+        path ="/default"
+        components = "path_only"
+        reroute = true
+      }
+    }
+  }
+
+
+  url_path_map {
+    name = "YOUTRACK-url-path-map"
+    default_backend_address_pool_name  = "BACKEND.YOUTRACK"
+    default_backend_http_settings_name = "Http-settings-8112"
+    path_rule {
+      name = "YOUTRACK-path-rule-1"
+      paths =  ["/default"]
+      backend_http_settings_name = "Http-settings-default"
+      backend_address_pool_name = "BACKEND.DEFAULT"
+    }
+  }
 
 
   #Backends
@@ -107,34 +131,7 @@ resource "azurerm_application_gateway" "network" {
     }
   }
 
-  rewrite_rule_set {
-    name = "rewrite-set-rule-hostname"
-
-    rewrite_rule {
-      name          = "rewrite-rule-hostname"
-      rule_sequence = 1
-
-      condition {
-        variable    = "http_req_Header_host"
-        pattern     = "api.youtrack.360imprimir.com"
-        ignore_case = true
-        negate      = false
-      }
-
-      condition {
-        variable    = "http_req_Header_bizay-access-token"
-        pattern     = "PBJHf4FhpJgaEAm8"
-        ignore_case = true
-        negate      = false
-      }
-
-      request_header_configuration {
-        header_name  = "Location"
-        header_value = "127.0.0.1"
-      }
-    }
-  }
-  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.31.177.178:443 --insecure
+  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://4.245.67.206:443 --insecure -i
   # Defining the health probe directly in backend_http_settings
   probe {
     name                    = "health-probe"
@@ -173,10 +170,10 @@ resource "azurerm_application_gateway" "network" {
       http_listener_name          = request_routing_rule.value.http_listener_name
       backend_address_pool_name   = lookup(request_routing_rule.value, "backend_address_pool_name", null)
       backend_http_settings_name  = lookup(request_routing_rule.value, "backend_http_settings_name", null)
+      url_path_map_name           = lookup(request_routing_rule.value, "url_path_map_name", null)
       redirect_configuration_name = lookup(request_routing_rule.value, "redirect_configuration_name", null)
     }
   }
-
 
 
   #GLOBAL  #custom_error_configuration

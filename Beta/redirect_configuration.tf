@@ -13,7 +13,7 @@ variable "redirect_configuration" {
       target_listener_name  = "YOUTRACK-listener-https"
       include_path          = true
       include_query_string  = true
-    }
+    },
   ]
 }
 

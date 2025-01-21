@@ -14,39 +14,13 @@ variable "listener" {
       frontend_port_name             = "port-https"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
+      host_name                      = "api.youtrack.360imprimir.com"
     },
     {
       name                           = "YOUTRACK-listener-http"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-http"
       protocol                       = "Http"
-    },
-    # {
-    #   name                           = "nefa_beta-listener-Http"
-    #   frontend_ip_configuration_name = "public-frontend-ip"
-    #   frontend_port_name             = "port-http"
-    #   protocol                       = "Http"
-    # },
-    # {
-    #   name                           = "nefa_beta-listener-https"
-    #   frontend_ip_configuration_name = "public-frontend-ip"
-    #   frontend_port_name             = "port-https"
-    #   protocol                       = "Https"
-    #   ssl_certificate_name           = "certificado-1"
-    # },
-    # {
-    #   name                           = "360imprimir-beta.PT-listener-http"
-    #   frontend_ip_configuration_name = "public-frontend-ip"
-    #   frontend_port_name             = "port-http"
-    #   protocol                       = "Http"
-    # },
-    # {
-    #   name                           = "360imprimir-beta.PT-listener-https"
-    #   frontend_ip_configuration_name = "public-frontend-ip"
-    #   frontend_port_name             = "port-https"
-    #   protocol                       = "Https"
-    #   ssl_certificate_name           = "certificado-1"
-    # },
-
+    }
   ]
 }
