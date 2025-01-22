@@ -19,6 +19,7 @@
 #   # }
 # }
 
+
 resource "azurerm_application_gateway" "network" {
   name                = "360imprimir-beta-agw"
   resource_group_name = data.azurerm_resource_group.resource_group.name
@@ -110,7 +111,7 @@ resource "azurerm_application_gateway" "network" {
     }
   }
 
-  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.50.238.203:443 --insecure -i
+  # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.8.48.39:443 --insecure -i
   # Health probe (reference in backend_http_settings )
   probe {
     name                    = "youtrack-health-probe"
@@ -171,15 +172,15 @@ resource "azurerm_application_gateway" "network" {
   
   #Rewrite Rule Set (referenced in request_routing_rule)
   rewrite_rule_set {
-    name = "rewrite-set-rule-hostname"
+    name = "rule-rewrite-1"
 
     rewrite_rule {
-      name          = "rewrite-rule-hostname"
-      rule_sequence = 1
+      name          = "NewRewrite"
+      rule_sequence = 100
 
       condition {
-        variable    = "http_req_Header_bizay-access-token"
-        pattern     = "PBJHf4FhpJgaEAm8"
+        variable    = "http_req_bizay-access-token" #"http_req_Header_bizay-access-token"
+        pattern     = "token"
         ignore_case = true
         negate      = true
       }
@@ -187,7 +188,7 @@ resource "azurerm_application_gateway" "network" {
       url {
         path ="/default"
         components = "path_only"
-        reroute = false
+        reroute = true
       }
     }
   }
@@ -197,7 +198,7 @@ resource "azurerm_application_gateway" "network" {
     name = "YOUTRACK-url-path-map"
     default_backend_address_pool_name  = "BACKEND.YOUTRACK"
     default_backend_http_settings_name = "Http-settings-8112"
-    # default_rewrite_rule_set_name = "rewrite-set-rule-hostname"
+    default_rewrite_rule_set_name = "rule-rewrite-1"
     path_rule {
       name = "default-path-rule-1"
       paths =  ["/default"]

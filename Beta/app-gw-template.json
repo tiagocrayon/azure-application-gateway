@@ -1,0 +1,452 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "applicationGateways_360imprimir_beta_agw_name": {
+            "defaultValue": "360imprimir-beta-agw",
+            "type": "String"
+        },
+        "virtualNetworks_360imprimir_beta_vnw_externalid": {
+            "defaultValue": "/subscriptions/5aadc750-a849-47ed-b3b8-0c41a5f3f9f9/resourceGroups/TiagoIsabelinho/providers/Microsoft.Network/virtualNetworks/360imprimir-beta-vnw",
+            "type": "String"
+        },
+        "publicIPAddresses_beta_agw_public_ip_externalid": {
+            "defaultValue": "/subscriptions/5aadc750-a849-47ed-b3b8-0c41a5f3f9f9/resourceGroups/TiagoIsabelinho/providers/Microsoft.Network/publicIPAddresses/beta-agw-public-ip",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/applicationGateways",
+            "apiVersion": "2024-03-01",
+            "name": "[parameters('applicationGateways_360imprimir_beta_agw_name')]",
+            "location": "westeurope",
+            "tags": {
+                "costCenter": "",
+                "createdAt": "",
+                "environment": "beta",
+                "owner": ""
+            },
+            "properties": {
+                "sku": {
+                    "name": "Standard_v2",
+                    "tier": "Standard_v2",
+                    "family": "Generation_1",
+                    "capacity": 1
+                },
+                "gatewayIPConfigurations": [
+                    {
+                        "name": "default",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/gatewayIPConfigurations/default')]",
+                        "properties": {
+                            "subnet": {
+                                "id": "[concat(parameters('virtualNetworks_360imprimir_beta_vnw_externalid'), '/subnets/default')]"
+                            }
+                        }
+                    }
+                ],
+                "sslCertificates": [
+                    {
+                        "name": "certificado-1",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/sslCertificates/certificado-1')]",
+                        "properties": {}
+                    }
+                ],
+                "trustedRootCertificates": [],
+                "trustedClientCertificates": [],
+                "sslProfiles": [],
+                "frontendIPConfigurations": [
+                    {
+                        "name": "public-frontend-ip",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendIPConfigurations/public-frontend-ip')]",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[parameters('publicIPAddresses_beta_agw_public_ip_externalid')]"
+                            }
+                        }
+                    }
+                ],
+                "frontendPorts": [
+                    {
+                        "name": "port-http",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendPorts/port-http')]",
+                        "properties": {
+                            "port": 80
+                        }
+                    },
+                    {
+                        "name": "port-https",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendPorts/port-https')]",
+                        "properties": {
+                            "port": 443
+                        }
+                    }
+                ],
+                "backendAddressPools": [
+                    {
+                        "name": "BACKEND.DEFAULT",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendAddressPools/BACKEND.DEFAULT')]",
+                        "properties": {
+                            "backendAddresses": [
+                                {
+                                    "ipAddress": "20.160.204.211"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "BACKEND.YOUTRACK",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendAddressPools/BACKEND.YOUTRACK')]",
+                        "properties": {
+                            "backendAddresses": [
+                                {
+                                    "ipAddress": "40.68.203.166"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "loadDistributionPolicies": [],
+                "backendHttpSettingsCollection": [
+                    {
+                        "name": "Https-settings-443",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendHttpSettingsCollection/Https-settings-443')]",
+                        "properties": {
+                            "port": 443,
+                            "protocol": "Https",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": false,
+                            "requestTimeout": 20
+                        }
+                    },
+                    {
+                        "name": "Http-settings-8112",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendHttpSettingsCollection/Http-settings-8112')]",
+                        "properties": {
+                            "port": 8112,
+                            "protocol": "Http",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": false,
+                            "requestTimeout": 20
+                        }
+                    },
+                    {
+                        "name": "Http-settings-80",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendHttpSettingsCollection/Http-settings-80')]",
+                        "properties": {
+                            "port": 80,
+                            "protocol": "Http",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": false,
+                            "requestTimeout": 20
+                        }
+                    },
+                    {
+                        "name": "Http-settings-default",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendHttpSettingsCollection/Http-settings-default')]",
+                        "properties": {
+                            "port": 8113,
+                            "protocol": "Http",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": false,
+                            "requestTimeout": 20
+                        }
+                    }
+                ],
+                "backendSettingsCollection": [],
+                "httpListeners": [
+                    {
+                        "name": "YOUTRACK-listener-https",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/httpListeners/YOUTRACK-listener-https')]",
+                        "properties": {
+                            "frontendIPConfiguration": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendIPConfigurations/public-frontend-ip')]"
+                            },
+                            "frontendPort": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendPorts/port-https')]"
+                            },
+                            "protocol": "Https",
+                            "sslCertificate": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/sslCertificates/certificado-1')]"
+                            },
+                            "hostNames": [
+                                "api.youtrack.360imprimir.com"
+                            ],
+                            "requireServerNameIndication": false,
+                            "customErrorConfigurations": [
+                                {
+                                    "statusCode": "HttpStatus400",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/400.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus403",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/403.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus408",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/408.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus500",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/500.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus502",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/502.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus503",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/503.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus504",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/504.html"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "YOUTRACK-listener-http",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/httpListeners/YOUTRACK-listener-http')]",
+                        "properties": {
+                            "frontendIPConfiguration": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendIPConfigurations/public-frontend-ip')]"
+                            },
+                            "frontendPort": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/frontendPorts/port-http')]"
+                            },
+                            "protocol": "Http",
+                            "hostNames": [],
+                            "requireServerNameIndication": false,
+                            "customErrorConfigurations": [
+                                {
+                                    "statusCode": "HttpStatus400",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/400.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus403",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/403.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus408",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/408.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus500",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/500.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus502",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/502.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus503",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/503.html"
+                                },
+                                {
+                                    "statusCode": "HttpStatus504",
+                                    "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/504.html"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "listeners": [],
+                "urlPathMaps": [
+                    {
+                        "name": "YOUTRACK-url-path-map",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/urlPathMaps/YOUTRACK-url-path-map')]",
+                        "properties": {
+                            "defaultBackendAddressPool": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendAddressPools/BACKEND.YOUTRACK')]"
+                            },
+                            "defaultBackendHttpSettings": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendHttpSettingsCollection/Http-settings-8112')]"
+                            },
+                            "defaultRewriteRuleSet": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/rewriteRuleSets/rule-rewrite-1')]"
+                            },
+                            "pathRules": [
+                                {
+                                    "name": "default-path-rule-1",
+                                    "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/urlPathMaps/YOUTRACK-url-path-map/pathRules/default-path-rule-1')]",
+                                    "properties": {
+                                        "paths": [
+                                            "/default"
+                                        ],
+                                        "backendAddressPool": {
+                                            "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendAddressPools/BACKEND.DEFAULT')]"
+                                        },
+                                        "backendHttpSettings": {
+                                            "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/backendHttpSettingsCollection/Http-settings-default')]"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "requestRoutingRules": [
+                    {
+                        "name": "YOUTRACK-route-rule-https",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/requestRoutingRules/YOUTRACK-route-rule-https')]",
+                        "properties": {
+                            "ruleType": "PathBasedRouting",
+                            "priority": 1,
+                            "httpListener": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/httpListeners/YOUTRACK-listener-https')]"
+                            },
+                            "urlPathMap": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/urlPathMaps/YOUTRACK-url-path-map')]"
+                            }
+                        }
+                    },
+                    {
+                        "name": "YOUTRACK-route-rule-http",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/requestRoutingRules/YOUTRACK-route-rule-http')]",
+                        "properties": {
+                            "ruleType": "Basic",
+                            "priority": 2,
+                            "httpListener": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/httpListeners/YOUTRACK-listener-http')]"
+                            },
+                            "redirectConfiguration": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/redirectConfigurations/YOUTRACK-to-https-redirect')]"
+                            }
+                        }
+                    }
+                ],
+                "routingRules": [],
+                "probes": [
+                    {
+                        "name": "default-health-probe",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/probes/default-health-probe')]",
+                        "properties": {
+                            "protocol": "Http",
+                            "host": "20.160.204.211",
+                            "port": 8113,
+                            "path": "/",
+                            "interval": 30,
+                            "timeout": 40,
+                            "unhealthyThreshold": 3,
+                            "pickHostNameFromBackendHttpSettings": false,
+                            "minServers": 0,
+                            "match": {
+                                "statusCodes": [
+                                    "200"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "youtrack-health-probe",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/probes/youtrack-health-probe')]",
+                        "properties": {
+                            "protocol": "Http",
+                            "host": "40.68.203.166",
+                            "port": 8112,
+                            "path": "/",
+                            "interval": 30,
+                            "timeout": 20,
+                            "unhealthyThreshold": 3,
+                            "pickHostNameFromBackendHttpSettings": false,
+                            "minServers": 0,
+                            "match": {
+                                "statusCodes": [
+                                    "200"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "rewriteRuleSets": [
+                    {
+                        "name": "rule-rewrite-1",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/rewriteRuleSets/rule-rewrite-1')]",
+                        "properties": {
+                            "rewriteRules": [
+                                {
+                                    "ruleSequence": 100,
+                                    "conditions": [
+                                        {
+                                            "variable": "http_req_bizay-access-token",
+                                            "pattern": "token",
+                                            "ignoreCase": true,
+                                            "negate": true
+                                        }
+                                    ],
+                                    "name": "NewRewrite",
+                                    "actionSet": {
+                                        "requestHeaderConfigurations": [],
+                                        "responseHeaderConfigurations": [],
+                                        "urlConfiguration": {
+                                            "modifiedPath": "/default",
+                                            "reroute": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "redirectConfigurations": [
+                    {
+                        "name": "YOUTRACK-to-https-redirect",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/redirectConfigurations/YOUTRACK-to-https-redirect')]",
+                        "properties": {
+                            "redirectType": "Permanent",
+                            "targetListener": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/httpListeners/YOUTRACK-listener-https')]"
+                            },
+                            "includePath": true,
+                            "includeQueryString": true,
+                            "requestRoutingRules": [
+                                {
+                                    "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_360imprimir_beta_agw_name')), '/requestRoutingRules/YOUTRACK-route-rule-http')]"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "privateLinkConfigurations": [],
+                "sslPolicy": {
+                    "policyType": "Predefined",
+                    "policyName": "AppGwSslPolicy20220101"
+                },
+                "enableHttp2": true,
+                "customErrorConfigurations": [
+                    {
+                        "statusCode": "HttpStatus400",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/400.html"
+                    },
+                    {
+                        "statusCode": "HttpStatus403",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/403.html"
+                    },
+                    {
+                        "statusCode": "HttpStatus408",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/408.html"
+                    },
+                    {
+                        "statusCode": "HttpStatus500",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/500.html"
+                    },
+                    {
+                        "statusCode": "HttpStatus502",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/502.html"
+                    },
+                    {
+                        "statusCode": "HttpStatus503",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/503.html"
+                    },
+                    {
+                        "statusCode": "HttpStatus504",
+                        "customErrorPageUrl": "https://storagestaticbackend.blob.core.windows.net/$web/504.html"
+                    }
+                ]
+            }
+        }
+    ]
+}
