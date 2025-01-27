@@ -5,43 +5,47 @@ variable "frontend_port" {
   }))
   default = [
     {
-      name = "port-https-443"
+      name = "port-80"
+      port = 80
+    },
+    {
+      name = "port-82"
+      port = 82
+    },
+    {
+      name = "port-443"
       port = 443
     },
     {
-      name = "port-https-9090"
+      name = "port-9090"
       port = 9090
     },
     {
-      name = "port-https-9190"
+      name = "port-9190"
       port = 9190
     },
     {
-      name = "port-https-9194"
+      name = "port-9193"
+      port = 9193
+    },
+    {
+      name = "port-9194"
       port = 9194
     },
     {
-      name = "port-http-9194"
-      port = 9194
-    },
-    {
-      name = "port-https-9291"
+      name = "port-9291"
       port = 9291
     },
     {
-      name = "port-https-9292"
+      name = "port-9292"
       port = 9292
     },
     {
-      name = "port-https-9491"
+      name = "port-9491"
       port = 9491
     },
     {
-      name = "port-http-9491"
-      port = 9491
-    },
-    {
-      name = "port-https-9590"
+      name = "port-9590"
       port = 9590
     }
   ]

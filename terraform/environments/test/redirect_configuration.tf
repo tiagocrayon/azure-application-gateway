@@ -7,6 +7,13 @@ variable "redirect_configuration" {
     include_query_string  = bool
   }))
   default = [
+    {
+      name                  = "YOUTRACK-to-https-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "YOUTRACK-listener-https"
+      include_path          = true
+      include_query_string  = true
+    },
   ]
 }
 

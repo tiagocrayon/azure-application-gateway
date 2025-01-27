@@ -4,5 +4,13 @@ variable "frontend_port" {
     port = number
   }))
   default = [
+    {
+      name = "port-https"
+      port = 443
+    },
+    {
+      name = "port-http"
+      port = 80
+    }
   ]
 }

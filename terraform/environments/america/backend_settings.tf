@@ -8,6 +8,27 @@ variable "backend_settings" {
   }))
   default = [
     {
+      name                    = "Http-settings-80"
+      cookie_based_affinity   = "Disabled"
+      port                    = 80
+      protocol                = "Http"
+      request_timeout         = 20
+    },
+    {
+      name                    = "Http-settings-82"
+      cookie_based_affinity   = "Disabled"
+      port                    = 82
+      protocol                = "Http"
+      request_timeout         = 20
+    },
+    {
+      name                    = "Http-settings-82"
+      cookie_based_affinity   = "Disabled"
+      port                    = 82
+      protocol                = "Http"
+      request_timeout         = 20
+    },
+    {
       name                    = "Http-settings-9090"
       cookie_based_affinity   = "Disabled"
       port                    = 9090
@@ -18,6 +39,13 @@ variable "backend_settings" {
       name                    = "Http-settings-9190"
       cookie_based_affinity   = "Disabled"
       port                    = 9190
+      protocol                = "Http"
+      request_timeout         = 20
+    },
+    {
+      name                    = "Http-settings-9193"
+      cookie_based_affinity   = "Disabled"
+      port                    = 9193
       protocol                = "Http"
       request_timeout         = 20
     },
