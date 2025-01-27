@@ -28,5 +28,5 @@ variable "environment" {
 }
 
 module "beta" {
-  source = "./environments/beta"
+  source = "./environments/america"
 }

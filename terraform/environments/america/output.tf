@@ -6,6 +6,10 @@ output "backend_settings" {
   value = var.backend_settings
 }
 
+output "error_configuration" {
+  value = var.error_configuration
+}
+
 output "frontend_port" {
   value = var.frontend_port
 }
