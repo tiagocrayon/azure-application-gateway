@@ -55,7 +55,7 @@ resource "azurerm_application_gateway" "network" {
 
   #frontend_port
   dynamic "frontend_port" {
-    for_each = module.beta.frontend_port  # Use the passed frontend_port variable
+    for_each = module.environment.frontend_port  # Use the passed frontend_port variable
     content {
       name = frontend_port.value.name
       port = frontend_port.value.port
@@ -69,7 +69,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Backends
   dynamic "backend_address_pool" {
-    for_each = module.beta.backend_pools
+    for_each = module.environment.backend_pools
     content {
       name = backend_address_pool.value.name
       fqdns = backend_address_pool.value.fqdns != null ? [backend_address_pool.value.fqdns] : null
@@ -79,7 +79,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Backends Settings
   dynamic "backend_http_settings" {
-    for_each = module.beta.backend_settings
+    for_each = module.environment.backend_settings
     content {
       name                  = backend_http_settings.value.name
       cookie_based_affinity = backend_http_settings.value.cookie_based_affinity
@@ -91,7 +91,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Listeners (referenced in request_routing_rule)
   dynamic "http_listener" {
-    for_each = module.beta.listener
+    for_each = module.environment.listener
     content {
       name                           = http_listener.value.name
       frontend_ip_configuration_name = http_listener.value.frontend_ip_configuration_name
@@ -102,7 +102,7 @@ resource "azurerm_application_gateway" "network" {
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
 
       dynamic "custom_error_configuration" {
-        for_each = module.beta.error_configuration
+        for_each = module.environment.error_configuration
         content {
           status_code                   = custom_error_configuration.value.status_code
           custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
@@ -113,39 +113,27 @@ resource "azurerm_application_gateway" "network" {
 
   # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.8.48.39:443 --insecure -i
   # Health probe (reference in backend_http_settings )
-  probe {
-    name                    = "youtrack-health-probe"
-    host                    = "40.68.203.166"
-    protocol                = "Http"
-    port                    = 8112
-    path                    = "/"
-    interval                = 30
-    timeout                 = 20
-    unhealthy_threshold     = 3
-    match {
-        status_code = ["200"]
-        body = ""
-    }
-  }
-
-  probe {
-    name                    = "default-health-probe"
-    host                    = "20.160.204.211"
-    protocol                = "Http"
-    port                    = 8113
-    path                    = "/"
-    interval                = 30
-    timeout                 = 40
-    unhealthy_threshold     = 3
-    match {
-        status_code = ["200"]
-        body = ""
+  dynamic "probe" {
+    for_each = module.environment.probe
+    content {
+      name                = probe.value.name
+      host                = probe.value.host
+      protocol            = probe.value.protocol
+      port                = probe.value.port
+      path                = probe.value.path
+      interval            = probe.value.interval
+      timeout             = probe.value.timeout
+      unhealthy_threshold = probe.value.unhealthy_threshold
+      match {
+        status_code = probe.value.match.status_code
+        body        = probe.value.match.body
+      }
     }
   }
 
   #Redirect Configuration (referenced in request_routing_rule)
   dynamic "redirect_configuration" {
-    for_each = module.beta.redirect_configuration
+    for_each = module.environment.redirect_configuration
     content {
       name                   = redirect_configuration.value.name
       redirect_type          = redirect_configuration.value.redirect_type
@@ -157,7 +145,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Request Routing RUle
   dynamic "request_routing_rule" {
-    for_each = module.beta.routing_rule
+    for_each = module.environment.routing_rule
     content {
       name                        = request_routing_rule.value.name
       priority                    = request_routing_rule.value.priority
@@ -194,23 +182,30 @@ resource "azurerm_application_gateway" "network" {
   }
 
   #Url path map (referenced in request_routing_rule)
-  url_path_map {
-    name = "YOUTRACK-url-path-map"
-    default_backend_address_pool_name  = "BACKEND.YOUTRACK"
-    default_backend_http_settings_name = "Http-settings-8112"
-    default_rewrite_rule_set_name = "rule-rewrite-1"
-    path_rule {
-      name = "default-path-rule-1"
-      paths =  ["/default"]
-      backend_http_settings_name = "Http-settings-default"
-      backend_address_pool_name = "BACKEND.DEFAULT"
+  dynamic "url_path_map" {
+    for_each = module.environment.url_path_map
+    content {
+      name                               = url_path_map.value.name
+      default_backend_address_pool_name  = url_path_map.value.default_backend_address_pool_name
+      default_backend_http_settings_name = url_path_map.value.default_backend_http_settings_name
+      default_rewrite_rule_set_name      = lookup(url_path_map.value, "default_rewrite_rule_set_name", null)
+
+      dynamic "path_rule" {
+        for_each = lookup(url_path_map.value, "path_rules", [])
+        content {
+          name                          = path_rule.value.name
+          paths                         = path_rule.value.paths
+          backend_http_settings_name    = path_rule.value.backend_http_settings_name
+          backend_address_pool_name     = path_rule.value.backend_address_pool_name
+        }
+      }
     }
   }
 
 
   #GLOBAL  #custom_error_configuration
   dynamic "custom_error_configuration" {
-    for_each = module.beta.error_configuration
+    for_each = module.environment.error_configuration
     content {
       status_code                   = custom_error_configuration.value.status_code
       custom_error_page_url         = custom_error_configuration.value.custom_error_page_url

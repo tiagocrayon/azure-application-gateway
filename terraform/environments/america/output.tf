@@ -18,10 +18,18 @@ output "listener" {
   value = var.listener
 }
 
+output "probe" {
+  value = var.probe
+}
+
 output "redirect_configuration" {
   value = var.redirect_configuration
 }
 
 output "routing_rule" {
   value = var.routing_rule
+}
+
+output "url_path_map" {
+  value = var.url_path_map
 }

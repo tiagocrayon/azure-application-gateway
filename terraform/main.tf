@@ -27,6 +27,6 @@ variable "environment" {
   description = "Specifies the environment to use"
 }
 
-module "beta" {
+module "environment" {
   source = "./environments/america"
 }

@@ -25,3 +25,12 @@ output "routing_rule" {
 output "error_configuration" {
   value = var.error_configuration
 }
+
+
+output "probe" {
+  value = var.probe
+}
+
+output "url_path_map" {
+  value = var.url_path_map
+}
