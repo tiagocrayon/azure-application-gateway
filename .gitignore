@@ -1,6 +1,5 @@
-Beta/.terraform/*
-Beta/.terraform*
-Beta/terraform.tfstate
-Beta/terraform.tfstate.backup
-Beta/.terraform.lock.hcl
-APIS-TEST/
+azure-application-gateway/terraform/.terraform.lock.hcl
+azure-application-gateway/terraform/.terraform/*
+azure-application-gateway/terraform/.terraform/terraform.tfstate
+azure-application-gateway/terraform/.terraform/modules/modules.json
+azure-application-gateway/terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.15.0/windows_386/terraform-provider-azurerm_v4.15.0_x5.exe

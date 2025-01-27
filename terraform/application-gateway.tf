@@ -55,7 +55,7 @@ resource "azurerm_application_gateway" "network" {
 
   #frontend_port
   dynamic "frontend_port" {
-    for_each = var.frontend_port
+    for_each = module.beta.frontend_port  # Use the passed frontend_port variable
     content {
       name = frontend_port.value.name
       port = frontend_port.value.port
@@ -69,7 +69,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Backends
   dynamic "backend_address_pool" {
-    for_each = var.backend_pools
+    for_each = module.beta.backend_pools
     content {
       name = backend_address_pool.value.name
       fqdns = backend_address_pool.value.fqdns != null ? [backend_address_pool.value.fqdns] : null
@@ -79,7 +79,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Backends Settings
   dynamic "backend_http_settings" {
-    for_each = var.backend_settings
+    for_each = module.beta.backend_settings
     content {
       name                  = backend_http_settings.value.name
       cookie_based_affinity = backend_http_settings.value.cookie_based_affinity
@@ -91,7 +91,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Listeners (referenced in request_routing_rule)
   dynamic "http_listener" {
-    for_each = var.listener
+    for_each = module.beta.listener
     content {
       name                           = http_listener.value.name
       frontend_ip_configuration_name = http_listener.value.frontend_ip_configuration_name
@@ -102,7 +102,7 @@ resource "azurerm_application_gateway" "network" {
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
 
       dynamic "custom_error_configuration" {
-        for_each = var.error_configuration
+        for_each = module.beta.error_configuration
         content {
           status_code                   = custom_error_configuration.value.status_code
           custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
@@ -145,7 +145,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Redirect Configuration (referenced in request_routing_rule)
   dynamic "redirect_configuration" {
-    for_each = var.redirect_configuration
+    for_each = module.beta.redirect_configuration
     content {
       name                   = redirect_configuration.value.name
       redirect_type          = redirect_configuration.value.redirect_type
@@ -157,7 +157,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Request Routing RUle
   dynamic "request_routing_rule" {
-    for_each = var.routing_rule
+    for_each = module.beta.routing_rule
     content {
       name                        = request_routing_rule.value.name
       priority                    = request_routing_rule.value.priority
@@ -180,7 +180,7 @@ resource "azurerm_application_gateway" "network" {
 
       condition {
         variable    = "http_req_bizay-access-token" #"http_req_Header_bizay-access-token"
-        pattern     = "token"
+        pattern     = "PBJHf4FhpJgaEAm8"
         ignore_case = true
         negate      = true
       }
@@ -210,7 +210,7 @@ resource "azurerm_application_gateway" "network" {
 
   #GLOBAL  #custom_error_configuration
   dynamic "custom_error_configuration" {
-    for_each = var.error_configuration
+    for_each = module.beta.error_configuration
     content {
       status_code                   = custom_error_configuration.value.status_code
       custom_error_page_url         = custom_error_configuration.value.custom_error_page_url

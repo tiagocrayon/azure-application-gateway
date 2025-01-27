@@ -19,3 +19,14 @@ provider "azurerm" {
   subscription_id = "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9"
   features {}
 }
+
+# Load environment variable
+variable "environment" {
+  type    = string
+  default = "beta"
+  description = "Specifies the environment to use"
+}
+
+module "beta" {
+  source = "./environments/beta"
+}
