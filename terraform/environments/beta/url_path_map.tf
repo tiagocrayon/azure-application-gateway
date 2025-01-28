@@ -12,5 +12,36 @@ variable "url_path_map" {
     }))
   }))
   default = [
+    {
+        name                              = "YOUTRACK-url-path-map"
+        default_backend_address_pool_name = "BACKEND.DEFAULT"
+        default_backend_http_settings_name = "Http-settings-default"
+        path_rules = [
+            {
+                name                       = "api-youtrack-all"
+                paths                      = ["/api/*"]
+                backend_http_settings_name = "Http-settings-8112"
+                backend_address_pool_name  = "BACKEND.YOUTRACK"
+            },
+            {
+                name                       = "api-youtrack"
+                paths                      = ["/api"]
+                backend_http_settings_name = "Http-settings-8112"
+                backend_address_pool_name  = "BACKEND.YOUTRACK"
+            },
+            {
+                name                       = "api2-youtrack-all"
+                paths                      = ["/api2/*"]
+                backend_http_settings_name = "Http-settings-8112"
+                backend_address_pool_name  = "BACKEND.YOUTRACK"
+            },
+            {
+                name                       = "api2-youtrack"
+                paths                      = ["/api2"]
+                backend_http_settings_name = "Http-settings-8112"
+                backend_address_pool_name  = "BACKEND.YOUTRACK"
+            },
+        ]
+    }
   ]
 }

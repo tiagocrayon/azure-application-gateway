@@ -12,5 +12,36 @@ variable "url_path_map" {
     }))
   }))
   default = [
+    {
+      name                               = "360imprimir_Administrative_BR-url-path-map"
+      default_backend_address_pool_name  = "BACKEND.DEFAULT"
+      default_backend_http_settings_name = "Http-settings-82"
+      path_rules = [
+        {
+            name                       = "Administrative-all-target"
+            paths                      = ["/Administrative/*"]
+            backend_http_settings_name = "Http-settings-82"
+            backend_address_pool_name  = "BACKEND.PRD-BR-CT"
+        },
+        {
+            name                       = "Administrative-target"
+            paths                      = ["/Administrative"]
+            backend_http_settings_name = "Http-settings-82"
+            backend_address_pool_name  = "BACKEND.PRD-BR-CT"
+        },
+        {
+            name                       = "Designer-all-target"
+            paths                      = ["/Designer/*"]
+            backend_http_settings_name = "Http-settings-82"
+            backend_address_pool_name  = "BACKEND.PRD-BR-CT"
+        },
+        {
+            name                       = "Designer-target"
+            paths                      = ["/Designer"]
+            backend_http_settings_name = "Http-settings-82"
+            backend_address_pool_name  = "BACKEND.PRD-BR-CT"
+        },
+      ]
+    }
   ]
 }

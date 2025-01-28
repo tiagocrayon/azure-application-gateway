@@ -5,5 +5,15 @@ variable "backend_pools" {
     ip_addresses = optional(list(string))
   }))
   default = [
+    {
+      name         = "BACKEND.YOUTRACK"
+      ip_addresses = ["40.68.203.166"]
+      fqdns        = null
+    },
+    {
+      name         = "BACKEND.DEFAULT"
+      ip_addresses = ["20.160.204.211"]
+      fqdns        = null
+    }
   ]
 }

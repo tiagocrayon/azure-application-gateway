@@ -9,5 +9,13 @@ variable "listener" {
     ssl_profile_id                  = optional(string)
   }))
   default = [
+    {
+      name                           = "YOUTRACK-listener-https"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-https"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                      = ["api.youtrack.360imprimir.com"]
+    }
   ]
 }

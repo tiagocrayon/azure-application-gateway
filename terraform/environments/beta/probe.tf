@@ -1,7 +1,8 @@
 variable "probe" {
   type = list(object({
     name                = string
-    host                = string
+    host                = optional(string)
+    pick_host_name_from_backend_http_settings = optional(string)
     protocol            = string
     port                = number
     path                = string
@@ -13,5 +14,23 @@ variable "probe" {
       body        = string
     })
   }))
-  default = []
+  default = [
+    {
+      name                                      = "youtrack-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 8112
+      path                                      = "/"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    }
+  ]
 }
+
+
+

@@ -26,6 +26,10 @@ output "redirect_configuration" {
   value = var.redirect_configuration
 }
 
+output "rewrite_rule_set" {
+  value = var.rewrite_rule_set
+}
+
 output "routing_rule" {
   value = var.routing_rule
 }

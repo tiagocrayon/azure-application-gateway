@@ -1,7 +1,8 @@
 variable "probe" {
   type = list(object({
     name                = string
-    host                = string
+    host                = optional(string)
+    pick_host_name_from_backend_http_settings = optional(string)
     protocol            = string
     port                = number
     path                = string

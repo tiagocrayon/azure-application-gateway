@@ -1,7 +1,8 @@
 variable "probe" {
   type = list(object({
     name                = string
-    host                = string
+    host                = optional(string)
+    pick_host_name_from_backend_http_settings = optional(string)
     protocol            = string
     port                = number
     path                = string
@@ -13,5 +14,174 @@ variable "probe" {
       body        = string
     })
   }))
-  default = []
+  default = [
+    {
+      name                                      = "http-80-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 80
+      path                                      = "/health"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },    
+    {
+      name                                      = "favicon-http-80-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 80
+      path                                      = "/favicon.ico"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "heartbeat-http-80-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 80
+      path                                      = "/heartbeat"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "http-82-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 82
+      path                                      = "/health"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "healthz-http-9090-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9090
+      path                                      = "/healthz"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "healthz-http-9190-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9190
+      path                                      = "/healthz"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "healthz-http-9193-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9193
+      path                                      = "/healthz"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "healthz-http-9194-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9194
+      path                                      = "/healthz"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "swagger-index-http-9291-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9291
+      path                                      = "/swagger/index.html"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "swagger-index-http-9292-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9292
+      path                                      = "/swagger/index.html"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "healthz-http-9491-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9491
+      path                                      = "/healthz"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+    {
+      name                                      = "swagger-index-http-9590-health-probe"
+      pick_host_name_from_backend_http_settings = true
+      protocol                                  = "Http"
+      port                                      = 9590
+      path                                      = "/swagger/index.html"
+      interval                                  = 30
+      timeout                                   = 20
+      unhealthy_threshold                       = 3
+      match = {
+        status_code = ["200"]
+        body        = ""
+      }
+    },
+  ]
 }

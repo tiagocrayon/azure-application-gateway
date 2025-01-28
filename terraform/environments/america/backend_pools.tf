@@ -6,6 +6,11 @@ variable "backend_pools" {
   }))
   default = [
     {
+      name         = "BACKEND.DEFAULT"
+      ip_addresses = ["10.0.0.0"]
+      fqdns        = null
+    },
+    {
       name         = "BACKEND.LATAM-DOCKER"
       ip_addresses = ["10.0.0.31", "10.0.0.32"]
       fqdns        = null

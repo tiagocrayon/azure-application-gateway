@@ -86,6 +86,8 @@ resource "azurerm_application_gateway" "network" {
       port                  = backend_http_settings.value.port
       protocol              = backend_http_settings.value.protocol
       request_timeout       = backend_http_settings.value.request_timeout
+      pick_host_name_from_backend_address = backend_http_settings.value.pick_host_name_from_backend_address
+      probe_name            = backend_http_settings.value.probe_name
     }
   }
 
@@ -112,24 +114,26 @@ resource "azurerm_application_gateway" "network" {
   }
 
   # # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.8.48.39:443 --insecure -i
-  # # Health probe (reference in backend_http_settings )
-  # dynamic "probe" {
-  #   for_each = module.environment.probe
-  #   content {
-  #     name                = probe.value.name
-  #     host                = probe.value.host
-  #     protocol            = probe.value.protocol
-  #     port                = probe.value.port
-  #     path                = probe.value.path
-  #     interval            = probe.value.interval
-  #     timeout             = probe.value.timeout
-  #     unhealthy_threshold = probe.value.unhealthy_threshold
-  #     match {
-  #       status_code = probe.value.match.status_code
-  #       body        = probe.value.match.body
-  #     }
-  #   }
-  # }
+  #   curl -X GET -H "Host: api.youtrack.360imprimir.com" https://20.8.48.39:443 --insecure -i
+  # Health probe (reference in backend_http_settings )
+  dynamic "probe" {
+    for_each = module.environment.probe
+    content {
+      name                = probe.value.name
+      host                = probe.value.host
+      pick_host_name_from_backend_http_settings = probe.value.pick_host_name_from_backend_http_settings
+      protocol            = probe.value.protocol
+      port                = probe.value.port
+      path                = probe.value.path
+      interval            = probe.value.interval
+      timeout             = probe.value.timeout
+      unhealthy_threshold = probe.value.unhealthy_threshold
+      match {
+        status_code = probe.value.match.status_code
+        body        = probe.value.match.body
+      }
+    }
+  }
 
   #Redirect Configuration (referenced in request_routing_rule)
   dynamic "redirect_configuration" {
@@ -158,49 +162,56 @@ resource "azurerm_application_gateway" "network" {
     }
   }
   
-  # #Rewrite Rule Set (referenced in request_routing_rule)
-  # rewrite_rule_set {
-  #   name = "rule-rewrite-1"
+  #Rewrite Rule Set (referenced in request_routing_rule)
+  dynamic "rewrite_rule_set" {
+    for_each = module.environment.rewrite_rule_set
+    content {
+      name = rewrite_rule_set.value.name
 
-  #   rewrite_rule {
-  #     name          = "NewRewrite"
-  #     rule_sequence = 100
+      # Using dynamic block to define rewrite_rule inside rewrite_rule_set
+      dynamic "rewrite_rule" {
+        for_each = rewrite_rule_set.value.rewrite_rule
+        content {
+          name          = rewrite_rule.value.name
+          rule_sequence = rewrite_rule.value.rule_sequence
 
-  #     condition {
-  #       variable    = "http_req_bizay-access-token" #"http_req_Header_bizay-access-token"
-  #       pattern     = "PBJHf4FhpJgaEAm8"
-  #       ignore_case = true
-  #       negate      = true
-  #     }
+          condition {
+            variable    = rewrite_rule.value.condition.variable
+            pattern     = rewrite_rule.value.condition.pattern
+            ignore_case = rewrite_rule.value.condition.ignore_case
+            negate      = rewrite_rule.value.condition.negate
+          }
 
-  #     url {
-  #       path ="/default"
-  #       components = "path_only"
-  #       reroute = true
-  #     }
-  #   }
-  # }
+          url {
+            path       = rewrite_rule.value.url.path
+            components = rewrite_rule.value.url.components
+            reroute    = rewrite_rule.value.url.reroute
+          }
+        }
+      }
+    }
+  }
 
-  # #Url path map (referenced in request_routing_rule)
-  # dynamic "url_path_map" {
-  #   for_each = module.environment.url_path_map
-  #   content {
-  #     name                               = url_path_map.value.name
-  #     default_backend_address_pool_name  = url_path_map.value.default_backend_address_pool_name
-  #     default_backend_http_settings_name = url_path_map.value.default_backend_http_settings_name
-  #     default_rewrite_rule_set_name      = lookup(url_path_map.value, "default_rewrite_rule_set_name", null)
+  #Url path map (referenced in request_routing_rule)
+  dynamic "url_path_map" {
+    for_each = module.environment.url_path_map
+    content {
+      name                               = url_path_map.value.name
+      default_backend_address_pool_name  = url_path_map.value.default_backend_address_pool_name
+      default_backend_http_settings_name = url_path_map.value.default_backend_http_settings_name
+      default_rewrite_rule_set_name      = lookup(url_path_map.value, "default_rewrite_rule_set_name", null)
 
-  #     dynamic "path_rule" {
-  #       for_each = lookup(url_path_map.value, "path_rules", [])
-  #       content {
-  #         name                          = path_rule.value.name
-  #         paths                         = path_rule.value.paths
-  #         backend_http_settings_name    = path_rule.value.backend_http_settings_name
-  #         backend_address_pool_name     = path_rule.value.backend_address_pool_name
-  #       }
-  #     }
-  #   }
-  # }
+      dynamic "path_rule" {
+        for_each = lookup(url_path_map.value, "path_rules", [])
+        content {
+          name                          = path_rule.value.name
+          paths                         = path_rule.value.paths
+          backend_http_settings_name    = path_rule.value.backend_http_settings_name
+          backend_address_pool_name     = path_rule.value.backend_address_pool_name
+        }
+      }
+    }
+  }
 
 
   # #GLOBAL  #custom_error_configuration
