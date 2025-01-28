@@ -49,6 +49,88 @@ variable "redirect_configuration" {
       include_path          = true
       include_query_string  = true
     },
+    {
+      name                  = "BIZAY_CA_MX_360imprimir-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "BIZAY_CA_MX_360imprimir-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "BIZAY_COM_US_MX_360imprimir-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "BIZAY_COM_US_MX_360imprimir-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "STUDIO_360imprimir-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "STUDIO_360imprimir-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "API_360imprimir_BR-to-http-82-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "API_360imprimir_BR-listener-http-82"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "API_360imprimir_MX-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "API_360imprimir_MX-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "IMG_360imprimir_BR-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "IMG_360imprimir_BR-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "IMG_360imprimir_MX-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "IMG_360imprimir_MX-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "IMG_360imprimir_STUDIO-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "IMG_360imprimir_STUDIO-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "IMG_API_360imprimir_BR-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "IMG_API_360imprimir_BR-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "IMG_API_360imprimir_MX-to-http-80-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "IMG_API_360imprimir_MX-listener-http-80"
+      include_path          = true
+      include_query_string  = true
+    },
+    {
+      name                  = "studio360_360imprimir_br-to-http-9193-redirect"
+      redirect_type         = "Permanent"
+      target_listener_name  = "studio360_360imprimir_br-listener-http-9193"
+      include_path          = true
+      include_query_string  = true
+    },
+
+
+    
+
+
 
 
 
@@ -63,9 +145,9 @@ variable "redirect_configuration" {
       include_query_string  = true
     },
     {
-      name                  = "studio360client_br-to-http-9193-redirect"
+      name                  = "studio360client_br_latam-to-http-9193-redirect"
       redirect_type         = "Permanent"
-      target_listener_name  = "studio360client_br-listener-http-9193"
+      target_listener_name  = "studio360client_br_latam-listener-http-9193"
       include_path          = true
       include_query_string  = true
     },
@@ -78,4 +160,6 @@ variable "redirect_configuration" {
     }
   ]
 }
+
+
 

@@ -99,6 +99,174 @@ variable "listener" {
       protocol                       = "Http"
       host_names                     = ["360imprimir.com.mx", "www.360imprimir.com.mx", "www.mailer.360imprimir.com.mx"]
     },
+    {
+      name                           = "BIZAY_CA_MX_360imprimir-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["bizay.ca", "www.bizay.ca"]
+    },
+    {
+      name                           = "BIZAY_CA_MX_360imprimir-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["bizay.ca", "www.bizay.ca"]
+    },
+    {
+      name                           = "BIZAY_COM_US_MX_360imprimir-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["bizay.com", "www.bizay.com", "us.bizay.com"]
+    },
+    {
+      name                           = "BIZAY_COM_US_MX_360imprimir-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["bizay.com", "www.bizay.com", "us.bizay.com"]
+    },
+    {
+      name                           = "STUDIO_360imprimir-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["studio.360imprimir.com", "studioapi.360imprimir.com"]
+    },
+    {
+      name                           = "STUDIO_360imprimir-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["studio.360imprimir.com", "studioapi.360imprimir.com"]
+    },
+    {
+      name                           = "API_360imprimir_BR-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["api.360imprimir.com.br"]
+    },
+    {
+      name                           = "API_360imprimir_BR-listener-http-82"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-82"
+      protocol                       = "Http"
+      host_names                     = ["api.360imprimir.com.br"]
+    },
+    {
+      name                           = "API_360imprimir_MX-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["api.360imprimir.com.mx"]
+    },
+    {
+      name                           = "API_360imprimir_MX-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["api.360imprimir.com.mx"]
+    },
+    {
+      name                           = "IMG_360imprimir_BR-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["imgprocessor.360imprimir.com.br"]
+    },
+    {
+      name                           = "IMG_360imprimir_BR-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imgprocessor.360imprimir.com.br"]
+    },
+    {
+      name                           = "IMG_360imprimir_BR-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["imgprocessor.360imprimir.com.mx"]
+    },
+    {
+      name                           = "IMG_360imprimir_BR-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imgprocessor.360imprimir.com.mx"]
+    },
+    {
+      name                           = "IMG_360imprimir_STUDIO-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["studioimgprocessor.360imprimir.com"]
+    },
+    {
+      name                           = "IMG_360imprimir_STUDIO-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["studioimgprocessor.360imprimir.com"]
+    },
+    {
+      name                           = "IMG_API_360imprimir_BR-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["imgprocessorwebapi.360imprimir.com.br"]
+    },
+    {
+      name                           = "IMG_API_360imprimir_BR-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imgprocessorwebapi.360imprimir.com.br"]
+    },
+    {
+      name                           = "IMG_API_360imprimir_MX-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["imgprocessorwebapi.360imprimir.com.mx"]
+    },
+    {
+      name                           = "IMG_API_360imprimir_MX-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imgprocessorwebapi.360imprimir.com.mx"]
+    },
+    {
+      name                           = "studio360_360imprimir_br-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     = ["studioclient.360imprimir.com.br"]
+    },
+    {
+      name                           = "studio360_360imprimir_br-listener-http-9193"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-9193"
+      protocol                       = "Http"
+      host_names                     = ["studioclient.360imprimir.com.br"]
+    },
+
+
+
 
 
 
@@ -171,7 +339,7 @@ variable "listener" {
       host_names                     = ["studioeventsourcing.360imprimir.com", "studioeventsourcing.360imprimir.latam"]
     },
     {
-      name                           = "studio360client_br-listener-https-443"
+      name                           = "studio360client_br_latam-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-443"
       protocol                       = "Https"
@@ -179,7 +347,7 @@ variable "listener" {
       host_names                     = ["studioclientbr.360imprimir.latam"]
     },
     {
-      name                           = "studio360client_br-listener-http-9193"
+      name                           = "studio360client_br_latam-listener-http-9193"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-9193"
       protocol                       = "Http"

@@ -45,5 +45,10 @@ variable "backend_pools" {
       ip_addresses = ["10.0.12.21", "10.0.0.20", "10.0.26.21"]
       fqdns        = null
     },
+    {
+      name         = "BACKEND.BE-IP-GLOBAL"
+      ip_addresses = ["10.0.0.20"]
+      fqdns        = null
+    },
   ]
 }
