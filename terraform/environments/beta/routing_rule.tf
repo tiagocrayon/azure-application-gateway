@@ -28,11 +28,18 @@ variable "routing_rule" {
     },
 
     #FORWARD HTPS
+
+
+
     {
       name                        = "360imprimir_beta_br-route-rule-https-443"
       priority                    = 3
       http_listener_name          = "360imprimir_beta_br-listener-https-443"
-      rule_type                   = "Basic"
+      # rule_type                   = "Basic"
+      # backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
+      # backend_http_settings_name  = "Http-settings-80"
+      rule_type                   = "PathBasedRouting"
+      url_path_map_name           = "paymentgw-STORE-BETA-VMSS-url-path-map"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
       backend_http_settings_name  = "Http-settings-80"
     },
@@ -400,7 +407,11 @@ variable "routing_rule" {
       name                        = "beta_360imprimir_pt-route-rule-https-443"
       priority                    = 3
       http_listener_name          = "beta_360imprimir_pt-listener-https-443"
-      rule_type                   = "Basic"
+      # rule_type                   = "Basic"
+      # backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
+      # backend_http_settings_name  = "Http-settings-80"
+      rule_type                   = "PathBasedRouting"
+      url_path_map_name           = "paymentgw-STORE-BETA-VMSS-url-path-map"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
       backend_http_settings_name  = "Http-settings-80"
     },

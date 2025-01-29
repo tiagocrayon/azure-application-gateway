@@ -12,6 +12,25 @@ variable "url_path_map" {
     }))
   }))
   default = [
-
+    {
+      name                               = "paymentgw-STORE-BETA-VMSS-url-path-map"
+      default_backend_address_pool_name  = "BACKEND.DEFAULT"
+      default_backend_http_settings_name = "Http-settings-80"
+      default_rewrite_rule_set_name     = "rule-rewrite-1"
+      path_rules = [
+        {
+            name                       = "paymentgw-all-target"
+            paths                      = ["/payment/multipaymentsystemcallback/"]
+            backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
+            backend_http_settings_name  = "Http-settings-80"
+        },
+        {
+            name                       = "paymentgw-target"
+            paths                      = ["/payment/multipaymentsystemcallback/*"]
+            backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
+            backend_http_settings_name  = "Http-settings-80"
+        }
+      ]
+    }
   ]
 }
