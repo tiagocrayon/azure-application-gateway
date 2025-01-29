@@ -28,7 +28,7 @@ variable "probe" {
         status_code = ["200"]
         body        = ""
       }
-    }
+    },
     {
       name: "http-9090-health-probe",
       pick_host_name_from_backend_http_settings: true,
