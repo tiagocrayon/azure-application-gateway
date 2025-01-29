@@ -15,15 +15,11 @@ variable "rewrite_rule_set" {
         components = optional(string)
         reroute    = optional(bool)
       }))
-      # request_header_configuration = optional(object({
-      #   header_name    = string
-      #   header_value   = string
-      # }))
     }))
   }))
   default = [
     {
-      name = "rule-rewrite-1"
+      name = "rule-rewrite"
       rewrite_rule = [
         {
           name          = "NewRewrite1"
@@ -38,25 +34,6 @@ variable "rewrite_rule_set" {
             path       = "/default"
             components = "path_only"
             reroute    = true
-          }
-        }
-      ]
-    },
-    {
-      name = "rule-rewrite-2"
-      rewrite_rule = [
-        {
-          name          = "NewRewrite2"
-          rule_sequence = 200
-          condition = {
-            variable    = "http_req_header_referer"
-            pattern     = "www\\.360imprimir\\.com\\.br/(Administrative|Areas/Administrative)"
-            ignore_case = true
-            negate      = true
-          }
-          request_header_configuration = {
-            header_name  = "X-Admin-Request"
-            header_value = "true"
           }
         }
       ]
