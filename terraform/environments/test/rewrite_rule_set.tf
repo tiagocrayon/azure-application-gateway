@@ -10,11 +10,11 @@ variable "rewrite_rule_set" {
         ignore_case = bool
         negate      = bool
       })
-      url = object({
+      url = optional(object({
         path       = string
         components = string
         reroute    = bool
-      })
+      }))
     }))
   }))
   default = [
@@ -33,7 +33,7 @@ variable "rewrite_rule_set" {
           url = {
             path       = "/default"
             components = "path_only"
-            reroute    = true
+            reroute    = false
           }
         }
       ]

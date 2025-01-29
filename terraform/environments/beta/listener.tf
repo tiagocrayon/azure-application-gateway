@@ -68,7 +68,7 @@ variable "listener" {
       host_names                     = ["studiocoreapi.beta.360imprimir.dev"]
     },
     {
-      name                           = "studiocoreapi_beta_dev-listener-https-9090"
+      name                           = "studiocoreapi_beta_com-listener-https-9090"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-9090"
       protocol                       = "Https"
@@ -108,7 +108,7 @@ variable "listener" {
       host_names                     = ["userimagesservice.beta.360imprimir.pt"]
     },
     {
-      name                           = "userimagesservice_beta_pt-listener-https-9291"
+      name                           = "userimagesservicebr_beta_dev-listener-https-9291"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-9291"
       protocol                       = "Https"

@@ -6,6 +6,11 @@ variable "backend_pools" {
   }))
   default = [
     {
+      name: "BACKEND.DEFAULT",
+      ip_addresses: ["10.0.10.0"],
+      fqdns: null
+    },
+    {
       name: "BACKEND.STORE-BETA-VMSS",
       ip_addresses: ["10.7.10.14"],
       fqdns: null

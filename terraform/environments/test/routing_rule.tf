@@ -18,7 +18,7 @@ variable "routing_rule" {
       url_path_map_name           = "bizayHeaderAllow-YOUTRACK-url-path-map"
       backend_address_pool_name   = "BACKEND.YOUTRACK"
       backend_http_settings_name  = "Http-settings-8112"
-    }
+    },
     {
       name                        = "YOUTRACK-route-rule-http"
       priority                    = 2

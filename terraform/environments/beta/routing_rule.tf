@@ -14,14 +14,14 @@ variable "routing_rule" {
     #REDIRECT HTTP
     {
       name                        = "beta_bizay_ca-route-rule-http-80"
-      priority                    = 49
+      priority                    = 1
       rule_type                   = "Basic"
       http_listener_name          = "beta_bizay_ca-listener-http-80"
       redirect_configuration_name = "redirect-beta-bizay-ca"
     },
     {
       name                        = "beta_bizay_ro-route-rule-http-80"
-      priority                    = 49
+      priority                    = 2
       rule_type                   = "Basic"
       http_listener_name          = "beta_bizay_ro-listener-http-80"
       redirect_configuration_name = "redirect-beta-bizay-com-ro"
@@ -45,7 +45,7 @@ variable "routing_rule" {
     },
     {
       name                        = "360imprimir_beta_pt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 4
       http_listener_name          = "360imprimir_beta_pt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -53,7 +53,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studio360eventsourcing_beta_dev-route-rule-https-9590"
-      priority                    = 3
+      priority                    = 5
       http_listener_name          = "studio360eventsourcing_beta_dev-listener-https-9590"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -61,7 +61,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studio360eventsourcing_beta_com-route-rule-https-9590"
-      priority                    = 3
+      priority                    = 6
       http_listener_name          = "studio360eventsourcing_beta_com-listener-https-9590"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -69,7 +69,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studiocoreapi_beta_dev-route-rule-https-9090"
-      priority                    = 3
+      priority                    = 7
       http_listener_name          = "studiocoreapi_beta_dev-listener-https-9090"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -77,7 +77,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studiocoreapi_beta_com-route-rule-https-9090"
-      priority                    = 3
+      priority                    = 8
       http_listener_name          = "studiocoreapi_beta_com-listener-https-9090"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -85,7 +85,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studiotemplateapi_beta_dev-route-rule-https-9190"
-      priority                    = 3
+      priority                    = 9
       http_listener_name          = "studiotemplateapi_beta_dev-listener-https-9190"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -93,7 +93,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studiotemplateapi_beta_com-route-rule-https-9190"
-      priority                    = 3
+      priority                    = 10
       http_listener_name          = "studiotemplateapi_beta_com-listener-https-9190"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -101,7 +101,7 @@ variable "routing_rule" {
     },
     {
       name                        = "userimagesservicept_beta_dev-route-rule-https-9290"
-      priority                    = 3
+      priority                    = 11
       http_listener_name          = "userimagesservicept_beta_dev-listener-https-9290"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -109,7 +109,7 @@ variable "routing_rule" {
     },
     {
       name                        = "userimagesservice_beta_pt-route-rule-https-9290"
-      priority                    = 3
+      priority                    = 12
       http_listener_name          = "userimagesservice_beta_pt-listener-https-9290"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -117,7 +117,7 @@ variable "routing_rule" {
     },
     {
       name                        = "userimagesservicebr_beta_dev-route-rule-https-9291"
-      priority                    = 3
+      priority                    = 13
       http_listener_name          = "userimagesservicebr_beta_dev-listener-https-9291"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -125,7 +125,7 @@ variable "routing_rule" {
     },
     {
       name                        = "userimagesservice_beta_com_br-route-rule-https-9291"
-      priority                    = 3
+      priority                    = 14
       http_listener_name          = "userimagesservice_beta_com_br-listener-https-9291"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -133,7 +133,7 @@ variable "routing_rule" {
     },
     {
       name                        = "userimagesservicemx_beta_dev-route-rule-https-9292"
-      priority                    = 3
+      priority                    = 15
       http_listener_name          = "userimagesservicemx_beta_dev-listener-https-9292"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -141,7 +141,7 @@ variable "routing_rule" {
     },
     {
       name                        = "userimagesservice_beta_com_mx-route-rule-https-9292"
-      priority                    = 3
+      priority                    = 16
       http_listener_name          = "userimagesservice_beta_com_mx-listener-https-9292"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -149,7 +149,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studiotemplategenerator_beta_com-route-rule-https-9490"
-      priority                    = 3
+      priority                    = 17
       http_listener_name          = "studiotemplategenerator_beta_com-listener-https-9490"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -157,7 +157,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studiotemplategenerator_beta_dev-route-rule-https-9490"
-      priority                    = 3
+      priority                    = 18
       http_listener_name          = "studiotemplategenerator_beta_dev-listener-https-9490"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -165,7 +165,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studioclient_beta_pt-route-rule-https-9192"
-      priority                    = 3
+      priority                    = 19
       http_listener_name          = "studioclient_beta_pt-listener-https-9192"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -173,7 +173,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studioclient_beta_com_br-route-rule-https-9193"
-      priority                    = 3
+      priority                    = 20
       http_listener_name          = "studioclient_beta_com_br-listener-https-9193"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -181,7 +181,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studioclient_beta_com_mx-route-rule-https-9194"
-      priority                    = 3
+      priority                    = 21
       http_listener_name          = "studioclient_beta_com_mx-listener-https-9194"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -189,7 +189,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studioclientpt_beta_dev-route-rule-https-9292"
-      priority                    = 3
+      priority                    = 22
       http_listener_name          = "studioclientpt_beta_dev-listener-https-9292"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -197,7 +197,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studioclientbr_beta_dev-route-rule-https-9193"
-      priority                    = 3
+      priority                    = 23
       http_listener_name          = "studioclientbr_beta_dev-listener-https-9193"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -205,7 +205,7 @@ variable "routing_rule" {
     },
     {
       name                        = "studioclientmx_beta_dev-route-rule-https-9194"
-      priority                    = 3
+      priority                    = 24
       http_listener_name          = "studioclientmx_beta_dev-listener-https-9194"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2"
@@ -213,7 +213,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta2masterapi-route-rule-https-443"
-      priority                    = 3
+      priority                    = 25
       http_listener_name          = "beta2masterapi-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -221,7 +221,7 @@ variable "routing_rule" {
     },
     {
       name                        = "betaapimaster-route-rule-https-443"
-      priority                    = 3
+      priority                    = 26
       http_listener_name          = "betaapimaster-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -229,7 +229,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_master-route-rule-https-443"
-      priority                    = 3
+      priority                    = 27
       http_listener_name          = "beta_master-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -237,7 +237,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_auth-route-rule-https-443"
-      priority                    = 3
+      priority                    = 28
       http_listener_name          = "beta_auth-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -245,7 +245,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_api_auth-route-rule-https-443"
-      priority                    = 3
+      priority                    = 29
       http_listener_name          = "beta_api_auth-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -253,7 +253,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_studio-route-rule-https-443"
-      priority                    = 3
+      priority                    = 30
       http_listener_name          = "beta_studio-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -261,7 +261,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_api_studio-route-rule-https-443"
-      priority                    = 3
+      priority                    = 31
       http_listener_name          = "beta_api_studio-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -269,7 +269,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_geoip-route-rule-https-443"
-      priority                    = 3
+      priority                    = 32
       http_listener_name          = "beta_geoip-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -277,7 +277,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessor_studio-route-rule-https-443"
-      priority                    = 3
+      priority                    = 33
       http_listener_name          = "beta_imgprocessor_studio-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -285,7 +285,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessorwebapi-route-rule-https-443"
-      priority                    = 3
+      priority                    = 34
       http_listener_name          = "beta_imgprocessorwebapi-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -293,7 +293,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessorwebapi_br-route-rule-https-443"
-      priority                    = 3
+      priority                    = 35
       http_listener_name          = "beta_imgprocessorwebapi_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -301,7 +301,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessorwebapi_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 36
       http_listener_name          = "beta_imgprocessorwebapi_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -309,7 +309,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessor_pt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 37
       http_listener_name          = "beta_imgprocessor_pt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -317,7 +317,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessor_br-route-rule-https-443"
-      priority                    = 3
+      priority                    = 38
       http_listener_name          = "beta_imgprocessor_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -325,7 +325,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imgprocessor_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 39
       http_listener_name          = "beta_imgprocessor_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.BE-BETA-VM01-BE-BETA-VM02"
@@ -333,7 +333,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_mailer_pt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 40
       http_listener_name          = "beta_mailer_pt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -341,7 +341,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_mailer_br-route-rule-https-443"
-      priority                    = 3
+      priority                    = 41
       http_listener_name          = "beta_mailer_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -349,7 +349,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_mailer_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 42
       http_listener_name          = "beta_mailer_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -357,7 +357,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_360onlineprint_com-route-rule-https-443"
-      priority                    = 3
+      priority                    = 43
       http_listener_name          = "beta_360onlineprint_com-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -365,7 +365,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_360onlineprint_ca-route-rule-https-443"
-      priority                    = 3
+      priority                    = 44
       http_listener_name          = "beta_360onlineprint_ca-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -373,7 +373,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_au-route-rule-https-443"
-      priority                    = 3
+      priority                    = 45
       http_listener_name          = "beta_bizay_au-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -381,7 +381,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_nz-route-rule-https-443"
-      priority                    = 3
+      priority                    = 46
       http_listener_name          = "beta_bizay_nz-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -389,7 +389,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_nz-route-rule-https-443"
-      priority                    = 3
+      priority                    = 47
       http_listener_name          = "beta_bizay_co_nz-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -397,7 +397,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_api_360imprimir_pt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 48
       http_listener_name          = "beta_api_360imprimir_pt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -405,7 +405,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_360imprimir_pt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 49
       http_listener_name          = "beta_360imprimir_pt-listener-https-443"
       # rule_type                   = "Basic"
       # backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -417,7 +417,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_360imprimir_es-route-rule-https-443"
-      priority                    = 3
+      priority                    = 50
       http_listener_name          = "beta_360imprimir_es-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -425,7 +425,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_at-route-rule-https-443"
-      priority                    = 3
+      priority                    = 51
       http_listener_name          = "beta_bizay_at-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -433,7 +433,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_be-route-rule-https-443"
-      priority                    = 3
+      priority                    = 52
       http_listener_name          = "beta_bizay_be-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -441,7 +441,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ch-route-rule-https-443"
-      priority                    = 3
+      priority                    = 53
       http_listener_name          = "beta_bizay_ch-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -449,7 +449,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_uk-route-rule-https-443"
-      priority                    = 3
+      priority                    = 54
       http_listener_name          = "beta_bizay_co_uk-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -457,7 +457,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_cz-route-rule-https-443"
-      priority                    = 3
+      priority                    = 55
       http_listener_name          = "beta_bizay_cz-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -465,7 +465,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_de-route-rule-https-443"
-      priority                    = 3
+      priority                    = 56
       http_listener_name          = "beta_bizay_de-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -473,7 +473,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_dk-route-rule-https-443"
-      priority                    = 3
+      priority                    = 57
       http_listener_name          = "beta_bizay_dk-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -481,7 +481,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_es-route-rule-https-443"
-      priority                    = 3
+      priority                    = 58
       http_listener_name          = "beta_bizay_es-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -489,7 +489,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_fi-route-rule-https-443"
-      priority                    = 3
+      priority                    = 59
       http_listener_name          = "beta_bizay_fi-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -497,7 +497,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_fr-route-rule-https-443"
-      priority                    = 3
+      priority                    = 60
       http_listener_name          = "beta_bizay_fr-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -505,7 +505,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ie-route-rule-https-443"
-      priority                    = 3
+      priority                    = 61
       http_listener_name          = "beta_bizay_ie-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -513,7 +513,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_it-route-rule-https-443"
-      priority                    = 3
+      priority                    = 62
       http_listener_name          = "beta_bizay_it-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -521,7 +521,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_no-route-rule-https-443"
-      priority                    = 3
+      priority                    = 63
       http_listener_name          = "beta_bizay_no-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -529,7 +529,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_nl-route-rule-https-443"
-      priority                    = 3
+      priority                    = 64
       http_listener_name          = "beta_bizay_nl-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -537,7 +537,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_pl-route-rule-https-443"
-      priority                    = 3
+      priority                    = 65
       http_listener_name          = "beta_bizay_pl-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -545,7 +545,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_pt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 66
       http_listener_name          = "beta_bizay_pt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -553,7 +553,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_se-route-rule-https-443"
-      priority                    = 3
+      priority                    = 67
       http_listener_name          = "beta_bizay_se-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -561,7 +561,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_za-route-rule-https-443"
-      priority                    = 3
+      priority                    = 68
       http_listener_name          = "beta_bizay_co_za-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -569,7 +569,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_ar-route-rule-https-443"
-      priority                    = 3
+      priority                    = 69
       http_listener_name          = "beta_bizay_com_ar-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -577,7 +577,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_bg-route-rule-https-443"
-      priority                    = 3
+      priority                    = 70
       http_listener_name          = "beta_bizay_bg-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -585,7 +585,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_cl-route-rule-https-443"
-      priority                    = 3
+      priority                    = 71
       http_listener_name          = "beta_bizay_cl-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -593,7 +593,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_cn-route-rule-https-443"
-      priority                    = 3
+      priority                    = 72
       http_listener_name          = "beta_bizay_com_cn-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -601,7 +601,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_hr-route-rule-https-443"
-      priority                    = 3
+      priority                    = 73
       http_listener_name          = "beta_bizay_hr-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -609,7 +609,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ee-route-rule-https-443"
-      priority                    = 3
+      priority                    = 74
       http_listener_name          = "beta_bizay_ee-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -617,7 +617,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_gr-route-rule-https-443"
-      priority                    = 3
+      priority                    = 75
       http_listener_name          = "beta_bizay_gr-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -625,7 +625,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_hk-route-rule-https-443"
-      priority                    = 3
+      priority                    = 76
       http_listener_name          = "beta_bizay_com_hk-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -633,7 +633,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_hu-route-rule-https-443"
-      priority                    = 3
+      priority                    = 77
       http_listener_name          = "beta_bizay_hu-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -641,7 +641,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_in-route-rule-https-443"
-      priority                    = 3
+      priority                    = 78
       http_listener_name          = "beta_bizay_co_in-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -649,7 +649,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_il-route-rule-https-443"
-      priority                    = 3
+      priority                    = 79
       http_listener_name          = "beta_bizay_co_il-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -657,7 +657,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_lv-route-rule-https-443"
-      priority                    = 3
+      priority                    = 80
       http_listener_name          = "beta_bizay_lv-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -665,7 +665,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_li-route-rule-https-443"
-      priority                    = 3
+      priority                    = 81
       http_listener_name          = "beta_bizay_li-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -673,7 +673,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_lt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 82
       http_listener_name          = "beta_bizay_lt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -681,7 +681,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_my-route-rule-https-443"
-      priority                    = 3
+      priority                    = 83
       http_listener_name          = "beta_bizay_com_my-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -689,7 +689,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_mt-route-rule-https-443"
-      priority                    = 3
+      priority                    = 84
       http_listener_name          = "beta_bizay_com_mt-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -697,7 +697,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_ma-route-rule-https-443"
-      priority                    = 3
+      priority                    = 85
       http_listener_name          = "beta_bizay_co_ma-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -705,7 +705,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_ph-route-rule-https-443"
-      priority                    = 3
+      priority                    = 86
       http_listener_name          = "beta_bizay_com_ph-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -713,7 +713,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_qa-route-rule-https-443"
-      priority                    = 3
+      priority                    = 87
       http_listener_name          = "beta_bizay_qa-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -721,7 +721,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_ro-route-rule-https-443"
-      priority                    = 3
+      priority                    = 88
       http_listener_name          = "beta_bizay_com_ro-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -729,7 +729,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ro-route-rule-https-443"
-      priority                    = 3
+      priority                    = 89
       http_listener_name          = "beta_bizay_ro-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -737,7 +737,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ru-route-rule-https-443"
-      priority                    = 3
+      priority                    = 90
       http_listener_name          = "beta_bizay_ru-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -745,7 +745,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_sg-route-rule-https-443"
-      priority                    = 3
+      priority                    = 91
       http_listener_name          = "beta_bizay_com_sg-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -753,7 +753,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_sk-route-rule-https-443"
-      priority                    = 3
+      priority                    = 92
       http_listener_name          = "beta_bizay_sk-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -761,7 +761,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_si-route-rule-https-443"
-      priority                    = 3
+      priority                    = 93
       http_listener_name          = "beta_bizay_si-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -769,7 +769,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_lu-route-rule-https-443"
-      priority                    = 3
+      priority                    = 94
       http_listener_name          = "beta_bizay_lu-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -777,7 +777,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_co_kr-route-rule-https-443"
-      priority                    = 3
+      priority                    = 95
       http_listener_name          = "beta_bizay_co_kr-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -785,7 +785,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_tr-route-rule-https-443"
-      priority                    = 3
+      priority                    = 96
       http_listener_name          = "beta_bizay_com_tr-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -793,7 +793,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ae-route-rule-https-443"
-      priority                    = 3
+      priority                    = 97
       http_listener_name          = "beta_bizay_ae-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -801,7 +801,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_api_360imprimir_com_br-route-rule-https-443"
-      priority                    = 3
+      priority                    = 98
       http_listener_name          = "beta_api_360imprimir_com_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -809,7 +809,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_360imprimir_com_br-route-rule-https-443"
-      priority                    = 3
+      priority                    = 99
       http_listener_name          = "beta_360imprimir_com_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -817,7 +817,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_br-route-rule-https-443"
-      priority                    = 3
+      priority                    = 100
       http_listener_name          = "beta_bizay_com_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -825,7 +825,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_api_360imprimir_com_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 101
       http_listener_name          = "beta_api_360imprimir_com_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -833,7 +833,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_360imprimir_com_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 102
       http_listener_name          = "beta_360imprimir_com_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -841,7 +841,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imprimir360_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 103
       http_listener_name          = "beta_imprimir360_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -849,7 +849,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_imprimir360_com_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 104
       http_listener_name          = "beta_imprimir360_com_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -857,7 +857,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_ca-route-rule-https-443"
-      priority                    = 3
+      priority                    = 105
       http_listener_name          = "beta_bizay_ca-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -865,7 +865,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com-route-rule-https-443"
-      priority                    = 3
+      priority                    = 106
       http_listener_name          = "beta_bizay_com-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -873,7 +873,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_bizay_com_mx-route-rule-https-443"
-      priority                    = 3
+      priority                    = 107
       http_listener_name          = "beta_bizay_com_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -881,7 +881,7 @@ variable "routing_rule" {
     },
     {
       name                        = "beta_us_bizay_com-route-rule-https-443"
-      priority                    = 3
+      priority                    = 108
       http_listener_name          = "beta_us_bizay_com-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
@@ -889,11 +889,15 @@ variable "routing_rule" {
     },
     {
       name                        = "api_youtrack_360imprimir_com-route-rule-https-443"
-      priority                    = 3
+      priority                    = 109
       http_listener_name          = "api_youtrack_360imprimir_com-listener-https-443"
-      rule_type                   = "Basic"
+      rule_type                   = "PathBasedRouting"
+      url_path_map_name           = "bizayHeaderAllow-YOUTRACK-url-path-map"
       backend_address_pool_name   = "BACKEND.YOUTRACK"
       backend_http_settings_name  = "Http-settings-8112"
+      # rule_type                   = "Basic"
+      # backend_address_pool_name   = "BACKEND.YOUTRACK"
+      # backend_http_settings_name  = "Http-settings-8112"
     }
   ]
 }
