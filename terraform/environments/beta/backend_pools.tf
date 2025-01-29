@@ -6,14 +6,24 @@ variable "backend_pools" {
   }))
   default = [
     {
-      name         = "BACKEND.YOUTRACK"
-      ip_addresses = ["40.68.203.166"]
-      fqdns        = null
+      name: "BACKEND.STORE-BETA-VMSS",
+      ip_addresses: ["10.7.10.14"],
+      fqdns: null
     },
     {
-      name         = "BACKEND.DEFAULT"
-      ip_addresses = ["20.160.204.211"]
-      fqdns        = null
+      name: "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+      ip_addresses: ["10.7.10.31", "10.7.10.32"],
+      fqdns: null
+    },
+    {
+      name: "BACKEND.BE-BETA-VM01-BE-BETA-VM02",
+      ip_addresses: ["10.7.10.21", "10.7.10.22"],
+      fqdns: null
+    },
+    {
+      name: "BACKEND.YOUTRACK",
+      ip_addresses: ["192.168.10.196"],
+      fqdns: null
     }
   ]
 }
