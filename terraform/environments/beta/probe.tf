@@ -44,38 +44,10 @@ variable "probe" {
       }
     },
     {
-      name: "swagger-index-http-9091-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9091,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
       name: "swagger-index-http-9190-health-probe",
       pick_host_name_from_backend_http_settings: true,
       protocol: "Http",
       port: 9190,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
-      name: "swagger-index-http-9191-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9191,
       path: "/swagger/index.html",
       interval: 30,
       timeout: 20,
@@ -128,48 +100,6 @@ variable "probe" {
       }
     },
     {
-      name: "swagger-index-http-9195-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9195,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
-      name: "swagger-index-http-9196-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9196,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
-      name: "swagger-index-http-9197-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9197,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
       name: "swagger-index-http-9290-health-probe",
       pick_host_name_from_backend_http_settings: true,
       protocol: "Http",
@@ -212,48 +142,6 @@ variable "probe" {
       }
     },
     {
-      name: "swagger-index-http-9293-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9293,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
-      name: "swagger-index-http-9294-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9294,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
-      name: "swagger-index-http-9295-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9295,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
       name: "swagger-index-http-9490-health-probe",
       pick_host_name_from_backend_http_settings: true,
       protocol: "Http",
@@ -268,38 +156,10 @@ variable "probe" {
       }
     },
     {
-      name: "swagger-index-http-9491-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9491,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
       name: "swagger-index-http-9590-health-probe",
       pick_host_name_from_backend_http_settings: true,
       protocol: "Http",
       port: 9590,
-      path: "/swagger/index.html",
-      interval: 30,
-      timeout: 20,
-      unhealthy_threshold: 3,
-      match: {
-        status_code: ["200"],
-        body: ""
-      }
-    },
-    {
-      name: "swagger-index-http-9591-health-probe",
-      pick_host_name_from_backend_http_settings: true,
-      protocol: "Http",
-      port: 9591,
       path: "/swagger/index.html",
       interval: 30,
       timeout: 20,

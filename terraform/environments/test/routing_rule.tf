@@ -15,11 +15,10 @@ variable "routing_rule" {
       priority                   = 1
       http_listener_name         = "YOUTRACK-listener-https"
       rule_type                  = "PathBasedRouting"
-      # backend_address_pool_name  = "BACKEND.YOUTRACK"
-      # backend_http_settings_name = "Http-settings-8112"
-      # rewrite_rule_set_name      = "rewrite-set-rule-hostname"
       url_path_map_name          = "YOUTRACK-url-path-map"
-    },
+      backend_address_pool_name   = "BACKEND.YOUTRACK"
+      backend_http_settings_name  = "Http-settings-8112"
+    }
     {
       name                        = "YOUTRACK-route-rule-http"
       priority                    = 2

@@ -18,26 +18,7 @@ variable "rewrite_rule_set" {
     }))
   }))
   default = [
-    {
-      name = "rule-rewrite"
-      rewrite_rule = [
-        {
-          name          = "NewRewrite1"
-          rule_sequence = 100
-          condition = {
-            variable    = "http_req_header_x-admin-request"
-            pattern     = "true"
-            ignore_case = true
-            negate      = true
-          }
-          url = {
-            path       = "/default"
-            components = "path_only"
-            reroute    = true
-          }
-        }
-      ]
-    }
+    
   ]
 }
 
