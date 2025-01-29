@@ -10,6 +10,74 @@ variable "routing_rule" {
     redirect_configuration_name = optional(string)
   }))
   default = [
+
+    #HTTP -> HTTPS
+    # http-request redirect code 301 location \ https://www.%[hdr(host)]%[capture.req.uri] if { hdr(host) -f /etc/haproxy/redirect2www.cfg } ! { hdr_beg(host) -f /etc/haproxy/redirect_beg_exceptions.cfg }
+    # HOST 360imprimir.com.mx definido em "360imprimir_Administrative_BR-route-rule-https-443"
+    # HOST bizay.ca definido em "BIZAY_CA_MX_360imprimir-route-rule-https-443"
+    # HOST bizay.com definido em "BIZAY_COM_US_MX_360imprimir-route-rule-https-443"
+
+    #https://www.360imprimir.com.mx
+    {
+      name                        = "360imprimir_com_mx-listener-https-443"
+      priority                    = 48
+      rule_type                   = "Basic"
+      backend_address_pool_name   = "BACKEND.PRD-NA-CT"
+      backend_http_settings_name  = "Http-settings-80"
+    },
+    {
+      name                        = "360imprimir_mx-route-rule-http-80"
+      priority                    = 49
+      rule_type                   = "Basic"
+      http_listener_name          = "360imprimir_mx-listener-http-80"
+      redirect_configuration_name = "redirect-360imprimir-mx"
+    },
+    {
+      name                        = "imprimir360_mx-route-rule-http-80"
+      priority                    = 50
+      rule_type                   = "Basic"
+      http_listener_name          = "imprimir360_mx-listener-http-80"
+      redirect_configuration_name = "redirect-imprimir360-mx"
+    },
+    {
+      name                        = "imprimir360_com_mx-route-rule-http-80"
+      priority                    = 51
+      rule_type                   = "Basic"
+      http_listener_name          = "imprimir360_com_mx-listener-http-80"
+      redirect_configuration_name = "redirect-imprimir360-com-mx"
+    },
+    #https://www.360imprimir.com.br
+    {
+      name                        = "360imprimir_com_br-listener-https-443"
+      priority                    = 52
+      rule_type                   = "PathBasedRouting"
+      url_path_map_name           = "360imprimir_Administrative_BR-url-path-map"
+      backend_address_pool_name   = "BACKEND.PRD-BR-CT"
+      backend_http_settings_name  = "Http-settings-82"
+    },
+    {
+      name                        = "360imprimir_com_br-route-rule-http-80"
+      priority                    = 53
+      rule_type                   = "Basic"
+      http_listener_name          = "360imprimir_com_br-listener-http-80"
+      redirect_configuration_name = "redirect-360imprimir-com-br"
+    },
+    {
+      name                        = "360print_com_br-route-rule-http-80"
+      priority                    = 54
+      rule_type                   = "Basic"
+      http_listener_name          = "360print_com_br-listener-http-80"
+      redirect_configuration_name = "redirect-360print-com-br"
+    },
+    {
+      name                        = "imprimir360_com_br-route-rule-http-80"
+      priority                    = 55
+      rule_type                   = "Basic"
+      http_listener_name          = "imprimir360_com_br-listener-http-80"
+      redirect_configuration_name = "redirect-imprimir360-com-br"
+    },
+
+    #HTTPS
     {
       name                        = "360imprimir_Administrative_BR-route-rule-https-443"
       priority                    = 1
@@ -209,14 +277,6 @@ variable "routing_rule" {
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
       backend_http_settings_name  = "Http-settings-9193"
-    },
-    {
-      name                        = "studio360client_mx_latam-route-rule-http-9193"
-      priority                    = 34
-      http_listener_name          = "studio360_360imprimir_br-listener-http-9193"
-      rule_type                   = "Basic"
-      backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
-      backend_http_settings_name  = "Http-settings-9193"
-    },
+    }
   ]
 }

@@ -41,6 +41,13 @@ variable "url_path_map" {
                 backend_http_settings_name = "Http-settings-8112"
                 backend_address_pool_name  = "BACKEND.YOUTRACK"
             },
+            {
+                name                       = "admin-referer-header"
+                paths                      = ["/*"]
+                rewrite_rule_set_name      = "rule-rewrite-1"
+                backend_http_settings_name = "Http-settings-8112"
+                backend_address_pool_name  = "BACKEND.YOUTRACK"
+            },
         ]
     }
   ]

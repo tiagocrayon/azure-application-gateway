@@ -9,6 +9,79 @@ variable "listener" {
     ssl_profile_id                  = optional(string)
   }))
   default = [
+    #HTTP -> HTTPS
+    # http-request redirect code 301 location \ https://www.%[hdr(host)]%[capture.req.uri] if { hdr(host) -f /etc/haproxy/redirect2www.cfg } ! { hdr_beg(host) -f /etc/haproxy/redirect_beg_exceptions.cfg }
+    # HOST 360imprimir.com.mx definido em "MX_360imprimir-listener-https-443"
+    # HOST 360imprimir.com.br definido em "360imprimir_Administrative_BR-listener-https-443"
+    # HOST bizay.ca definido em "BIZAY_CA_MX_360imprimir-listener-https-443"
+    # HOST bizay.com definido em "BIZAY_COM_US_MX_360imprimir-listener-https-443"
+
+
+    #https://www.360imprimir.com.mx
+    {
+      name                           = "360imprimir_com_mx-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      host_names                     = ["www.360imprimir.com.mx"]
+      ssl_certificate_name           = "certificado-1"
+    },
+    {
+      name                           = "360imprimir_mx-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["360imprimir.mx", "www.360imprimir.mx"]
+    },
+    {
+      name                           = "imprimir360_mx-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imprimir360.mx", "www.imprimir360.mx"]
+    },
+    {
+      name                           = "imprimir360_com_mx-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imprimir360.com.mx", "www.imprimir360.com.mx"]
+    },
+    #https://www.360imprimir.com.br
+    {
+      name                           = "360imprimir_com_br-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      host_names                     = ["www.360imprimir.com.br"]
+      ssl_certificate_name           = "certificado-1"
+    },
+    {
+      name                           = "360imprimir_com_br-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["360imprimi.com.br", "www.360imprimi.com.br"]
+    },
+    {
+      name                           = "360print_com_br-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["360print.com.br", "www.360print.com.br"]
+    },
+    {
+      name                           = "imprimir360_com_br-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imprimir360.com.br", "www.imprimir360.com.br"]
+    },
+
+
+    #HTTPS
+
+
     {
       name                           = "360imprimir_Administrative_BR-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
