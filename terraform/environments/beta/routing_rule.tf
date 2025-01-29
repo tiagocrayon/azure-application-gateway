@@ -10,7 +10,24 @@ variable "routing_rule" {
     redirect_configuration_name = optional(string)
   }))
   default = [
-    #HTTPS
+
+    #REDIRECT HTTP
+    {
+      name                        = "beta_bizay_ca-route-rule-http-80"
+      priority                    = 49
+      rule_type                   = "Basic"
+      http_listener_name          = "beta_bizay_ca-listener-http-80"
+      redirect_configuration_name = "redirect-beta-bizay-ca"
+    },
+    {
+      name                        = "beta_bizay_ro-route-rule-http-80"
+      priority                    = 49
+      rule_type                   = "Basic"
+      http_listener_name          = "beta_bizay_ro-listener-http-80"
+      redirect_configuration_name = "redirect-beta-bizay-com-ro"
+    },
+
+    #FORWARD HTPS
     {
       name                        = "360imprimir_beta_br-route-rule-https-443"
       priority                    = 3
@@ -771,12 +788,6 @@ variable "routing_rule" {
       backend_address_pool_name   = "BACKEND.STORE-BETA-VMSS"
       backend_http_settings_name  = "Http-settings-80"
     },
-
-
-
-
-
-    #SADSADADA
     {
       name                        = "beta_api_360imprimir_com_br-route-rule-https-443"
       priority                    = 3

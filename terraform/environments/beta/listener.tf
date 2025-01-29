@@ -9,6 +9,24 @@ variable "listener" {
     ssl_profile_id                  = optional(string)
   }))
   default = [
+    #REDIRECT HTTP
+    #https://beta.bizay.ca 
+    {
+      name                           = "beta_bizay_ca-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["beta.360onlineprint.ca"]
+    },
+    #https://beta.bizay.ro
+    {
+      name                           = "beta_bizay_ro-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["beta.bizay.ro"]
+    },
+    #FORWARD HTPS
     {
       name                           = "360imprimir_beta_br-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
@@ -769,13 +787,6 @@ variable "listener" {
       ssl_certificate_name           = "certificado-1"
       host_names                     = ["beta.bizay.ae"]
     },
-
-
-
-
-
-
-      #SADSADADA
     {
       name                           = "beta_api_360imprimir_com_br-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
