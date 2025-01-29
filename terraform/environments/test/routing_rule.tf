@@ -11,11 +11,11 @@ variable "routing_rule" {
   }))
   default = [
     {
-      name                       = "YOUTRACK-route-rule-https"
-      priority                   = 1
-      http_listener_name         = "YOUTRACK-listener-https"
-      rule_type                  = "PathBasedRouting"
-      url_path_map_name          = "YOUTRACK-url-path-map"
+      name                        = "YOUTRACK-route-rule-https"
+      priority                    = 1
+      http_listener_name          = "YOUTRACK-listener-https"
+      rule_type                   = "PathBasedRouting"
+      url_path_map_name           = "bizayHeaderAllow-YOUTRACK-url-path-map"
       backend_address_pool_name   = "BACKEND.YOUTRACK"
       backend_http_settings_name  = "Http-settings-8112"
     }

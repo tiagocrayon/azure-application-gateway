@@ -19,7 +19,7 @@ variable "rewrite_rule_set" {
   }))
   default = [
     {
-      name = "rule-rewrite-1"
+      name = "rule-rewrite-bizay-access-token"
       rewrite_rule = [
         {
           name          = "NewRewrite"
