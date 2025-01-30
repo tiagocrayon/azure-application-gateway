@@ -15,15 +15,30 @@ variable "listener" {
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-80"
       protocol                       = "Http"
-      host_names                     = ["imprimir.pt", "www.imprimir.pt", "imprimir360.pt", "www.imprimir360.pt"]
+      host_names                     = ["imprimir360.pt", "www.imprimir360.pt"]
+    },
+    {
+      name                           = "imprimir_pt-listener-https-443"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-443"
+      protocol                       = "Https"
+      ssl_certificate_name           = "certificado-1"
+      host_names                     =  ["imprimir.pt", "www.imprimir.pt"]
+    },
+    {
+      name                           = "imprimir_pt-listener-http-80"
+      frontend_ip_configuration_name = "public-frontend-ip"
+      frontend_port_name             = "port-80"
+      protocol                       = "Http"
+      host_names                     = ["imprimir.pt", "www.imprimir.pt"]
     },
     {
       name                           = "360print_pt-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-443"
       protocol                       = "Https"
-      host_names                     =  ["360print.pt", "www.360print.pt"]
       ssl_certificate_name           = "certificado-1"
+      host_names                     =  ["360print.pt", "www.360print.pt"]
     },
     {
       name                           = "360print_pt-listener-http-80"
@@ -40,7 +55,7 @@ variable "listener" {
       frontend_port_name             = "port-443"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["imprimir.pt", "www.imprimir.pt","www.360imprimir.pt" "360imprimir.pt"]
+      host_names                     = ["www.360imprimir.pt" "360imprimir.pt"]
     },
     {
       name                           = "360imprimir_es-listener-https-443"

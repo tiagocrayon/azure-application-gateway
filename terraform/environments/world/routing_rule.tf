@@ -19,6 +19,13 @@ variable "routing_rule" {
       redirect_configuration_name = "redirect-360imprimir-pt"
     },
     {
+      name                        = "imprimir_pt-route-rule-http-80"
+      priority                    = 1
+      rule_type                   = "Basic"
+      http_listener_name          = "imprimir_pt-listener-http-80"
+      redirect_configuration_name = "redirect-imprimir-pt"
+    },
+    {
       name                        = "360print_pt-route-rule-http-80"
       priority                    = 1
       rule_type                   = "Basic"
