@@ -6,11 +6,6 @@ variable "backend_pools" {
   }))
   default = [
     {
-      name         = "BACKEND.PRD-EU-BO"
-      ip_addresses = ["10.10.10.14"]
-      fqdns        = null
-    },
-    {
       name         = "BACKEND.BE-IP-PT1-BE-IP-PT2"
       ip_addresses = ["10.10.1.21", "10.10.1.22"]
       fqdns        = null
@@ -26,7 +21,7 @@ variable "backend_pools" {
       fqdns        = null
     },
     {
-      name         = "BACKEND.PRD-EU-CT"
+      name         = "BACKEND.PRD-EU-CT-BO"
       ip_addresses = ["10.10.10.14"]
       fqdns        = null
     },
