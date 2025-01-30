@@ -393,8 +393,7 @@ variable "routing_rule" {
       rule_type                    = "Basic"
       backend_address_pool_name    = "BACKEND.PRD-EU-CT-BO"
       backend_http_settings_name   = "Http-settings-80"
-    }
-
+    },
     {
       name                         = "bizay_co_il-route-rule-https-443"
       priority                     = 22
