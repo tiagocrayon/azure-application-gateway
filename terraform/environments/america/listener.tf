@@ -201,7 +201,7 @@ variable "listener" {
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
       host_names                     = ["imgprocessorwebapi.360imprimir.com.br"]
-    },
+    },                                    
     {
       name                           = "IMG_API_360imprimir_MX-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
@@ -211,20 +211,20 @@ variable "listener" {
       host_names                     = ["imgprocessorwebapi.360imprimir.com.mx"]
     },
     {
-      name                           = "studioclient_360imprimir_br_latam-listener-https-443"
+      name                           = "studioclient_360imprimir_br-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-443"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studioclient.360imprimir.com.br", "studioclientbr.360imprimir.latam"]
+      host_names                     = ["studioclient.360imprimir.com.br"]
     },
     {
-      name                           = "studioclient_360imprimir_mx_latam-listener-https-443"
+      name                           = "studioclient_360imprimir_mx-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-443"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studioclient.360imprimir.com.mx", "studioclientmx.360imprimir.latam"]
+      host_names                     = ["studioclient.360imprimir.com.mx"]
     },
     {
       name                           = "studio360coreapi-listener-https-9090"
@@ -232,7 +232,7 @@ variable "listener" {
       frontend_port_name             = "port-9090"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studiocoreapi.360imprimir.com", "studiocoreapi.360imprimir.latam"]
+      host_names                     = ["studiocoreapi.360imprimir.com"]
     },
     {
       name                           = "studio360eventsourcing-listener-https-9590"
@@ -240,7 +240,7 @@ variable "listener" {
       frontend_port_name             = "port-9590"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studioeventsourcing.360imprimir.com", "studioeventsourcing.360imprimir.latam"]
+      host_names                     = ["studioeventsourcing.360imprimir.com"]
     },
     {
       name                           = "studio360templateapi-listener-https-9190"
@@ -248,7 +248,7 @@ variable "listener" {
       frontend_port_name             = "port-9190"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studiotemplateapi.360imprimir.com", "studiotemplateapi.360imprimir.latam"]
+      host_names                     = ["studiotemplateapi.360imprimir.com"]
     },
     {
       name                           = "studiotemplategenerator-listener-https-443"
@@ -256,31 +256,31 @@ variable "listener" {
       frontend_port_name             = "port-443"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studiotemplategenerator.360imprimir.com", "studiotemplategenerator.360imprimir.latam"]
+      host_names                     = ["studiotemplategenerator.360imprimir.com"]
     },
     {
-      name                           = "userimagesservice_br_latam-listener-https-9291"
+      name                           = "userimagesservice_br-listener-https-9291"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-9291"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["userimagesservice.360imprimir.com.br", "userimagesservicebr.360imprimir.latam"]
+      host_names                     = ["userimagesservice.360imprimir.com.br"]
     },
     {
-      name                           = "userimagesservice_mx_latam-listener-https-9292"
+      name                           = "userimagesservice_mx-listener-https-9292"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-9292"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["userimagesservice.360imprimir.com.mx", "userimagesservicemx.360imprimir.latam"]
+      host_names                     = ["userimagesservice.360imprimir.com.mx"]
     },
     {
-      name                           = "studio360client_br_latam-listener-https-443"
+      name                           = "studio360client_br-listener-https-443"
       frontend_ip_configuration_name = "public-frontend-ip"
       frontend_port_name             = "port-443"
       protocol                       = "Https"
       ssl_certificate_name           = "certificado-1"
-      host_names                     = ["studioclientbr.360imprimir.com.br", "studioclientbr.360imprimir.latam"]
+      host_names                     = ["studioclientbr.360imprimir.com.br"]
     }
   ]
 }

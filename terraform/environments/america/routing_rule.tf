@@ -207,17 +207,17 @@ variable "routing_rule" {
       backend_http_settings_name  = "Http-settings-80"
     },
     {
-      name                        = "studioclient_360imprimir_br_latam-route-rule-https-443"
+      name                        = "studioclient_360imprimir_br-route-rule-https-443"
       priority                    = 33
-      http_listener_name          = "studioclient_360imprimir_br_latam-listener-https-443"
+      http_listener_name          = "studioclient_360imprimir_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
       backend_http_settings_name  = "Http-settings-9193"
     },
     {
-      name                        = "studioclient_360imprimir_mx_latam-route-rule-https-443"
+      name                        = "studioclient_360imprimir_mx-route-rule-https-443"
       priority                    = 170
-      http_listener_name          = "studioclient_360imprimir_mx_latam-listener-https-443"
+      http_listener_name          = "studioclient_360imprimir_mx-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
       backend_http_settings_name  = "Http-settings-9194"
@@ -255,25 +255,25 @@ variable "routing_rule" {
       backend_http_settings_name  = "Http-settings-9491"
     },
     {
-      name                        = "userimagesservice_br_latam-route-rule-https-9291"
+      name                        = "userimagesservice_br-route-rule-https-9291"
       priority                    = 130
-      http_listener_name          = "userimagesservice_br_latam-listener-https-9291"
+      http_listener_name          = "userimagesservice_br-listener-https-9291"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
       backend_http_settings_name  = "Http-settings-9291"
     },
     {
-      name                        = "userimagesservice_mx_latam-route-rule-https-9292"
+      name                        = "userimagesservice_mx-route-rule-https-9292"
       priority                    = 140
-      http_listener_name          = "userimagesservice_mx_latam-listener-https-9292"
+      http_listener_name          = "userimagesservice_mx-listener-https-9292"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
       backend_http_settings_name  = "Http-settings-9292"
     },
     {
-      name                        = "studio360client_br_latam-route-rule-https-443"
+      name                        = "studio360client_br-route-rule-https-443"
       priority                    = 160
-      http_listener_name          = "studio360client_br_latam-listener-https-443"
+      http_listener_name          = "studio360client_br-listener-https-443"
       rule_type                   = "Basic"
       backend_address_pool_name   = "BACKEND.LATAM-DOCKER"
       backend_http_settings_name  = "Http-settings-9193"
