@@ -26,10 +26,11 @@ resource "azurerm_application_gateway" "network" {
   location            = data.azurerm_resource_group.resource_group.location
 
   tags = {
-    environment = "beta"
-    owner = ""
-    createdAt = ""
-    costCenter = ""
+    project     = ""
+    department  = ""
+    environment = "" 
+    owner       = ""
+    costCenter  = ""
   }
 
   sku {
