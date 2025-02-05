@@ -109,7 +109,7 @@ resource "azurerm_application_gateway" "network" {
       frontend_ip_configuration_name = http_listener.value.frontend_ip_configuration_name
       frontend_port_name             = http_listener.value.frontend_port_name
       protocol                       = http_listener.value.protocol
-      host_names                      = http_listener.value.host_names
+      host_names                     = try(http_listener.value.host_names, null)
       ssl_certificate_name           = try(http_listener.value.ssl_certificate_name, null)
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
 
@@ -130,7 +130,7 @@ resource "azurerm_application_gateway" "network" {
     for_each = local.probes
     content {
       name                = probe.value.name
-      pick_host_name_from_backend_http_settings = probe.value.pick_host_name_from_backend_http_settings
+      pick_host_name_from_backend_http_settings = try(probe.value.pick_host_name_from_backend_http_settings, false)
       protocol            = probe.value.protocol
       port                = probe.value.port
       path                = probe.value.path
@@ -175,11 +175,11 @@ resource "azurerm_application_gateway" "network" {
   dynamic "rewrite_rule_set" {
     for_each = local.rewrite_rule_sets
     content {
-      name = rewrite_rule_set.value[0].name
+      name = rewrite_rule_set.value.name
 
       # Using dynamic block to define rewrite_rule inside rewrite_rule_set
       dynamic "rewrite_rule" {
-        for_each = rewrite_rule_set.value[0].rewrite_rule
+        for_each = rewrite_rule_set.value.rewrite_rule
         content {
           name          = rewrite_rule.value.name
           rule_sequence = rewrite_rule.value.rule_sequence
