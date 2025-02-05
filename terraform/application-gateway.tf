@@ -56,7 +56,7 @@ resource "azurerm_application_gateway" "network" {
 
   #frontend_port
   dynamic "frontend_port" {
-    for_each = module.environment.frontend_port  # Use the passed frontend_port variable
+    for_each = var.frontend_ports  # Use the passed frontend_port variable
     content {
       name = frontend_port.value.name
       port = frontend_port.value.port
@@ -70,7 +70,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Backends
   dynamic "backend_address_pool" {
-    for_each = module.environment.backend_pools
+    for_each = var.backend_pools
     content {
       name = backend_address_pool.value.name
       fqdns = backend_address_pool.value.fqdns != null ? [backend_address_pool.value.fqdns] : null
@@ -80,7 +80,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Backends Settings
   dynamic "backend_http_settings" {
-    for_each = module.environment.backend_settings
+    for_each = var.backend_settings
     content {
       name                  = backend_http_settings.value.name
       cookie_based_affinity = backend_http_settings.value.cookie_based_affinity
@@ -94,7 +94,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Listeners (referenced in request_routing_rule)
   dynamic "http_listener" {
-    for_each = module.environment.listener
+    for_each = var.listeners
     content {
       name                           = http_listener.value.name
       frontend_ip_configuration_name = http_listener.value.frontend_ip_configuration_name
@@ -105,7 +105,7 @@ resource "azurerm_application_gateway" "network" {
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
 
       dynamic "custom_error_configuration" {
-        for_each = module.environment.error_configuration
+        for_each = var.error_configurations
         content {
           status_code                   = custom_error_configuration.value.status_code
           custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
@@ -118,7 +118,7 @@ resource "azurerm_application_gateway" "network" {
   #   curl -X GET -H "Host: api.youtrack.360imprimir.com" https://20.8.48.39:443 --insecure -i
   # Health probe (reference in backend_http_settings )
   dynamic "probe" {
-    for_each = module.environment.probe
+    for_each = var.probes
     content {
       name                = probe.value.name
       host                = probe.value.host
@@ -138,7 +138,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Redirect Configuration (referenced in request_routing_rule)
   dynamic "redirect_configuration" {
-    for_each = module.environment.redirect_configuration
+    for_each = var.redirect_configurations
     content {
       name                   = redirect_configuration.value.name
       redirect_type          = redirect_configuration.value.redirect_type
@@ -150,7 +150,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Request Routing RUle
   dynamic "request_routing_rule" {
-    for_each = module.environment.routing_rule
+    for_each = var.routing_rules
     content {
       name                        = request_routing_rule.value.name
       priority                    = request_routing_rule.value.priority
@@ -165,7 +165,7 @@ resource "azurerm_application_gateway" "network" {
   
   #Rewrite Rule Set (referenced in request_routing_rule)
   dynamic "rewrite_rule_set" {
-    for_each = module.environment.rewrite_rule_set
+    for_each = var.rewrite_rule_sets
     content {
       name = rewrite_rule_set.value.name
 
@@ -195,7 +195,7 @@ resource "azurerm_application_gateway" "network" {
 
   #Url path map (referenced in request_routing_rule)
   dynamic "url_path_map" {
-    for_each = module.environment.url_path_map
+    for_each = var.url_path_maps
     content {
       name                               = url_path_map.value.name
       default_backend_address_pool_name  = url_path_map.value.default_backend_address_pool_name
@@ -217,7 +217,7 @@ resource "azurerm_application_gateway" "network" {
 
   # #GLOBAL  #custom_error_configuration
   # dynamic "custom_error_configuration" {
-  #   for_each = module.environment.error_configuration
+  #   for_each = var.error_configuration
   #   content {
   #     status_code                   = custom_error_configuration.value.status_code
   #     custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
