@@ -9,7 +9,7 @@
 # Backend_pools: simplificar, exist varios backend com o mesmo IP
 # Health Probes: verificar se permite custom headrs nas probes
 # Uniformizar health probes path se possivel, cria entropia nas configurações
-
+# https://registry.terraform.io/providers/bpedman/jsonschema/latest/docs/data-sources/jsonschema_validator
 
 
 
