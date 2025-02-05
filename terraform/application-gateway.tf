@@ -96,8 +96,8 @@ resource "azurerm_application_gateway" "network" {
       port                  = backend_http_settings.value.port
       protocol              = backend_http_settings.value.protocol
       request_timeout       = backend_http_settings.value.request_timeout
-      pick_host_name_from_backend_address = backend_http_settings.value.pick_host_name_from_backend_address
-      probe_name            = backend_http_settings.value.probe_name
+      pick_host_name_from_backend_address = try(backend_http_settings.value.pick_host_name_from_backend_address,null)
+      probe_name            = backend_http_settings.value.name
     }
   }
 
@@ -175,11 +175,11 @@ resource "azurerm_application_gateway" "network" {
   dynamic "rewrite_rule_set" {
     for_each = local.rewrite_rule_sets
     content {
-      name = rewrite_rule_set.value.name
+      name = rewrite_rule_set.value[0].name
 
       # Using dynamic block to define rewrite_rule inside rewrite_rule_set
       dynamic "rewrite_rule" {
-        for_each = rewrite_rule_set.value.rewrite_rule
+        for_each = rewrite_rule_set.value[0].rewrite_rule
         content {
           name          = rewrite_rule.value.name
           rule_sequence = rewrite_rule.value.rule_sequence
