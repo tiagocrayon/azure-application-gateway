@@ -10,8 +10,8 @@ terraform {
   backend "azurerm" {
     resource_group_name   = "TiagoIsabelinho"        # TODO
     storage_account_name  = "terraformstatestore9876"          # TODO
-    container_name        = "tf-states"    # TODO
-    key                    = "terraform.tfstate"         # State file name
+    container_name       = "tfstate"
+    key                  = "${terraform.workspace}.tfstate"
   }
 }
 
