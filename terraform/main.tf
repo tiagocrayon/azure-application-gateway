@@ -8,7 +8,7 @@ terraform {
   }
   # #REMOTE STATE
   # backend "azurerm" {
-  #   resource_group_name   = "TiagoIsabelinho"        # TODO
+  #   resource_group_name   = var.resource_group_name        # TODO
   #   storage_account_name  = "terraformstatestore9876"          # TODO
   #   container_name       = "tfstate"
   #   key                  = "${terraform.workspace}.tfstate"

@@ -1,20 +1,20 @@
 data "azurerm_resource_group" "resource_group" {
-  name = "TiagoIsabelinho"
+  name = var.resource_group_name
 }
 
 data "azurerm_virtual_network" "vnet" {
-  name                = "360imprimir-beta-vnw"
+  name                = var.virtual_network_name
   resource_group_name = data.azurerm_resource_group.resource_group.name
 }
 
 data "azurerm_subnet" "subnet" {
-  name                 = "default"
+  name                 = var.subnet_name
   virtual_network_name = data.azurerm_virtual_network.vnet.name
   resource_group_name  = data.azurerm_resource_group.resource_group.name
 }
 
 
 data "azurerm_public_ip" "public_ip" {
-  name                = "beta-agw-public-ip"
+  name                = var.public_ip_name
   resource_group_name = data.azurerm_resource_group.resource_group.name
 }

@@ -1,34 +1,4 @@
 
-# resource "azurerm_public_ip" "public_ip" {
-#   name                = "beta-agw-public-ip"
-#   resource_group_name = data.azurerm_resource_group.resource_group.name
-#   location            = data.azurerm_resource_group.resource_group.location
-#   allocation_method   = "Static"
-#   sku                 = "Standard" 
-#   zones               = ["1", "2", "3"]
-
-#   tags = {
-#     environment = "beta"
-#     owner = ""
-#     createdAt = ""
-#     costCenter = ""
-#     application = ""
-#   }
-#   # lifecycle {
-#   #   prevent_destroy = true
-#   # }
-# }
-
-
-# variable "set_password" {
-#   type = string
-# }
-
-
-output "backend_settings" {
-  value = local.backend_pools
-}
-
 resource "azurerm_application_gateway" "network" {
   name                = "360imprimir-beta-agw"
   resource_group_name = data.azurerm_resource_group.resource_group.name
