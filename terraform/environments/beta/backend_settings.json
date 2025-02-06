@@ -9,6 +9,13 @@
     "probe_name": "http-80-health-probe"
   },
   {
+    "name": "Https-settings-443",
+    "cookie_based_affinity": "Disabled",
+    "port": 443,
+    "protocol": "Https",
+    "request_timeout": 20
+  },
+  {
     "name": "Http-settings-8112",
     "cookie_based_affinity": "Disabled",
     "port": 8112,

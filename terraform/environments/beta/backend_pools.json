@@ -23,5 +23,330 @@
     "name": "BACKEND.YOUTRACK",
     "ip_addresses": ["192.168.10.196"],
     "fqdns": null
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-BILLINGSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-billingservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-CALCULATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-calculator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-CHILIEDITOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-chilieditor-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-CLIENTS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-clients-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-DATECALCULATION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-datecalculationservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-DELIVERY",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-delivery-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-DISCOUNTS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-discounts-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-FILEREVISION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-filerevision-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-LOGISTIC",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-logistic-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-PAYMENTSYSTEM",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-paymentsystem-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-POSTPRODUCTION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-postproduction-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-PRICING",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-pricing-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-PRODUCTIMAGES",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-productimages-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-PRODUCTIONSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-productionservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-PUBLICORDERSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-publicorderservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-PUBLICPRODUCTION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-publicproduction-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-RESOURCES",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-resources-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BR-STOREAGGREGATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-br-store-aggregator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-EU-EDITOR-BACKEND",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-eu-editor-backend.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-EU-EDITOR-FRONTEND",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-eu-editor-frontend.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-BILLINGSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-billingservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-CALCULATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-calculator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-CHILIEDITOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-chilieditor-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-CLIENTS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-clients-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-DATECALCULATION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-datecalculationservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-DELIVERY",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-delivery-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-DISCOUNTS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-discounts-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-FILEREVISION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-filerevision-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-LOGISTIC",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-logistic-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-PAYMENTSYSTEM",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-paymentsystem-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-POSTPRODUCTION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-postproduction-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-PRICING",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-pricing-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-PRODUCTIMAGES",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-productimages-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-PRODUCTIONSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-productionservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-PUBLICORDERSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-publicorderservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-PUBLICPRODUCTION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-publicproduction-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-RESOURCES",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-resources-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PT-STOREAGGREGATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-pt-store-aggregator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-BILLINGSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-billingservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-CALCULATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-calculator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-CHILIEDITOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-chilieditor-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-CLIENTS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-clients-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-DATECALCULATION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-datecalculationservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-DELIVERY",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-delivery-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-DISCOUNTS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-discounts-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-FILEREVISION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-filerevision-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-LOGISTIC",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-logistic-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-PAYMENTSYSTEM",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-paymentsystem-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-POSTPRODUCTION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-postproduction-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-PRICING",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-pricing-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-PRODUCTIMAGES",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-productimages-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-PRODUCTIONSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-productionservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-PUBLICORDERSERVICE",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-publicorderservice-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-PUBLICPRODUCTION",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-publicproduction-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-RESOURCES",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-resources-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MX-STOREAGGREGATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-mx-store-aggregator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-US-EDITOR-BACKEND",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-us-editor-backend.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-US-EDITOR-FRONTEND",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-us-editor-frontend.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-AUTH-SIL",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-auth-sil-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-BACKOFFICE-SIL",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-backoffice-sil-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-MASTER-AGGREGATOR",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-master-aggregator-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-PRODUCTREVIEWS",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-productreviews-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-BETA-SIL",
+    "ip_addresses": null,
+    "fqdns": ["bizay-beta-sil-api.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-TESTS-ADB2C-COMPAT",
+    "ip_addresses": null,
+    "fqdns": ["bizay-tests-adb2c-compat.azurewebsites.net"]
+  },
+  {
+    "name": "BACKEND.API-TESTS-MSGRAPH",
+    "ip_addresses": null,
+    "fqdns": ["bizay-tests-msgraph.azurewebsites.net"]
   }
 ]

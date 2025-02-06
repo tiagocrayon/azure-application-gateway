@@ -32,5 +32,423 @@
         "backend_http_settings_name": "Http-settings-8112"
       }
     ]
+  },
+  {
+    "name": "beta-sa-api-azurewebsites-url-path-map",
+    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    "path_rules": [
+      {
+        "name": "billingservice-api-target",
+        "paths": ["/billingservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-BILLINGSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "calculator-api-target",
+        "paths": ["/calculator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-CALCULATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "chilieditor-api-target",
+        "paths": ["/chilieditor-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-CHILIEDITOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "clients-api-target",
+        "paths": ["/clients-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-CLIENTS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "datecalculationservice-api-target",
+        "paths": ["/datecalculationservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-DATECALCULATION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "delivery-api-target",
+        "paths": ["/delivery-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-DELIVERY",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "discounts-api-target",
+        "paths": ["/discounts-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-DISCOUNTS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "filerevision-api-target",
+        "paths": ["/filerevision-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-FILEREVISION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "logistic-api-target",
+        "paths": ["/logistic-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-LOGISTIC",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "paymentsystem-api-target",
+        "paths": ["/paymentsystem-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-PAYMENTSYSTEM",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "postproduction-api-target",
+        "paths": ["/postproduction-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-POSTPRODUCTION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "pricing-api-target",
+        "paths": ["/pricing-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-PRICING",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productimages-api-target",
+        "paths": ["/productimages-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-PRODUCTIMAGES",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productionservice-api-target",
+        "paths": ["/productionservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-PRODUCTIONSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "publicorderservice-api-target",
+        "paths": ["/publicorderservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-PUBLICORDERSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "publicproduction-api-target",
+        "paths": ["/publicproduction-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-PUBLICPRODUCTION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "resources-api-target",
+        "paths": ["/resources-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-RESOURCES",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "store-aggregator-api-target",
+        "paths": ["/store-aggregator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BR-STOREAGGREGATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      }
+    ]
+  },
+  {
+    "name": "beta-eu-api-azurewebsites-url-path-map",
+    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    "path_rules": [
+      {
+        "name": "editor-backend-target",
+        "paths": ["/editor-backend"],
+        "backend_address_pool_name": "BACKEND.API-EU-EDITOR-BACKEND",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "editor-frontend-target",
+        "paths": ["/editor-frontend"],
+        "backend_address_pool_name": "BACKEND.API-EU-EDITOR-FRONTEND",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "billingservice-api-target",
+        "paths": ["/billingservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-BILLINGSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "calculator-api-target",
+        "paths": ["/calculator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-CALCULATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "chilieditor-api-target",
+        "paths": ["/chilieditor-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-CHILIEDITOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "clients-api-target",
+        "paths": ["/clients-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-CLIENTS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "datecalculationservice-api-target",
+        "paths": ["/datecalculationservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-DATECALCULATION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "delivery-api-target",
+        "paths": ["/delivery-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-DELIVERY",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "discounts-api-target",
+        "paths": ["/discounts-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-DISCOUNTS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "filerevision-api-target",
+        "paths": ["/filerevision-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-FILEREVISION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "logistic-api-target",
+        "paths": ["/logistic-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-LOGISTIC",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "paymentsystem-api-target",
+        "paths": ["/paymentsystem-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-PAYMENTSYSTEM",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "postproduction-api-target",
+        "paths": ["/postproduction-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-POSTPRODUCTION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "pricing-api-target",
+        "paths": ["/pricing-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-PRICING",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productimages-api-target",
+        "paths": ["/productimages-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-PRODUCTIMAGES",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productionservice-api-target",
+        "paths": ["/productionservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-PRODUCTIONSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "publicorderservice-api-target",
+        "paths": ["/publicorderservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-PUBLICORDERSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "publicproduction-api-target",
+        "paths": ["/publicproduction-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-PUBLICPRODUCTION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "resources-api-target",
+        "paths": ["/resources-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-RESOURCES",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "store-aggregator-api-target",
+        "paths": ["/store-aggregator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PT-STOREAGGREGATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      }
+    ]
+  },
+  {
+    "name": "beta-na-api-azurewebsites-url-path-map",
+    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    "path_rules": [
+      {
+        "name": "billingservice-api-target",
+        "paths": ["/billingservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-BILLINGSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "calculator-api-target",
+        "paths": ["/calculator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-CALCULATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "chilieditor-api-target",
+        "paths": ["/chilieditor-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-CHILIEDITOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "clients-api-target",
+        "paths": ["/clients-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-CLIENTS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "datecalculationservice-api-target",
+        "paths": ["/datecalculationservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-DATECALCULATION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "delivery-api-target",
+        "paths": ["/delivery-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-DELIVERY",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "discounts-api-target",
+        "paths": ["/discounts-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-DISCOUNTS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "filerevision-api-target",
+        "paths": ["/filerevision-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-FILEREVISION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "logistic-api-target",
+        "paths": ["/logistic-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-LOGISTIC",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "paymentsystem-api-target",
+        "paths": ["/paymentsystem-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-PAYMENTSYSTEM",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "postproduction-api-target",
+        "paths": ["/postproduction-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-POSTPRODUCTION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "pricing-api-target",
+        "paths": ["/pricing-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-PRICING",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productimages-api-target",
+        "paths": ["/productimages-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-PRODUCTIMAGES",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productionservice-api-target",
+        "paths": ["/productionservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-PRODUCTIONSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "publicorderservice-api-target",
+        "paths": ["/publicorderservice-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-PUBLICORDERSERVICE",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "publicproduction-api-target",
+        "paths": ["/publicproduction-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-PUBLICPRODUCTION",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "resources-api-target",
+        "paths": ["/resources-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-RESOURCES",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "store-aggregator-api-target",
+        "paths": ["/store-aggregator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MX-STOREAGGREGATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "editor-backend-target",
+        "paths": ["/editor-backend"],
+        "backend_address_pool_name": "BACKEND.API-BETA-US-EDITOR-BACKEND",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "editor-frontend-target",
+        "paths": ["/editor-frontend"],
+        "backend_address_pool_name": "BACKEND.API-BETA-US-EDITOR-FRONTEND",
+        "backend_http_settings_name": "Https-settings-443"
+      }
+    ]
+  },
+  {
+    "name": "beta-gl-api-azurewebsites-url-path-map",
+    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    "path_rules": [
+      {
+        "name": "auth-sil-api-target",
+        "paths": ["/auth-sil-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-AUTH-SIL",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "backoffice-sil-api-target",
+        "paths": ["/backoffice-sil-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-BACKOFFICE-SIL",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "master-aggregator-api-target",
+        "paths": ["/master-aggregator-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-MASTER-AGGREGATOR",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "productreviews-api-target",
+        "paths": ["/productreviews-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-PRODUCTREVIEWS",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "sil-api-target",
+        "paths": ["/sil-api"],
+        "backend_address_pool_name": "BACKEND.API-BETA-SIL",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "adb2c-compat-api-target",
+        "paths": ["/adb2c-compat"],
+        "backend_address_pool_name": "BACKEND.API-TESTS-ADB2C-COMPAT",
+        "backend_http_settings_name": "Https-settings-443"
+      },
+      {
+        "name": "msgraph-api-target",
+        "paths": ["/msgraph"],
+        "backend_address_pool_name": "BACKEND.API-TESTS-MSGRAPH",
+        "backend_http_settings_name": "Https-settings-443"
+      }
+    ]
   }
 ]
