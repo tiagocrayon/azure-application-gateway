@@ -1,7 +1,11 @@
 # azure-application-gateway
 
-# Create Resource Group, Virtual Network, Subnet and Public IP
-# Update variables.tf file with the name of the previous resources
+# Install Terraform CLI https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+
+# Create Storage Account and Container. State will be saved on storage account. Update backend block under terraform (see main-tf file)
+
+# Create Subscription, Resource Group, Virtual Network, Subnet and Public IP
+# Update variables.tf file with the id or name of the previous resources
 # Application Gateway is the only resource created through terraform, all the others resources are imported (Data Sources) to terraform.
 
 
@@ -43,22 +47,24 @@
 
 
 # TODO:
+# Authentication to azure ( Service Principal with a Client Secret ) https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
 # Check SSL Profile / Certificates; Necessario desdobramento dos listeners
 # COOKIES
 # Confirm listeners: ssl_certificate_name => host_names
 # Health Probes: verificar se permite custom headrs nas probes
 # Uniformizar health probes path se possivel, cria entropia nas configurações
+# Criar variaveis dinamicas consoante ambiente (reosurce groups, virtual network, ..)
 
 
 
 # Infrastruture: 
-# managed identity
-# service endpoint
+# managed identity (contexto segurança para aceder ao key vault)
+# service endpoint 
 # application gateway
 
 
 # Certificados: AZ-ACME, Key Vault
-# Storage Account: logs, states, e error htmls
+# Storage Account: logs, states, e error htmls (onde vao ser guardadas?)
 
 # Log Analytics
 

@@ -1,3 +1,9 @@
+variable "subscription_id" {
+  description = "Azure Subscription ID"
+  type        = string
+  default     = "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9"
+}
+
 variable "resource_group_name" {
   description = "Azure Resource Group"
   type        = string

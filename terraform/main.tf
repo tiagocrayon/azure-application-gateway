@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "4.15.0"
+      version = "4.17.0"
     }
   }
   # #REMOTE STATE
@@ -16,6 +16,6 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9"
+  subscription_id = var.subscription_id
   features {}
 }

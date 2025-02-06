@@ -1,8 +1,8 @@
 [
   {
-    "name": "Routing-Rule-FE-80-beta-hosts1-360onlineprint.ca-BE-80-redir",
+    "name": "Routing-Rule-FE-80-beta-hosts1-360onlineprint.ca-BE-443-redir",
     "priority": 1,
-    "http_listener_name": "Listener-FE-80-beta-hosts1-360onlineprint.ca-BE-80-redir",
+    "http_listener_name": "Listener-FE-80-beta-hosts1-360onlineprint.ca-BE-443-redir",
     "rule_type": "Basic",
     "redirect_configuration_name": "redirect-beta-hosts1-360onlineprint.ca-BE-80-redir"
   },
@@ -18,7 +18,7 @@
     "priority": 10,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",   //TODO CHECK
+    "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
     "backend_http_settings_name": "Http-settings-80"
   },
@@ -123,7 +123,7 @@
     "priority": 23,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.pt-BE-80-vmss",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",   //TODO CHECK
+    "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
     "backend_http_settings_name": "Http-settings-80"
   },
@@ -636,35 +636,27 @@
     "priority": 87,
     "http_listener_name": "Listener-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-sa-api-azurewebsites-url-path-map",
-    // "backend_address_pool_name": "BACKEND.DEFAULT", //TODO CHECK
-    // "backend_http_settings_name": "Https-settings-443"      //TODO CHECK
+    "url_path_map_name": "beta-sa-api-azurewebsites-url-path-map"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
     "priority": 88,
     "http_listener_name": "Listener-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-eu-api-azurewebsites-url-path-map",
-    // "backend_address_pool_name": "BACKEND.DEFAULT", //TODO CHECK
-    // "backend_http_settings_name": "Https-settings-443"      //TODO CHECK
+    "url_path_map_name": "beta-eu-api-azurewebsites-url-path-map"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
     "priority": 89,
     "http_listener_name": "Listener-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-na-api-azurewebsites-url-path-map",
-    // "backend_address_pool_name": "BACKEND.DEFAULT", //TODO CHECK
-    // "backend_http_settings_name": "Https-settings-443"      //TODO CHECK
+    "url_path_map_name": "beta-na-api-azurewebsites-url-path-map"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
     "priority": 90,
     "http_listener_name": "Listener-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-gl-api-azurewebsites-url-path-map",
-    // "backend_address_pool_name": "BACKEND.DEFAULT", //TODO CHECK
-    // "backend_http_settings_name": "Https-settings-443"      //TODO CHECK
+    "url_path_map_name": "beta-gl-api-azurewebsites-url-path-map"
   }
 ]  
