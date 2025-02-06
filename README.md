@@ -23,7 +23,7 @@
 
 
 # STATE
-# Terraform states are saved on a storage account (see main-tf, backend block under terraform)
+# Terraform states are saved on a storage account (see main-tf file, backend block under terraform)
 
 
 
