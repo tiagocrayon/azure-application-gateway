@@ -232,7 +232,17 @@ resource "azurerm_application_gateway" "network" {
   #   }
   # }
 
+
+
   #SSL Certificate (referenced in http_listener)
+  # dynamic "ssl_certificate" {
+  #   for_each = local.ssl_certificates
+  #   content {
+  #     name                   = ssl_certificate.value.name
+  #     key_vault_secret_id    = ssl_certificate.value.key_vault_secret_id
+  #   }
+  # }
+  
   ssl_certificate {
     name   = "certificado-1"
     data   = filebase64("C:/Users/tiaisabe/OneDrive - Crayon Group/Documentos/Projetos/Bizay/Cert/example_com.pfx")

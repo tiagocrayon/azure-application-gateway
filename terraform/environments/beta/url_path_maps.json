@@ -1,8 +1,8 @@
 [
   {
     "name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",
-    "default_backend_address_pool_name": "BACKEND.DEFAULT", //TODO CHECK
-    "default_backend_http_settings_name": "Http-settings-80", //TODO CHECK
+    // "default_backend_address_pool_name": "BACKEND.DEFAULT", //TODO CHECK
+    // "default_backend_http_settings_name": "Http-settings-80", //TODO CHECK
     "path_rules": [
       {
         "name": "multipaymentsystemcallback-all-target",
@@ -20,8 +20,8 @@
   },
   {
     "name": "beta-sa-api-azurewebsites-url-path-map",
-    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
-    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    // "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    // "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
     "path_rules": [
       {
         "name": "billingservice-api-target",
@@ -135,8 +135,8 @@
   },
   {
     "name": "beta-eu-api-azurewebsites-url-path-map",
-    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
-    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    // "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    // "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
     "path_rules": [
       {
         "name": "editor-backend-target",
@@ -262,8 +262,8 @@
   },
   {
     "name": "beta-na-api-azurewebsites-url-path-map",
-    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
-    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    // "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    // "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
     "path_rules": [
       {
         "name": "billingservice-api-target",
@@ -389,8 +389,8 @@
   },
   {
     "name": "beta-gl-api-azurewebsites-url-path-map",
-    "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
-    "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
+    // "default_backend_address_pool_name": "BACKEND.DEFAULT",  //TODO CHECK
+    // "default_backend_http_settings_name": "Http-settings-80",  //TODO CHECK
     "path_rules": [
       {
         "name": "auth-sil-api-target",
