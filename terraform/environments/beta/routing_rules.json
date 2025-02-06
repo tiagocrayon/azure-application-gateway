@@ -17,7 +17,8 @@
     "name": "Routing-Rule-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
     "priority": 10,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
-    "rule_type": "Basic",
+    "rule_type": "PathBasedRouting",
+    "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",  //TODO
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
     "backend_http_settings_name": "Http-settings-80"
   },
@@ -122,7 +123,7 @@
     "priority": 23,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.pt-BE-80-vmss",
     "rule_type": "PathBasedRouting",
-    "url_path_map_name": "paymentgw-STORE-BETA-VMSS-url-path-map",
+    "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",  //TODO
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
     "backend_http_settings_name": "Http-settings-80"
   },

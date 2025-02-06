@@ -22,7 +22,7 @@
     "frontend_port_name": "port-443",
     "protocol": "Https",
     "ssl_certificate_name": "certificado-1",
-    "host_names": ["beta.360imprimir.com.br","beta.mailer.360imprimir.com.br","beta.api.360imprimir.com.br","beta.360imprimir.com.br"]
+    "host_names": ["beta.360imprimir.com.br","beta.mailer.360imprimir.com.br","beta.api.360imprimir.com.br"]
   },
   {
     "name": "Listener-FE-9590-beta-wild-360imprimir.dev&.com-BE-9590-dck",
