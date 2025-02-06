@@ -1,15 +1,15 @@
 [
   {
-    "name": "redirect-beta-bizay-ca",
+    "name": "redirect-beta-hosts1-360onlineprint.ca-BE-80-redir",
     "redirect_type": "Permanent",
-    "target_listener_name": "beta_bizay_ca-listener-https-443",
+    "target_listener_name": "Listener-FE-443-beta-wild-bizay.ca-BE-80-vmss",
     "include_path": true,
     "include_query_string": true
   },
   {
-    "name": "redirect-beta-bizay-com-ro",
+    "name": "redirect-beta-hosts1-bizay.com.ro-BE-80-redir",
     "redirect_type": "Permanent",
-    "target_listener_name": "beta_bizay_ro-listener-https-443",
+    "target_listener_name": "Listener-FE-443-beta-wild-bizay.com.ro-BE-80-vmss",
     "include_path": true,
     "include_query_string": true
   }

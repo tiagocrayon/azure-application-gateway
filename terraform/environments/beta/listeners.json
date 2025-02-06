@@ -1,4 +1,21 @@
 [
+
+  {
+    "name": "Listener-FE-80-beta-hosts1-360onlineprint.ca-BE-80-redir",
+    "frontend_ip_configuration_name": "public-frontend-ip",
+    "frontend_port_name": "port-80",
+    "protocol": "Http",
+    "ssl_certificate_name": "certificado-1",
+    "host_names": ["beta.360onlineprint.ca"]
+  },
+  {
+    "name": "Listener-FE-80-beta-hosts1-bizay.com.ro-BE-80-redir",
+    "frontend_ip_configuration_name": "public-frontend-ip",
+    "frontend_port_name": "port-80",
+    "protocol": "Http",
+    "ssl_certificate_name": "certificado-1",
+    "host_names": ["beta.bizay.com.ro"]
+  },
   {
     "name": "Listener-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
     "frontend_ip_configuration_name": "public-frontend-ip",
@@ -563,8 +580,9 @@
   {
     "name": "Listener-FE-443-beta-wild-bizay.ro-BE-80-vmss",
     "frontend_ip_configuration_name": "public-frontend-ip",
-    "frontend_port_name": "port-80",
-    "protocol": "Http",
+    "frontend_port_name": "port-443",
+    "protocol": "Https",
+    "ssl_certificate_name": "certificado-1",
     "host_names": ["beta.bizay.ro"]
   },
   {

@@ -1,5 +1,19 @@
 [
   {
+    "name": "Routing-Rule-FE-80-beta-hosts1-360onlineprint.ca-BE-80-redir",
+    "priority": 1,
+    "http_listener_name": "Listener-FE-80-beta-hosts1-360onlineprint.ca-BE-80-redir",
+    "rule_type": "Basic",
+    "redirect_configuration_name": "redirect-beta-hosts1-360onlineprint.ca-BE-80-redir"
+  },
+  {
+    "name": "Routing-Rule-FE-80-beta-hosts1-bizay.com.ro-BE-80-redir",
+    "priority": 2,
+    "http_listener_name": "Listener-FE-80-beta-hosts1-bizay.com.ro-BE-80-redir",
+    "rule_type": "Basic",
+    "redirect_configuration_name": "redirect-beta-hosts1-bizay.com.ro-BE-80-redir"
+  },
+  {
     "name": "Routing-Rule-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
     "priority": 10,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
@@ -563,9 +577,10 @@
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ro-BE-80-vmss",
     "priority": 80,
-    "rule_type": "Basic",
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ro-BE-80-vmss",
-    "redirect_configuration_name": "redirect-beta-bizay-com-ro"   //TODO CHECK
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
+    "backend_http_settings_name": "Http-settings-80"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ru-BE-80-vmss",
