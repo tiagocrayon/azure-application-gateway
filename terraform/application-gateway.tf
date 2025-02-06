@@ -83,13 +83,14 @@ resource "azurerm_application_gateway" "network" {
       ssl_certificate_name           = try(http_listener.value.ssl_certificate_name, null)
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
 
-      dynamic "custom_error_configuration" {
-        for_each = local.error_configurations
-        content {
-          status_code                   = custom_error_configuration.value.status_code
-          custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
-        }
-      }
+      #TODO: não faz sentido, senão houver paginas erro especificas. Redundante com a configuração glocal
+      # dynamic "custom_error_configuration" {
+      #   for_each = local.error_configurations
+      #   content {
+      #     status_code                   = custom_error_configuration.value.status_code
+      #     custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
+      #   }
+      # }
     }
   }
 
@@ -193,14 +194,14 @@ resource "azurerm_application_gateway" "network" {
   }
 
 
-  # #GLOBAL  #custom_error_configuration
-  # dynamic "custom_error_configuration" {
-  #   for_each = local.error_configuration
-  #   content {
-  #     status_code                   = custom_error_configuration.value.status_code
-  #     custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
-  #   }
-  # }
+  #GLOBAL  #custom_error_configuration
+  dynamic "custom_error_configuration" {
+    for_each = local.error_configuration
+    content {
+      status_code                   = custom_error_configuration.value.status_code
+      custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
+    }
+  }
 
 
 
@@ -213,6 +214,8 @@ resource "azurerm_application_gateway" "network" {
   #   }
   # }
   
+
+  #TODO: add ceriticates to key vault
   ssl_certificate {
     name   = "certificado-1"
     data   = filebase64("C:/Users/tiaisabe/OneDrive - Crayon Group/Documentos/Projetos/Bizay/Cert/example_com.pfx")
