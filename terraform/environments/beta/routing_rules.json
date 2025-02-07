@@ -7,9 +7,9 @@
     "redirect_configuration_name": "redirect-beta-hosts1-360onlineprint.ca-BE-80-redir"
   },
   {
-    "name": "Routing-Rule-FE-80-beta-hosts1-bizay.com.ro-BE-80-redir",
+    "name": "Routing-Rule-FE-80-beta-hosts1-bizay.com.ro-BE-443-redir",
     "priority": 2,
-    "http_listener_name": "Listener-FE-80-beta-hosts1-bizay.com.ro-BE-80-redir",
+    "http_listener_name": "Listener-FE-80-beta-hosts1-bizay.com.ro-BE-443-redir",
     "rule_type": "Basic",
     "redirect_configuration_name": "redirect-beta-hosts1-bizay.com.ro-BE-80-redir"
   },
@@ -23,81 +23,81 @@
     "backend_http_settings_name": "Http-settings-80"
   },
   {
-    "name": "Routing-Rule-FE-9590-beta-wild-360imprimir.dev&.com-BE-9590-dck",
+    "name": "Routing-Rule-FE-9590-beta-wild-360imprimir.dev-.com-BE-9590-dck",
     "priority": 11,
-    "http_listener_name": "Listener-FE-9590-beta-wild-360imprimir.dev&.com-BE-9590-dck",
+    "http_listener_name": "Listener-FE-9590-beta-wild-360imprimir.dev-.com-BE-9590-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9590"
   },
   {
-    "name": "Routing-Rule-FE-9090-beta-wild-360imprimir.dev&.com-BE-9090-dck",
+    "name": "Routing-Rule-FE-9090-beta-wild-360imprimir.dev-.com-BE-9090-dck",
     "priority": 12,
-    "http_listener_name": "Listener-FE-9090-beta-wild-360imprimir.dev&.com-BE-9090-dck",
+    "http_listener_name": "Listener-FE-9090-beta-wild-360imprimir.dev-.com-BE-9090-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9090"
   },
   {
-    "name": "Routing-Rule-FE-9190-beta-wild-360imprimir.dev&.com-BE-9190-dck",
+    "name": "Routing-Rule-FE-9190-beta-wild-360imprimir.dev-.com-BE-9190-dck",
     "priority": 13,
-    "http_listener_name": "Listener-FE-9190-beta-wild-360imprimir.dev&.com-BE-9190-dck",
+    "http_listener_name": "Listener-FE-9190-beta-wild-360imprimir.dev-.com-BE-9190-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9190"
   },
   {
-    "name": "Routing-Rule-FE-9290-beta-wild-360imprimir.dev&.pt-BE-9290-dck",
+    "name": "Routing-Rule-FE-9290-beta-wild-360imprimir.dev-.pt-BE-9290-dck",
     "priority": 14,
-    "http_listener_name": "Listener-FE-9290-beta-wild-360imprimir.dev&.pt-BE-9290-dck",
+    "http_listener_name": "Listener-FE-9290-beta-wild-360imprimir.dev-.pt-BE-9290-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9290"
   },
   {
-    "name": "Routing-Rule-FE-9291-beta-wild-360imprimir.dev&.br-BE-9291-dck",
+    "name": "Routing-Rule-FE-9291-beta-wild-360imprimir.dev-.br-BE-9291-dck",
     "priority": 15,
-    "http_listener_name": "Listener-FE-9291-beta-wild-360imprimir.dev&.br-BE-9291-dck",
+    "http_listener_name": "Listener-FE-9291-beta-wild-360imprimir.dev-.br-BE-9291-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9291"
   },
   {
-    "name": "Routing-Rule-FE-9292-beta-wild-360imprimir.dev&.mx-BE-9292-dck",
+    "name": "Routing-Rule-FE-9292-beta-wild-360imprimir.dev-.mx-BE-9292-dck",
     "priority": 16,
-    "http_listener_name": "Listener-FE-9292-beta-wild-360imprimir.dev&.mx-BE-9292-dck",
+    "http_listener_name": "Listener-FE-9292-beta-wild-360imprimir.dev-.mx-BE-9292-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9292"
   },
   {
-    "name": "Routing-Rule-FE-9490-beta-wild-360imprimir.dev&.com-BE-9490-dck",
+    "name": "Routing-Rule-FE-9490-beta-wild-360imprimir.dev-.com-BE-9490-dck",
     "priority": 17,
-    "http_listener_name": "Listener-FE-9490-beta-wild-360imprimir.dev&.com-BE-9490-dck",
+    "http_listener_name": "Listener-FE-9490-beta-wild-360imprimir.dev-.com-BE-9490-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9490"
   },
   {
-    "name": "Routing-Rule-FE-9192-beta-wild-360imprimir.dev&.pt-BE-9192-dck",
+    "name": "Routing-Rule-FE-9192-beta-wild-360imprimir.dev-.pt-BE-9192-dck",
     "priority": 18,
-    "http_listener_name": "Listener-FE-9192-beta-wild-360imprimir.dev&.pt-BE-9192-dck",
+    "http_listener_name": "Listener-FE-9192-beta-wild-360imprimir.dev-.pt-BE-9192-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9192"
   },
   {
-    "name": "Routing-Rule-FE-9193-beta-wild-360imprimir.dev&.br-BE-9193-dck",
+    "name": "Routing-Rule-FE-9193-beta-wild-360imprimir.dev-.br-BE-9193-dck",
     "priority": 19,
-    "http_listener_name": "Listener-FE-9193-beta-wild-360imprimir.dev&.br-BE-9193-dck",
+    "http_listener_name": "Listener-FE-9193-beta-wild-360imprimir.dev-.br-BE-9193-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9193"
   },
   {
-    "name": "Routing-Rule-FE-9194-beta-wild-360imprimir.dev&.mx-BE-9194-dck",
+    "name": "Routing-Rule-FE-9194-beta-wild-360imprimir.dev-.mx-BE-9194-dck",
     "priority": 20,
-    "http_listener_name": "Listener-FE-9194-beta-wild-360imprimir.dev&.mx-BE-9194-dck",
+    "http_listener_name": "Listener-FE-9194-beta-wild-360imprimir.dev-.mx-BE-9194-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9194"

@@ -67,7 +67,7 @@ resource "azurerm_application_gateway" "network" {
       protocol              = backend_http_settings.value.protocol
       request_timeout       = backend_http_settings.value.request_timeout
       pick_host_name_from_backend_address = try(backend_http_settings.value.pick_host_name_from_backend_address,null)
-      probe_name            = try(backend_http_settings.value.name, null)
+      probe_name            = try(backend_http_settings.value.probe_name, null)
     }
   }
 
