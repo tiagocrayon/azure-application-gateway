@@ -52,8 +52,8 @@ resource "azurerm_application_gateway" "network" {
     for_each = local.backend_pools
     content {
       name = backend_address_pool.value.name
-      fqdns = backend_address_pool.value.fqdns != null ? [backend_address_pool.value.fqdns] : null
-      ip_addresses = backend_address_pool.value.ip_addresses != null ? backend_address_pool.value.ip_addresses : null
+      fqdns = try(backend_address_pool.value.fqdns, null)
+      ip_addresses = try(backend_address_pool.value.ip_addresses, null)
     }
   }
 
@@ -67,7 +67,7 @@ resource "azurerm_application_gateway" "network" {
       protocol              = backend_http_settings.value.protocol
       request_timeout       = backend_http_settings.value.request_timeout
       pick_host_name_from_backend_address = try(backend_http_settings.value.pick_host_name_from_backend_address,null)
-      probe_name            = backend_http_settings.value.name
+      probe_name            = try(backend_http_settings.value.name, null)
     }
   }
 
@@ -177,9 +177,9 @@ resource "azurerm_application_gateway" "network" {
     for_each = local.url_path_maps
     content {
       name                               = url_path_map.value.name
-      default_backend_address_pool_name  = url_path_map.value.default_backend_address_pool_name
-      default_backend_http_settings_name = url_path_map.value.default_backend_http_settings_name
-      default_rewrite_rule_set_name      = lookup(url_path_map.value, "default_rewrite_rule_set_name", null)
+      default_backend_address_pool_name  = try(url_path_map.value.default_backend_address_pool_name, null)
+      default_backend_http_settings_name = try(url_path_map.value.default_backend_http_settings_name, null)
+      default_rewrite_rule_set_name      = try(url_path_map.value.default_rewrite_rule_set_name, null)
 
       dynamic "path_rule" {
         for_each = lookup(url_path_map.value, "path_rules", [])
@@ -196,7 +196,7 @@ resource "azurerm_application_gateway" "network" {
 
   #GLOBAL  #custom_error_configuration
   dynamic "custom_error_configuration" {
-    for_each = local.error_configuration
+    for_each = local.error_configurations
     content {
       status_code                   = custom_error_configuration.value.status_code
       custom_error_page_url         = custom_error_configuration.value.custom_error_page_url

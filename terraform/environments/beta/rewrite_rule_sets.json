@@ -1,5 +1,4 @@
-{
-  "rewrite_rule_sets": [
+[
     {
       "name": "rule-rewrite-bizay-access-token",
       "rewrite_rule": [
@@ -20,5 +19,4 @@
         }
       ]
     }
-  ]
-}
+]
