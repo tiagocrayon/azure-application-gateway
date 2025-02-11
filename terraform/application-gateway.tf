@@ -5,11 +5,13 @@ resource "azurerm_application_gateway" "network" {
   location            = data.azurerm_resource_group.resource_group.location
 
   tags = {
-    project     = ""
-    department  = ""
-    environment = "" 
-    owner       = ""
-    costCenter  = ""
+    project       = ""
+    department    = ""
+    costCenter    = ""
+    bussinessUnit = ""
+    environment   = "${terraform.workspace}" 
+    owner         = ""
+    application   = ""
   }
 
   sku {

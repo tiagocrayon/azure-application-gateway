@@ -42,7 +42,9 @@
 # RUNNING TERRAFORM IN AUTOMATION: https://developer.hashicorp.com/terraform/tutorials/automation/automate-terraform
 
 
-
+# FUTURE PROJECTS
+## Azure Automation Runbook to stop/start no production environments
+## FinOps Project
 
 
 
