@@ -1,0 +1,458 @@
+[
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts1--beta-360imprimir-com"
+      name    = "hosts1--beta-360imprimir-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts1--beta-360imprimir-com-br"
+      name    = "hosts1--beta-360imprimir-com-br"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts1--beta-360imprimir-com-mx"
+      name    = "hosts1--beta-360imprimir-com-mx"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts1--beta-360imprimir-com-pt"
+      name    = "hosts1--beta-360imprimir-com-pt"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts1--beta-bizay-com"
+      name    = "hosts1--beta-bizay-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts2--beta-360imprimir-com"
+      name    = "hosts2--beta-360imprimir-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts2--beta-360imprimir-com-br"
+      name    = "hosts2--beta-360imprimir-com-br"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts2--beta-360imprimir-com-mx"
+      name    = "hosts2--beta-360imprimir-com-mx"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/hosts2--beta-360imprimir-com-pt"
+      name    = "hosts2--beta-360imprimir-com-pt"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--360imprimir-es"
+      name    = "wild--360imprimir-es"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-360imprimir-dev--wild--beta-360imprimir-com"
+      name    = "wild--beta-360imprimir-dev--wild--beta-360imprimir-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-360imprimir-dev--wild--beta-360imprimir-com-br"
+      name    = "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-br"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx"
+      name    = "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-360imprimir-dev--wild--beta-360imprimir-pt"
+      name    = "wild--beta-360imprimir-dev--wild--beta-360imprimir-pt"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-360onlineprint-ca"
+      name    = "wild--beta-360onlineprint-ca"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-360onlineprint-com"
+      name    = "wild--beta-360onlineprint-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ae"
+      name    = "wild--beta-bizay-ae"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-at"
+      name    = "wild--beta-bizay-at"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-au"
+      name    = "wild--beta-bizay-au"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-be"
+      name    = "wild--beta-bizay-be"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-bg"
+      name    = "wild--beta-bizay-bg"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ca"
+      name    = "wild--beta-bizay-ca"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ch"
+      name    = "wild--beta-bizay-ch"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-cl"
+      name    = "wild--beta-bizay-cl"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-il"
+      name    = "wild--beta-bizay-co-il"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-in"
+      name    = "wild--beta-bizay-co-in"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-kr"
+      name    = "wild--beta-bizay-co-kr"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-ma"
+      name    = "wild--beta-bizay-co-ma"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-nz"
+      name    = "wild--beta-bizay-co-nz"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-uk"
+      name    = "wild--beta-bizay-co-uk"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-co-za"
+      name    = "wild--beta-bizay-co-za"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-ar"
+      name    = "wild--beta-bizay-com-ar"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-br"
+      name    = "wild--beta-bizay-com-br"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-cn"
+      name    = "wild--beta-bizay-com-cn"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-hk"
+      name    = "wild--beta-bizay-com-hk"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-mt"
+      name    = "wild--beta-bizay-com-mt"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-mx"
+      name    = "wild--beta-bizay-com-mx"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-my"
+      name    = "wild--beta-bizay-com-my"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-ph"
+      name    = "wild--beta-bizay-com-ph"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-ro"
+      name    = "wild--beta-bizay-com-ro"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-sg"
+      name    = "wild--beta-bizay-com-sg"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-com-tr"
+      name    = "wild--beta-bizay-com-tr"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-cz"
+      name    = "wild--beta-bizay-cz"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-de"
+      name    = "wild--beta-bizay-de"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-dk"
+      name    = "wild--beta-bizay-dk"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ee"
+      name    = "wild--beta-bizay-ee"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-es"
+      name    = "wild--beta-bizay-es"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-fi"
+      name    = "wild--beta-bizay-fi"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-fr"
+      name    = "wild--beta-bizay-fr"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-gr"
+      name    = "wild--beta-bizay-gr"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-hr"
+      name    = "wild--beta-bizay-hr"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-hu"
+      name    = "wild--beta-bizay-hu"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ie"
+      name    = "wild--beta-bizay-ie"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-it"
+      name    = "wild--beta-bizay-it"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-li"
+      name    = "wild--beta-bizay-li"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-lt"
+      name    = "wild--beta-bizay-lt"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-lu"
+      name    = "wild--beta-bizay-lu"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-lv"
+      name    = "wild--beta-bizay-lv"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-nl"
+      name    = "wild--beta-bizay-nl"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-no"
+      name    = "wild--beta-bizay-no"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-nz"
+      name    = "wild--beta-bizay-nz"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-pl"
+      name    = "wild--beta-bizay-pl"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-pt"
+      name    = "wild--beta-bizay-pt"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-qa"
+      name    = "wild--beta-bizay-qa"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ro"
+      name    = "wild--beta-bizay-ro"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-ru"
+      name    = "wild--beta-bizay-ru"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-se"
+      name    = "wild--beta-bizay-se"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-si"
+      name    = "wild--beta-bizay-si"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-bizay-sk"
+      name    = "wild--beta-bizay-sk"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-imprimir360-com-mx"
+      name    = "wild--beta-imprimir360-com-mx"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--beta-imprimir360-mx"
+      name    = "wild--beta-imprimir360-mx"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--card--br-api-bizay-com"
+      name    = "wild--card--br-api-bizay-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--card--eu-api-bizay-com"
+      name    = "wild--card--eu-api-bizay-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--card--gl-api-bizay-com"
+      name    = "wild--card--gl-api-bizay-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--card--mx-api-bizay-com"
+      name    = "wild--card--mx-api-bizay-com"
+      tags    = {}
+  },
+  {
+      enabled = true
+      id      = "https://lab-bizay-kv-02.vault.azure.net/certificates/wild--card--pt-api-bizay-com"
+      name    = "wild--card--pt-api-bizay-com"
+      tags    = {}
+  }
+]
