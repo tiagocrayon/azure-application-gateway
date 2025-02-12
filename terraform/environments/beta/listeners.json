@@ -5,7 +5,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-80",
     "protocol": "Http",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360onlineprint-ca",
     "host_names": ["beta.360onlineprint.ca"]
   },
   {
@@ -13,7 +13,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-80",
     "protocol": "Http",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-ro",
     "host_names": ["beta.bizay.com.ro"]
   },
   {
@@ -21,7 +21,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
     "host_names": ["beta.360imprimir.com.br","beta.mailer.360imprimir.com.br","beta.api.360imprimir.com.br"]
   },
   {
@@ -29,7 +29,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9590",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com",
     "host_names": ["studioeventsourcing.beta.360imprimir.dev","studioeventsourcing.beta.360imprimir.com"]
   },
   {
@@ -37,7 +37,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9090",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com",
     "host_names": ["studiocoreapi.beta.360imprimir.dev", "studiocoreapi.beta.360imprimir.com"]
   },
   {
@@ -45,7 +45,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9190",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com",
     "host_names": ["studiotemplateapi.beta.360imprimir.dev","studiotemplateapi.beta.360imprimir.com"]
   },
   {
@@ -53,7 +53,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9290",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-pt",
     "host_names": ["userimagesservicept.beta.360imprimir.dev", "userimagesservice.beta.360imprimir.pt"]
   },
   {
@@ -61,7 +61,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9291",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
     "host_names": ["userimagesservicebr.beta.360imprimir.dev", "userimagesservice.beta.360imprimir.com.br"]
   },
   {
@@ -69,7 +69,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9292",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
     "host_names": ["userimagesservicemx.beta.360imprimir.dev","userimagesservice.beta.360imprimir.com.mx"]
   },
   {
@@ -77,7 +77,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9490",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com",
     "host_names": ["studiotemplategenerator.beta.360imprimir.com","studiotemplategenerator.beta.360imprimir.dev"]
   },
   {
@@ -85,7 +85,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9192",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-pt",
     "host_names": ["studioclient.beta.360imprimir.pt", "studioclientpt.beta.360imprimir.dev"]
   },
   {
@@ -93,7 +93,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9193",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
     "host_names": ["studioclient.beta.360imprimir.com.br", "studioclientbr.beta.360imprimir.dev"]
   },
   {
@@ -101,7 +101,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9194",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
     "host_names": ["studioclient.beta.360imprimir.com.mx","studioclientmx.beta.360imprimir.dev"]
   },
   {
@@ -109,7 +109,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
     "host_names": ["beta.mailer.360imprimir.com.mx","beta.api.360imprimir.com.mx", "beta.360imprimir.com.mx"]
   },
   {
@@ -117,7 +117,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com",
     "host_names": ["beta2masterapi.360imprimir.com", "beta.api.master.360imprimir.com", "beta.master.360imprimir.com",
                    "beta.auth.360imprimir.com", "beta.api.auth.360imprimir.com"]
   },
@@ -126,7 +126,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-pt",
     "host_names": ["beta.360imprimir.pt", "beta.mailer.360imprimir.pt", "beta.api.360imprimir.pt"]
   },
   {
@@ -134,7 +134,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com",
     "host_names": ["beta.bizay.com", "beta.us.bizay.com"]
   },
   {
@@ -142,7 +142,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
     "host_names": ["beta.imgprocessorwebapi.360imprimir.com.br", "beta.imgprocessor.360imprimir.com.br"]
   },
   {
@@ -150,7 +150,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
     "host_names": ["beta.imgprocessorwebapi.360imprimir.com.mx", "beta.imgprocessor.360imprimir.com.mx"]
   },
   {
@@ -158,15 +158,15 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
-    "host_names": ["beta.studio.360imprimir.com","beta.api.studio.360imprimir.com", "beta.geoip.360imprimir.com", "beta.imgprocessor.studio.360imprimir.com"]
+    "ssl_certificate_name": "hosts2--beta-360imprimir-com",
+    "host_names": ["beta.studio.360imprimir.com", "beta.api.studio.360imprimir.com", "beta.geoip.360imprimir.com", "beta.imgprocessor.studio.360imprimir.com"]
   },
   {
     "name": "Listener-FE-443-beta-hosts2-360imprimir.pt-BE-80-vm",
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "hosts2--beta-360imprimir-com-pt",
     "host_names": ["beta.imgprocessorwebapi.360imprimir.pt", "beta.imgprocessor.360imprimir.pt"]
   },
   {
@@ -174,7 +174,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--360imprimir-es",
     "host_names": ["beta.360imprimir.es"]
   },
   {
@@ -182,7 +182,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360onlineprint-ca",
     "host_names": ["beta.360onlineprint.ca"]
   },
   {
@@ -190,7 +190,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-360onlineprint-com",
     "host_names": ["beta.360onlineprint.com"]
   },
   {
@@ -198,7 +198,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ae",
     "host_names": ["beta.bizay.ae"]
   },
   {
@@ -206,7 +206,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-at",
     "host_names": ["beta.bizay.at"]
   },
   {
@@ -214,7 +214,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-au",
     "host_names": ["beta.bizay.au"]
   },
   {
@@ -222,7 +222,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-be",
     "host_names": ["beta.bizay.be"]
   },
   {
@@ -230,7 +230,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-bg",
     "host_names": ["beta.bizay.bg"]
   },
   {
@@ -238,7 +238,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ca",
     "host_names": ["beta.bizay.ca"]
   },
   {
@@ -246,7 +246,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ch",
     "host_names": ["beta.bizay.ch"]
   },
   {
@@ -254,7 +254,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-cl",
     "host_names": ["beta.bizay.cl"]
   },
   {
@@ -262,7 +262,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-il",
     "host_names": ["beta.bizay.co.il"]
   },
   {
@@ -270,7 +270,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-in",
     "host_names": ["beta.bizay.co.in"]
   },
   {
@@ -278,7 +278,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-kr",
     "host_names": ["beta.bizay.co.kr"]
   },
   {
@@ -286,7 +286,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-ma",
     "host_names": ["beta.bizay.co.ma"]
   },
   {
@@ -294,7 +294,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-nz",
     "host_names": ["beta.bizay.co.nz"]
   },
   {
@@ -302,7 +302,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-uk",
     "host_names": ["beta.bizay.co.uk"]
   },
   {
@@ -310,7 +310,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-za",
     "host_names": ["beta.bizay.co.za"]
   },
   {
@@ -318,7 +318,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-ar",
     "host_names": ["beta.bizay.com.ar"]
   },
   {
@@ -326,7 +326,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-br",
     "host_names": ["beta.bizay.com.br"]
   },
   {
@@ -334,7 +334,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-cn",
     "host_names": ["beta.bizay.com.cn"]
   },
   {
@@ -342,7 +342,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-hk",
     "host_names": ["beta.bizay.com.hk"]
   },
   {
@@ -350,7 +350,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-mt",
     "host_names": ["beta.bizay.com.mt"]
   },
   {
@@ -358,7 +358,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-mx",
     "host_names": ["beta.bizay.com.mx"]
   },
   {
@@ -366,7 +366,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-my",
     "host_names": ["beta.bizay.com.my"]
   },
   {
@@ -374,7 +374,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-ph",
     "host_names": ["beta.bizay.com.ph"]
   },
   {
@@ -382,7 +382,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-ro",
     "host_names": ["beta.bizay.com.ro"]
   },
   {
@@ -390,7 +390,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-sg",
     "host_names": ["beta.bizay.com.sg"]
   },
   {
@@ -398,7 +398,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-com-tr",
     "host_names": ["beta.bizay.com.tr"]
   },
   {
@@ -406,7 +406,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-cz",
     "host_names": ["beta.bizay.cz"]
   },
   {
@@ -414,7 +414,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-de",
     "host_names": ["beta.bizay.de"]
   },
   {
@@ -422,7 +422,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-dk",
     "host_names": ["beta.bizay.dk"]
   },
   {
@@ -430,7 +430,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ee",
     "host_names": ["beta.bizay.ee"]
   },
   {
@@ -438,7 +438,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-es",
     "host_names": ["beta.bizay.es"]
   },
   {
@@ -446,7 +446,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-fi",
     "host_names": ["beta.bizay.fi"]
   },
   {
@@ -454,7 +454,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-fr",
     "host_names": ["beta.bizay.fr"]
   },
   {
@@ -462,7 +462,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-gr",
     "host_names": ["beta.bizay.gr"]
   },
   {
@@ -470,7 +470,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-hr",
     "host_names": ["beta.bizay.hr"]
   },
   {
@@ -478,7 +478,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-hu",
     "host_names": ["beta.bizay.hu"]
   },
   {
@@ -486,7 +486,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ie",
     "host_names": ["beta.bizay.ie"]
   },
   {
@@ -494,7 +494,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-it",
     "host_names": ["beta.bizay.it"]
   },
   {
@@ -502,7 +502,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-li",
     "host_names": ["beta.bizay.li"]
   },
   {
@@ -510,7 +510,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-lt",
     "host_names": ["beta.bizay.lt"]
   },
   {
@@ -518,7 +518,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-lu",
     "host_names": ["beta.bizay.lu"]
   },
   {
@@ -526,7 +526,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-lv",
     "host_names": ["beta.bizay.lv"]
   },
   {
@@ -534,7 +534,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-nl",
     "host_names": ["beta.bizay.nl"]
   },
   {
@@ -542,7 +542,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-no",
     "host_names": ["beta.bizay.no"]
   },
   {
@@ -550,7 +550,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-co-nz",
     "host_names": ["beta.bizay.nz"]
   },
   {
@@ -558,7 +558,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-pl",
     "host_names": ["beta.bizay.pl"]
   },
   {
@@ -566,7 +566,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-pt",
     "host_names": ["beta.bizay.pt"]
   },
   {
@@ -574,7 +574,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-qa",
     "host_names": ["beta.bizay.qa"]
   },
   {
@@ -582,7 +582,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ro",
     "host_names": ["beta.bizay.ro"]
   },
   {
@@ -590,7 +590,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-ru",
     "host_names": ["beta.bizay.ru"]
   },
   {
@@ -598,7 +598,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-se",
     "host_names": ["beta.bizay.se"]
   },
   {
@@ -606,7 +606,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-si",
     "host_names": ["beta.bizay.si"]
   },
   {
@@ -614,7 +614,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-bizay-sk",
     "host_names": ["beta.bizay.sk"]
   },
   {
@@ -622,7 +622,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-imprimir360-com-mx",
     "host_names": ["beta.imprimir360.com.mx"]
   },
   {
@@ -630,7 +630,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--beta-imprimir360-mx",
     "host_names": ["beta.imprimir360.mx"]
   },
   {
@@ -638,7 +638,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--card--sa-api-bizay-com",
     "host_names": ["beta.sa.api.bizay.com"]
   },
   {
@@ -646,7 +646,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--card--eu-api-bizay-com",
     "host_names": ["beta.eu.api.bizay.com"]
   },
   {
@@ -654,7 +654,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--card--na-api-bizay-com",
     "host_names": ["beta.na.api.bizay.com"]
   },
   {
@@ -662,7 +662,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "certificado-1",
+    "ssl_certificate_name": "wild--card--gl-api-bizay-com",
     "host_names": ["beta.gl.api.bizay.com"]
   }
 ]  
