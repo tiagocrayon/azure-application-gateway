@@ -1,6 +1,306 @@
 [
     {
-        "name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",
-        "key_vault_secret_id " : ""
+        "name": "hosts1--beta-360imprimir-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts1--beta-360imprimir-com-br",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts1--beta-360imprimir-com-mx",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts1--beta-360imprimir-com-pt",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts1--beta-bizay-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts2--beta-360imprimir-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts2--beta-360imprimir-com-br",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts2--beta-360imprimir-com-mx",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "hosts2--beta-360imprimir-com-pt",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--360imprimir-es",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-br",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-pt",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-360onlineprint-ca",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-360onlineprint-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ae",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-at",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-au",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-be",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-bg",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ca",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ch",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-cl",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-il",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-in",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-kr",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-ma",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-nz",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-uk",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-co-za",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-ar",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-br",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-cn",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-hk",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-mt",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-mx",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-my",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-ph",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-ro",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-sg",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-com-tr",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-cz",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-de",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-dk",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ee",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-es",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-fi",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-fr",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-gr",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-hr",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-hu",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ie",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-it",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-li",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-lt",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-lu",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-lv",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-nl",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-no",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-nz",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-pl",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-pt",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-qa",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ro",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-ru",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-se",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-si",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-bizay-sk",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-imprimir360-com-mx",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--beta-imprimir360-mx",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--card--br-api-bizay-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--card--eu-api-bizay-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--card--gl-api-bizay-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--card--mx-api-bizay-com",
+        "key_vault_secret_id": ""
+    },
+    {
+        "name": "wild--card--pt-api-bizay-com",
+        "key_vault_secret_id": ""
     }
 ]
