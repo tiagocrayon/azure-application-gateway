@@ -40,6 +40,7 @@
 ## AZURE PROVIDER: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 ## APPLICATION GATEWAY RESOURCE: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway
 ## RUNNING TERRAFORM IN AUTOMATION: https://developer.hashicorp.com/terraform/tutorials/automation/automate-terraform
+## DEBUGGING https://developer.hashicorp.com/terraform/internals/debugging 
 
 
 # FUTURE PROJECTS
