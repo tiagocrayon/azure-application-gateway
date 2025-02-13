@@ -21,7 +21,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-br",
     "host_names": ["beta.360imprimir.com.br","beta.mailer.360imprimir.com.br","beta.api.360imprimir.com.br"]
   },
   {
@@ -53,7 +53,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9290",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-pt",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-pt",
     "host_names": ["userimagesservicept.beta.360imprimir.dev", "userimagesservice.beta.360imprimir.pt"]
   },
   {
@@ -61,7 +61,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9291",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-br",
     "host_names": ["userimagesservicebr.beta.360imprimir.dev", "userimagesservice.beta.360imprimir.com.br"]
   },
   {
@@ -69,7 +69,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9292",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx",
     "host_names": ["userimagesservicemx.beta.360imprimir.dev","userimagesservice.beta.360imprimir.com.mx"]
   },
   {
@@ -85,7 +85,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9192",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-pt",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-pt",
     "host_names": ["studioclient.beta.360imprimir.pt", "studioclientpt.beta.360imprimir.dev"]
   },
   {
@@ -93,7 +93,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9193",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-br",
     "host_names": ["studioclient.beta.360imprimir.com.br", "studioclientbr.beta.360imprimir.dev"]
   },
   {
@@ -101,7 +101,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-9194",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx",
     "host_names": ["studioclient.beta.360imprimir.com.mx","studioclientmx.beta.360imprimir.dev"]
   },
   {
@@ -109,7 +109,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx",
     "host_names": ["beta.mailer.360imprimir.com.mx","beta.api.360imprimir.com.mx", "beta.360imprimir.com.mx"]
   },
   {
@@ -126,7 +126,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-pt",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-pt",
     "host_names": ["beta.360imprimir.pt", "beta.mailer.360imprimir.pt", "beta.api.360imprimir.pt"]
   },
   {
@@ -134,7 +134,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-bizay-com",
+    "ssl_certificate_name": "hosts1--beta-bizay-com",
     "host_names": ["beta.bizay.com", "beta.us.bizay.com"]
   },
   {
@@ -142,7 +142,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
+    "ssl_certificate_name": "hosts2--beta-360imprimir-com-br",
     "host_names": ["beta.imgprocessorwebapi.360imprimir.com.br", "beta.imgprocessor.360imprimir.com.br"]
   },
   {
@@ -150,7 +150,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "wild--beta-360imprimir-com-mx",
+    "ssl_certificate_name": "wild--beta-360imprimir-dev--wild--beta-360imprimir-com-mx",
     "host_names": ["beta.imgprocessorwebapi.360imprimir.com.mx", "beta.imgprocessor.360imprimir.com.mx"]
   },
   {
@@ -632,37 +632,5 @@
     "protocol": "Https",
     "ssl_certificate_name": "wild--beta-imprimir360-mx",
     "host_names": ["beta.imprimir360.mx"]
-  },
-  {
-    "name": "Listener-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
-    "frontend_ip_configuration_name": "public-frontend-ip",
-    "frontend_port_name": "port-443",
-    "protocol": "Https",
-    "ssl_certificate_name": "wild--card--sa-api-bizay-com",
-    "host_names": ["beta.sa.api.bizay.com"]
-  },
-  {
-    "name": "Listener-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
-    "frontend_ip_configuration_name": "public-frontend-ip",
-    "frontend_port_name": "port-443",
-    "protocol": "Https",
-    "ssl_certificate_name": "wild--card--eu-api-bizay-com",
-    "host_names": ["beta.eu.api.bizay.com"]
-  },
-  {
-    "name": "Listener-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
-    "frontend_ip_configuration_name": "public-frontend-ip",
-    "frontend_port_name": "port-443",
-    "protocol": "Https",
-    "ssl_certificate_name": "wild--card--na-api-bizay-com",
-    "host_names": ["beta.na.api.bizay.com"]
-  },
-  {
-    "name": "Listener-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
-    "frontend_ip_configuration_name": "public-frontend-ip",
-    "frontend_port_name": "port-443",
-    "protocol": "Https",
-    "ssl_certificate_name": "wild--card--gl-api-bizay-com",
-    "host_names": ["beta.gl.api.bizay.com"]
   }
 ]  
