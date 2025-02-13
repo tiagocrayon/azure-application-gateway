@@ -630,33 +630,5 @@
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
     "backend_http_settings_name": "Http-settings-80"
-  },
-  {
-    "name": "Routing-Rule-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
-    "priority": 87,
-    "http_listener_name": "Listener-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
-    "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-sa-api-azurewebsites-url-path-map"
-  },
-  {
-    "name": "Routing-Rule-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
-    "priority": 88,
-    "http_listener_name": "Listener-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
-    "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-eu-api-azurewebsites-url-path-map"
-  },
-  {
-    "name": "Routing-Rule-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
-    "priority": 89,
-    "http_listener_name": "Listener-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
-    "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-na-api-azurewebsites-url-path-map"
-  },
-  {
-    "name": "Routing-Rule-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
-    "priority": 90,
-    "http_listener_name": "Listener-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
-    "rule_type": "PathBasedRouting",
-    "url_path_map_name": "beta-gl-api-azurewebsites-url-path-map"
   }
 ]  
