@@ -28,6 +28,19 @@ variable "public_ip_name" {
   default     = "beta-agw-public-ip"
 }
 
+variable "user_assigned_name" {
+  description = "User Assigned Identity"
+  type        = string
+  default     = "appgw-managed-identity"
+}
+
+variable "keyvault_name" {
+  description = "Key Vault Name"
+  type        = string
+  default     = "lab-bizay-kv-02"
+}
+
+
 
 
 locals {

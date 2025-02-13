@@ -34,6 +34,12 @@ resource "azurerm_application_gateway" "network" {
     subnet_id = data.azurerm_subnet.subnet.id
   }
 
+  identity {
+    type = "UserAssigned"
+    identity_ids = [
+        data.azurerm_user_assigned_identity.user_assigned.id
+    ]
+  }
 
   #frontend_port
   dynamic "frontend_port" {
@@ -206,22 +212,13 @@ resource "azurerm_application_gateway" "network" {
   }
 
 
-
   #SSL Certificate (referenced in http_listener)
-  # dynamic "ssl_certificate" {
-  #   for_each = local.ssl_certificates
-  #   content {
-  #     name                   = ssl_certificate.value.name
-  #     key_vault_secret_id    = ssl_certificate.value.key_vault_secret_id
-  #   }
-  # }
-  
-
-  #TODO: add ceriticates to key vault
-  ssl_certificate {
-    name   = "certificado-1"
-    data   = filebase64("C:/Users/tiaisabe/OneDrive - Crayon Group/Documentos/Projetos/Bizay/Cert/example_com.pfx")
-    password = "admin123"  # Set the password for your PFX certificate
-    # key_vault_secret_id = ""  # data.azurerm_key_vault.certificate.id
+  dynamic "ssl_certificate" {
+    for_each = local.ssl_certificates
+    content {
+      name                   = ssl_certificate.value.name
+      key_vault_secret_id    = ssl_certificate.value.key_vault_secret_id
+    }
   }
+  
 }

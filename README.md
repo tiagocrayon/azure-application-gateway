@@ -49,7 +49,7 @@
 
 
 # TODO:
-## Authentication to azure ( Service Principal with a Client Secret ) https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
+## Authentication to azure ( Service Principal with a Client Secret ) https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret; Permissoes para o key vault
 ## Check SSL Profile / Certificates; Necessario desdobramento dos listeners
 ## COOKIES
 ## Confirm listeners: ssl_certificate_name => host_names
