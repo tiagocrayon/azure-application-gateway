@@ -43,10 +43,10 @@ resource "azurerm_application_gateway" "network" {
 
   #frontend_port
   dynamic "frontend_port" {
-    for_each = local.frontend_ports  # Use the passed frontend_port variable
+    for_each = local.frontend_ports
     content {
-      name = frontend_port.value.name
-      port = frontend_port.value.port
+      name = "port-${frontend_port.value}"
+      port = frontend_port.value
     }
   }
 
