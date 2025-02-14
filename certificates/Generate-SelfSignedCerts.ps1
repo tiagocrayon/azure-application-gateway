@@ -11,8 +11,8 @@ $context = Set-AzContext -SubscriptionId "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9" 
 # Configuration
 # -----------------------------------------------
 # Path to the CSV file. Update this path as needed.
-$csvPath = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\HAProxyAGWRuleListV9.0Beta.csv"
-$az-acmeCmdLines  = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\az-acmeCmdLines.txt"
+$csvPath = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\HAProxyAGWRuleListV10.0Beta.csv"
+# $az-acmeCmdLines  = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\az-acmeCmdLines.txt"
 
 # Temporary password for the PFX file.
 # NOTE: In a production scenario, use a more secure method to handle credentials.
@@ -130,4 +130,4 @@ foreach ($group in $certGroups) {
 
     Write-Output "Certificate '$certName' has been imported into KeyVault '$keyVaultName'."
 }
-$certAcmeList | Out-File -FilePath $azacmeCmdLines  = "C:\res\OneDrv\jorge.bravo@crayon.com\OneDrive - Crayon Group\res\Crayon\Projects\Bizay\AGW\Scripts\Generate-SelfSigned\az-acmeCmdLines.txt"
+# $certAcmeList | Out-File -FilePath $azacmeCmdLines  = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\az-acmeCmdLines.txt"

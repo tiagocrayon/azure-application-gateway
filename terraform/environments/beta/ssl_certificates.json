@@ -38,7 +38,7 @@
     {
         "name": "wild--bizay-com",
         "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--bizay-com"
-    }
+    },
     {
         "name": "wild--beta-bizay-com",
         "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com"
