@@ -15,8 +15,8 @@ resource "azurerm_application_gateway" "network" {
   }
 
   sku {
-    name     = "Standard_v2" # "Basic"
-    tier     = "Standard_v2" # "Basic"
+    name     = "Standard_v2"
+    tier     = "Standard_v2"
     capacity = 1
   }
 
@@ -91,19 +91,10 @@ resource "azurerm_application_gateway" "network" {
       ssl_certificate_name           = try(http_listener.value.ssl_certificate_name, null)
       ssl_profile_id                 = try(http_listener.value.ssl_profile_id, null)
 
-      #TODO: não faz sentido, senão houver paginas erro especificas. Redundante com a configuração glocal
-      # dynamic "custom_error_configuration" {
-      #   for_each = local.error_configurations
-      #   content {
-      #     status_code                   = custom_error_configuration.value.status_code
-      #     custom_error_page_url         = custom_error_configuration.value.custom_error_page_url
-      #   }
-      # }
+      #TODO: dynamic "custom_error_configuration" associado a cada listener
     }
   }
 
-  # # curl -X GET -H "Host: api.youtrack.360imprimir.com" -H "bizay-access-token: PBJHf4FhpJgaEAm8" https://20.8.48.39:443 --insecure -i
-  #   curl -X GET -H "Host: api.youtrack.360imprimir.com" https://20.8.48.39:443 --insecure -i
   # Health probe (reference in backend_http_settings )
   dynamic "probe" {
     for_each = local.probes
@@ -156,7 +147,6 @@ resource "azurerm_application_gateway" "network" {
     content {
       name = rewrite_rule_set.value.name
 
-      # Using dynamic block to define rewrite_rule inside rewrite_rule_set
       dynamic "rewrite_rule" {
         for_each = rewrite_rule_set.value.rewrite_rule
         content {
