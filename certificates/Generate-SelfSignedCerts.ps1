@@ -101,10 +101,10 @@ foreach ($group in $certGroups) {
     # Import Certificate into Azure KeyVault
     # -----------------------------------------------
 
-    Import-AzKeyVaultCertificate -VaultName $keyVaultName `
-                                 -Name $certName `
-                                 -FilePath $pfxPath `
-                                 -Password $pfxPassword
+#    Import-AzKeyVaultCertificate -VaultName $keyVaultName `
+#                                 -Name $certName `
+#                                 -FilePath $pfxPath `
+#                                 -Password $pfxPassword
 
     # -----------------------------------------------
     $certAcmeCmdLine = 'az-acme order ' `
@@ -130,4 +130,4 @@ foreach ($group in $certGroups) {
 
     Write-Output "Certificate '$certName' has been imported into KeyVault '$keyVaultName'."
 }
-$certAcmeList | Out-File -FilePath $az-acmeCmdLines  = "C:\res\OneDrv\jorge.bravo@crayon.com\OneDrive - Crayon Group\res\Crayon\Projects\Bizay\AGW\Scripts\Generate-SelfSigned\az-acmeCmdLines.txt"
+$certAcmeList | Out-File -FilePath $azacmeCmdLines  = "C:\res\OneDrv\jorge.bravo@crayon.com\OneDrive - Crayon Group\res\Crayon\Projects\Bizay\AGW\Scripts\Generate-SelfSigned\az-acmeCmdLines.txt"
