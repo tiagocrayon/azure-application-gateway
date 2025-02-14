@@ -1,14 +1,18 @@
-Disconnect-AzAccount
-$conn = Connect-AzAccount -DeviceCode -TenantId ""
+Disconnect-AzAccount -Scope Process
+Clear-AzContext -Force
+# Disconnect-AzAccount
+$conn = Connect-AzAccount -DeviceCode -TenantId "39d93467-64d3-4e3b-aab5-f3fdf5bc949e"
 
-$context = Set-AzContext -SubscriptionId "" # Microsoft Partner Network - Owner
+$context = Set-AzContext -SubscriptionId "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9" # Microsoft Partner Network - Owner
+
 
 
 # -----------------------------------------------
 # Configuration
 # -----------------------------------------------
 # Path to the CSV file. Update this path as needed.
-$csvPath = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\HAProxyAGWRuleListV7.0BetaSINGLE.csv"
+$csvPath = "C:\res\OneDrv\jorge.bravo@crayon.com\OneDrive - Crayon Group\res\Crayon\Projects\Bizay\AGW\Scripts\Generate-SelfSigned\HAProxyAGWRuleListV9.0Beta.csv"
+$az-acmeCmdLines  = "C:\res\OneDrv\jorge.bravo@crayon.com\OneDrive - Crayon Group\res\Crayon\Projects\Bizay\AGW\Scripts\Generate-SelfSigned\az-acmeCmdLines.txt"
 
 # Temporary password for the PFX file.
 # NOTE: In a production scenario, use a more secure method to handle credentials.
@@ -20,6 +24,8 @@ $pfxPassword = ConvertTo-SecureString -String $pfxPasswordPlain -Force -AsPlainT
 # -----------------------------------------------
 # Ensure the Az.KeyVault module is available.
 Import-Module Az.KeyVault -ErrorAction Stop
+
+$certAcmeList = @()
 
 # -----------------------------------------------
 # Read and Filter CSV Data
@@ -58,13 +64,17 @@ foreach ($group in $certGroups) {
         $sanList += $hostnames
     }
     # Remove duplicate SANs.
-    $sanList = $sanList | Select-Object -Unique
+    if (@($sanList).Count -gt 1) {
+        $sanList = $sanList | Select-Object -Unique
+    }
 
     # If the certificate name starts with "wild", add the wildcard SAN.
     if ($certName -like "wild*") {
-        $wildcardSAN = "*." + $domain
         if (-not ($sanList -contains $wildcardSAN)) {
-            $sanList += $wildcardSAN
+            $sanList += "*.$domain"
+        }
+        if (-not ($sanList -contains $domain)) {
+            $sanList += $domain
         }
     }
 
@@ -90,14 +100,34 @@ foreach ($group in $certGroups) {
     # -----------------------------------------------
     # Import Certificate into Azure KeyVault
     # -----------------------------------------------
+
     Import-AzKeyVaultCertificate -VaultName $keyVaultName `
                                  -Name $certName `
                                  -FilePath $pfxPath `
                                  -Password $pfxPassword
 
-    # Cleanup: Remove the temporary PFX file.
+    # -----------------------------------------------
+    $certAcmeCmdLine = 'az-acme order ' `
+                                + '--key-vault-uri "https://bizay-aag-test.vault.azure.net/" ' `
+                                + '--certificate "bizay-at" ' `
+                                + '--server "https://acme-v02.api.letsencrypt.org/directory" ' `
+                                + '--subject ' + $domain + ' ' `
+                                + '--sans ' + $($sanList -join ' ') + ' ' `
+                                + '--account-secret "test" ' `
+                                + '--dns-provider Cloudflare ' `
+                                + '--cf-zone-id "" ' `
+                                + '--cf-api-token "" ' `
+                                + '--renew-within-days 30 ' `
+                                + '--force-order ' `
+                                + '--verbose'
+
+    $certAcmeList += $certAcmeCmdLine
+
+ 
+                                 # Cleanup: Remove the temporary PFX file.
     Remove-Item -Path $pfxPath
     Remove-Item -Path "Cert:\CurrentUser\My\$($cert.Thumbprint)" -DeleteKey
 
     Write-Output "Certificate '$certName' has been imported into KeyVault '$keyVaultName'."
 }
+$certAcmeList | Out-File -FilePath $az-acmeCmdLines  = "C:\res\OneDrv\jorge.bravo@crayon.com\OneDrive - Crayon Group\res\Crayon\Projects\Bizay\AGW\Scripts\Generate-SelfSigned\az-acmeCmdLines.txt"
