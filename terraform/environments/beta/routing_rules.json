@@ -31,9 +31,25 @@
     "backend_http_settings_name": "Http-settings-9590"
   },
   {
+    "name": "Routing-Rule-FE-9590-beta-wild-360imprimir.com-BE-9590-dck",
+    "priority": 11,
+    "http_listener_name": "Listener-FE-9590-beta-wild-360imprimir.com-BE-9590-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9590"
+  },
+  {
     "name": "Routing-Rule-FE-9090-beta-wild-360imprimir.dev-.com-BE-9090-dck",
     "priority": 12,
     "http_listener_name": "Listener-FE-9090-beta-wild-360imprimir.dev-.com-BE-9090-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9090"
+  },
+  {
+    "name": "Routing-Rule-FE-9090-beta-wild-360imprimir.com-BE-9090-dck",
+    "priority": 12,
+    "http_listener_name": "Listener-FE-9090-beta-wild-360imprimir.com-BE-9090-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9090"
@@ -47,9 +63,25 @@
     "backend_http_settings_name": "Http-settings-9190"
   },
   {
+    "name": "Routing-Rule-FE-9190-beta-wild-360imprimir.com-BE-9190-dck",
+    "priority": 13,
+    "http_listener_name": "Listener-FE-9190-beta-wild-360imprimir.com-BE-9190-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9190"
+  },
+  {
     "name": "Routing-Rule-FE-9290-beta-wild-360imprimir.dev-.pt-BE-9290-dck",
     "priority": 14,
     "http_listener_name": "Listener-FE-9290-beta-wild-360imprimir.dev-.pt-BE-9290-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9290"
+  },
+  {
+    "name": "Routing-Rule-FE-9290-beta-wild-360imprimir.pt-BE-9290-dck",
+    "priority": 14,
+    "http_listener_name": "Listener-FE-9290-beta-wild-360imprimir.pt-BE-9290-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9290"
@@ -63,9 +95,25 @@
     "backend_http_settings_name": "Http-settings-9291"
   },
   {
+    "name": "Routing-Rule-FE-9291-beta-wild-360imprimir.com.br-BE-9291-dck",
+    "priority": 15,
+    "http_listener_name": "Listener-FE-9291-beta-wild-360imprimir.com.br-BE-9291-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9291"
+  },
+  {
     "name": "Routing-Rule-FE-9292-beta-wild-360imprimir.dev-.mx-BE-9292-dck",
     "priority": 16,
     "http_listener_name": "Listener-FE-9292-beta-wild-360imprimir.dev-.mx-BE-9292-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9292"
+  },
+  {
+    "name": "Routing-Rule-FE-9292-beta-wild-360imprimir.mx-BE-9292-dck",
+    "priority": 16,
+    "http_listener_name": "Listener-FE-9292-beta-wild-360imprimir.mx-BE-9292-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9292"
@@ -79,9 +127,25 @@
     "backend_http_settings_name": "Http-settings-9490"
   },
   {
+    "name": "Routing-Rule-FE-9490-beta-wild-360imprimir.com-BE-9490-dck",
+    "priority": 17,
+    "http_listener_name": "Listener-FE-9490-beta-wild-360imprimir.com-BE-9490-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9490"
+  },
+  {
     "name": "Routing-Rule-FE-9192-beta-wild-360imprimir.dev-.pt-BE-9192-dck",
     "priority": 18,
     "http_listener_name": "Listener-FE-9192-beta-wild-360imprimir.dev-.pt-BE-9192-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9192"
+  },
+  {
+    "name": "Routing-Rule-FE-9192-beta-wild-360imprimir.pt-BE-9192-dck",
+    "priority": 18,
+    "http_listener_name": "Listener-FE-9192-beta-wild-360imprimir.pt-BE-9192-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9192"
@@ -95,9 +159,25 @@
     "backend_http_settings_name": "Http-settings-9193"
   },
   {
+    "name": "Routing-Rule-FE-9193-beta-wild-360imprimir.com.br-BE-9193-dck",
+    "priority": 19,
+    "http_listener_name": "Listener-FE-9193-beta-wild-360imprimir.com.br-BE-9193-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9193"
+  },
+  {
     "name": "Routing-Rule-FE-9194-beta-wild-360imprimir.dev-.mx-BE-9194-dck",
     "priority": 20,
     "http_listener_name": "Listener-FE-9194-beta-wild-360imprimir.dev-.mx-BE-9194-dck",
+    "rule_type": "Basic",
+    "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
+    "backend_http_settings_name": "Http-settings-9194"
+  },
+  {
+    "name": "Routing-Rule-FE-9194-beta-wild-360imprimir.mx-BE-9194-dck",
+    "priority": 20,
+    "http_listener_name": "Listener-FE-9194-beta-wild-360imprimir.mx-BE-9194-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
     "backend_http_settings_name": "Http-settings-9194"
@@ -630,5 +710,33 @@
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
     "backend_http_settings_name": "Http-settings-80"
+  },
+  {
+    "name": "Routing-Rule-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
+    "priority": 87,
+    "http_listener_name": "Listener-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
+    "rule_type": "PathBasedRouting",
+    "url_path_map_name": "beta-sa-api-azurewebsites-url-path-map"
+  },
+  {
+    "name": "Routing-Rule-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
+    "priority": 88,
+    "http_listener_name": "Listener-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
+    "rule_type": "PathBasedRouting",
+    "url_path_map_name": "beta-eu-api-azurewebsites-url-path-map"
+  },
+  {
+    "name": "Routing-Rule-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
+    "priority": 89,
+    "http_listener_name": "Listener-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
+    "rule_type": "PathBasedRouting",
+    "url_path_map_name": "beta-na-api-azurewebsites-url-path-map"
+  },
+  {
+    "name": "Routing-Rule-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
+    "priority": 90,
+    "http_listener_name": "Listener-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
+    "rule_type": "PathBasedRouting",
+    "url_path_map_name": "beta-gl-api-azurewebsites-url-path-map"
   }
 ]  
