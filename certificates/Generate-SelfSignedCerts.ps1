@@ -1,14 +1,14 @@
 Disconnect-AzAccount
 $conn = Connect-AzAccount -DeviceCode -TenantId ""
 
-$context = Set-AzContext -SubscriptionId "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9" # Microsoft Partner Network - Owner
+$context = Set-AzContext -SubscriptionId "" # Microsoft Partner Network - Owner
 
 
 # -----------------------------------------------
 # Configuration
 # -----------------------------------------------
 # Path to the CSV file. Update this path as needed.
-$csvPath = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\HAProxyAGWRuleListV7.0Beta.csv"
+$csvPath = "C:\Users\tiaisabe\OneDrive - Crayon Group\Documentos\Projetos\Bizay\Repo\azure-application-gateway\certificates\HAProxyAGWRuleListV7.0BetaSINGLE.csv"
 
 # Temporary password for the PFX file.
 # NOTE: In a production scenario, use a more secure method to handle credentials.
