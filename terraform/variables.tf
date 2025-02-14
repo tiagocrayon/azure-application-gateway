@@ -1,50 +1,7 @@
-variable "subscription_id" {
-  description = "Azure Subscription ID"
-  type        = string
-  default     = "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9"
-}
-
-variable "resource_group_name" {
-  description = "Azure Resource Group"
-  type        = string
-  default     = "TiagoIsabelinho"
-}
-
-variable "virtual_network_name" {
-  description = "Azure Virtual Network"
-  type        = string
-  default     = "360imprimir-beta-vnw"
-}
-
-variable "subnet_name" {
-  description = "Azure Subnet"
-  type        = string
-  default     = "default"
-}
-
-variable "public_ip_name" {
-  description = "Azure Public IP"
-  type        = string
-  default     = "beta-agw-public-ip"
-}
-
-variable "user_assigned_name" {
-  description = "User Assigned Identity"
-  type        = string
-  default     = "appgw-managed-identity"
-}
-
-variable "keyvault_name" {
-  description = "Key Vault Name"
-  type        = string
-  default     = "lab-bizay-kv-02"
-}
-
-
-
 
 locals {
   environment = "environments/${terraform.workspace}"
+  azure_env               = jsondecode(file("${local.environment}/azure_env.json"))
   backend_pools           = jsondecode(file("${local.environment}/backend_pools.json"))
   backend_settings        = jsondecode(file("${local.environment}/backend_settings.json"))
   error_configurations    = jsondecode(file("${local.environment}/error_configurations.json"))

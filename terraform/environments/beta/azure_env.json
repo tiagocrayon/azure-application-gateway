@@ -1,0 +1,9 @@
+{
+  "subscription_id": "5aadc750-a849-47ed-b3b8-0c41a5f3f9f9",
+  "resource_group_name": "TiagoIsabelinho",
+  "virtual_network_name": "360imprimir-beta-vnw",
+  "subnet_name": "default",
+  "public_ip_name": "beta-agw-public-ip",
+  "user_assigned_name": "appgw-managed-identity",
+  "keyvault_name": "lab-bizay-kv-02"
+}
