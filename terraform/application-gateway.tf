@@ -1,6 +1,6 @@
 
 resource "azurerm_application_gateway" "network" {
-  name                = "360imprimir-beta-agw"
+  name                = local.azure_env.application_gateway_name
   resource_group_name = data.azurerm_resource_group.resource_group.name
   location            = data.azurerm_resource_group.resource_group.location
 
@@ -28,6 +28,10 @@ resource "azurerm_application_gateway" "network" {
   # zones  = ["1", "2", "3"]
 
   enable_http2 = true
+
+  lifecycle {
+    prevent_destroy = true
+  }
 
   gateway_ip_configuration {
     name      = data.azurerm_subnet.subnet.name

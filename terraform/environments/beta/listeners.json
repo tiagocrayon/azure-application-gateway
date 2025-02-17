@@ -221,7 +221,7 @@
     "frontend_ip_configuration_name": "public-frontend-ip",
     "frontend_port_name": "port-443",
     "protocol": "Https",
-    "ssl_certificate_name": "hosts2--beta-360imprimir-com-br",
+    "ssl_certificate_name": "wild--beta-360imprimir-com-br",
     "host_names": ["beta.imgprocessorwebapi.360imprimir.com.br", "beta.imgprocessor.360imprimir.com.br"]
   },
   {

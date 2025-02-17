@@ -36,6 +36,10 @@
         "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360onlineprint-ca"
     },
     {
+        "name": "wild--beta-360onlineprint-com",
+        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360onlineprint-com"
+    },
+    {
         "name": "wild--bizay-com",
         "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--bizay-com"
     },

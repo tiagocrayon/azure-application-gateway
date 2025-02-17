@@ -15,7 +15,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
-    "priority": 10,
+    "priority": 93,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.com.br-BE-80-vmss",
     "rule_type": "PathBasedRouting",
     "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",
@@ -24,7 +24,7 @@
   },
   {
     "name": "Routing-Rule-FE-9590-beta-wild-360imprimir.dev-.com-BE-9590-dck",
-    "priority": 11,
+    "priority": 3,
     "http_listener_name": "Listener-FE-9590-beta-wild-360imprimir.dev-.com-BE-9590-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -32,7 +32,7 @@
   },
   {
     "name": "Routing-Rule-FE-9590-beta-wild-360imprimir.com-BE-9590-dck",
-    "priority": 11,
+    "priority": 4,
     "http_listener_name": "Listener-FE-9590-beta-wild-360imprimir.com-BE-9590-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -40,7 +40,7 @@
   },
   {
     "name": "Routing-Rule-FE-9090-beta-wild-360imprimir.dev-.com-BE-9090-dck",
-    "priority": 12,
+    "priority": 5,
     "http_listener_name": "Listener-FE-9090-beta-wild-360imprimir.dev-.com-BE-9090-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -48,7 +48,7 @@
   },
   {
     "name": "Routing-Rule-FE-9090-beta-wild-360imprimir.com-BE-9090-dck",
-    "priority": 12,
+    "priority": 6,
     "http_listener_name": "Listener-FE-9090-beta-wild-360imprimir.com-BE-9090-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -56,7 +56,7 @@
   },
   {
     "name": "Routing-Rule-FE-9190-beta-wild-360imprimir.dev-.com-BE-9190-dck",
-    "priority": 13,
+    "priority": 7,
     "http_listener_name": "Listener-FE-9190-beta-wild-360imprimir.dev-.com-BE-9190-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -64,7 +64,7 @@
   },
   {
     "name": "Routing-Rule-FE-9190-beta-wild-360imprimir.com-BE-9190-dck",
-    "priority": 13,
+    "priority": 8,
     "http_listener_name": "Listener-FE-9190-beta-wild-360imprimir.com-BE-9190-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -72,7 +72,7 @@
   },
   {
     "name": "Routing-Rule-FE-9290-beta-wild-360imprimir.dev-.pt-BE-9290-dck",
-    "priority": 14,
+    "priority": 9,
     "http_listener_name": "Listener-FE-9290-beta-wild-360imprimir.dev-.pt-BE-9290-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -80,7 +80,7 @@
   },
   {
     "name": "Routing-Rule-FE-9290-beta-wild-360imprimir.pt-BE-9290-dck",
-    "priority": 14,
+    "priority": 10,
     "http_listener_name": "Listener-FE-9290-beta-wild-360imprimir.pt-BE-9290-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -88,7 +88,7 @@
   },
   {
     "name": "Routing-Rule-FE-9291-beta-wild-360imprimir.dev-.br-BE-9291-dck",
-    "priority": 15,
+    "priority": 11,
     "http_listener_name": "Listener-FE-9291-beta-wild-360imprimir.dev-.br-BE-9291-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -96,7 +96,7 @@
   },
   {
     "name": "Routing-Rule-FE-9291-beta-wild-360imprimir.com.br-BE-9291-dck",
-    "priority": 15,
+    "priority": 12,
     "http_listener_name": "Listener-FE-9291-beta-wild-360imprimir.com.br-BE-9291-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -104,7 +104,7 @@
   },
   {
     "name": "Routing-Rule-FE-9292-beta-wild-360imprimir.dev-.mx-BE-9292-dck",
-    "priority": 16,
+    "priority": 13,
     "http_listener_name": "Listener-FE-9292-beta-wild-360imprimir.dev-.mx-BE-9292-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -112,7 +112,7 @@
   },
   {
     "name": "Routing-Rule-FE-9292-beta-wild-360imprimir.mx-BE-9292-dck",
-    "priority": 16,
+    "priority": 14,
     "http_listener_name": "Listener-FE-9292-beta-wild-360imprimir.mx-BE-9292-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -120,7 +120,7 @@
   },
   {
     "name": "Routing-Rule-FE-9490-beta-wild-360imprimir.dev-.com-BE-9490-dck",
-    "priority": 17,
+    "priority": 15,
     "http_listener_name": "Listener-FE-9490-beta-wild-360imprimir.dev-.com-BE-9490-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -128,7 +128,7 @@
   },
   {
     "name": "Routing-Rule-FE-9490-beta-wild-360imprimir.com-BE-9490-dck",
-    "priority": 17,
+    "priority": 16,
     "http_listener_name": "Listener-FE-9490-beta-wild-360imprimir.com-BE-9490-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -136,7 +136,7 @@
   },
   {
     "name": "Routing-Rule-FE-9192-beta-wild-360imprimir.dev-.pt-BE-9192-dck",
-    "priority": 18,
+    "priority": 17,
     "http_listener_name": "Listener-FE-9192-beta-wild-360imprimir.dev-.pt-BE-9192-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -160,7 +160,7 @@
   },
   {
     "name": "Routing-Rule-FE-9193-beta-wild-360imprimir.com.br-BE-9193-dck",
-    "priority": 19,
+    "priority": 20,
     "http_listener_name": "Listener-FE-9193-beta-wild-360imprimir.com.br-BE-9193-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -168,7 +168,7 @@
   },
   {
     "name": "Routing-Rule-FE-9194-beta-wild-360imprimir.dev-.mx-BE-9194-dck",
-    "priority": 20,
+    "priority": 21,
     "http_listener_name": "Listener-FE-9194-beta-wild-360imprimir.dev-.mx-BE-9194-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -176,7 +176,7 @@
   },
   {
     "name": "Routing-Rule-FE-9194-beta-wild-360imprimir.mx-BE-9194-dck",
-    "priority": 20,
+    "priority": 22,
     "http_listener_name": "Listener-FE-9194-beta-wild-360imprimir.mx-BE-9194-dck",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-DCK1-BE-BETA-DCK2",
@@ -184,7 +184,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts1-360imprimir.com.mx-BE-80-vmss",
-    "priority": 21,
+    "priority": 23,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.com.mx-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -192,7 +192,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts1-360imprimir.com-BE-80-vm",
-    "priority": 22,
+    "priority": 24,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.com-BE-80-vm",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-VM01-BE-BETA-VM02",
@@ -200,7 +200,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts1-360imprimir.pt-BE-80-vmss",
-    "priority": 23,
+    "priority": 25,
     "http_listener_name": "Listener-FE-443-beta-hosts1-360imprimir.pt-BE-80-vmss",
     "rule_type": "PathBasedRouting",
     "url_path_map_name": "beta-hosts1-360imprimir.com.br-pt-BE-80-vmss-url-path-map",
@@ -209,7 +209,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts1-bizay.com-BE-80-vmss",
-    "priority": 24,
+    "priority": 26,
     "http_listener_name": "Listener-FE-443-beta-hosts1-bizay.com-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts2-360imprimir.com.br-BE-80-vm",
-    "priority": 25,
+    "priority": 27,
     "http_listener_name": "Listener-FE-443-beta-hosts2-360imprimir.com.br-BE-80-vm",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-VM01-BE-BETA-VM02",
@@ -225,7 +225,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts2-360imprimir.com.mx-BE-80-vm",
-    "priority": 26,
+    "priority": 28,
     "http_listener_name": "Listener-FE-443-beta-hosts2-360imprimir.com.mx-BE-80-vm",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-VM01-BE-BETA-VM02",
@@ -233,7 +233,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts2-360imprimir.com-BE-80-vm",
-    "priority": 27,
+    "priority": 29,
     "http_listener_name": "Listener-FE-443-beta-hosts2-360imprimir.com-BE-80-vm",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-VM01-BE-BETA-VM02",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-hosts2-360imprimir.pt-BE-80-vm",
-    "priority": 28,
+    "priority": 30,
     "http_listener_name": "Listener-FE-443-beta-hosts2-360imprimir.pt-BE-80-vm",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.BE-BETA-VM01-BE-BETA-VM02",
@@ -249,7 +249,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-360imprimir.es-BE-80-vmss",
-    "priority": 29,
+    "priority": 31,
     "http_listener_name": "Listener-FE-443-beta-wild-360imprimir.es-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -257,7 +257,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-360onlineprint.ca-BE-80-vmss",
-    "priority": 30,
+    "priority": 32,
     "http_listener_name": "Listener-FE-443-beta-wild-360onlineprint.ca-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -265,7 +265,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-360onlineprint.com-BE-80-vmss",
-    "priority": 31,
+    "priority": 33,
     "http_listener_name": "Listener-FE-443-beta-wild-360onlineprint.com-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -273,7 +273,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ae-BE-80-vmss",
-    "priority": 32,
+    "priority": 34,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ae-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.at-BE-80-vmss",
-    "priority": 33,
+    "priority": 35,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.at-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -289,7 +289,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.au-BE-80-vmss",
-    "priority": 34,
+    "priority": 36,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.au-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -297,7 +297,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.be-BE-80-vmss",
-    "priority": 35,
+    "priority": 37,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.be-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -305,7 +305,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.bg-BE-80-vmss",
-    "priority": 36,
+    "priority": 38,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.bg-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -313,7 +313,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ca-BE-80-vmss",
-    "priority": 37,
+    "priority": 39,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ca-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ch-BE-80-vmss",
-    "priority": 38,
+    "priority": 40,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ch-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -329,7 +329,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.cl-BE-80-vmss",
-    "priority": 39,
+    "priority": 41,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.cl-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -337,7 +337,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.il-BE-80-vmss",
-    "priority": 40,
+    "priority": 42,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.il-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -345,7 +345,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.in-BE-80-vmss",
-    "priority": 41,
+    "priority": 43,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.in-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -353,7 +353,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.kr-BE-80-vmss",
-    "priority": 42,
+    "priority": 44,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.kr-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.ma-BE-80-vmss",
-    "priority": 43,
+    "priority": 45,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.ma-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -369,7 +369,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.nz-BE-80-vmss",
-    "priority": 44,
+    "priority": 46,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.nz-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -377,7 +377,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.uk-BE-80-vmss",
-    "priority": 45,
+    "priority": 47,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.uk-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -385,7 +385,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.co.za-BE-80-vmss",
-    "priority": 46,
+    "priority": 48,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.co.za-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -393,7 +393,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.ar-BE-80-vmss",
-    "priority": 47,
+    "priority": 49,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.ar-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.br-BE-80-vmss",
-    "priority": 48,
+    "priority": 50,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.br-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -409,7 +409,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.cn-BE-80-vmss",
-    "priority": 49,
+    "priority": 51,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.cn-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -417,7 +417,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.hk-BE-80-vmss",
-    "priority": 50,
+    "priority": 52,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.hk-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -425,7 +425,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.mt-BE-80-vmss",
-    "priority": 51,
+    "priority": 53,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.mt-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -433,7 +433,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.mx-BE-80-vmss",
-    "priority": 52,
+    "priority": 54,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.mx-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -441,7 +441,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.my-BE-80-vmss",
-    "priority": 53,
+    "priority": 55,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.my-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -449,7 +449,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.ph-BE-80-vmss",
-    "priority": 54,
+    "priority": 56,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.ph-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -457,7 +457,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.ro-BE-80-vmss",
-    "priority": 55,
+    "priority": 57,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.ro-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -465,7 +465,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.sg-BE-80-vmss",
-    "priority": 56,
+    "priority": 58,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.sg-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -473,7 +473,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.com.tr-BE-80-vmss",
-    "priority": 57,
+    "priority": 59,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.com.tr-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -481,7 +481,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.cz-BE-80-vmss",
-    "priority": 58,
+    "priority": 60,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.cz-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -489,7 +489,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.de-BE-80-vmss",
-    "priority": 59,
+    "priority": 61,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.de-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -497,7 +497,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.dk-BE-80-vmss",
-    "priority": 60,
+    "priority": 62,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.dk-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -505,7 +505,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ee-BE-80-vmss",
-    "priority": 61,
+    "priority": 63,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ee-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -513,7 +513,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.es-BE-80-vmss",
-    "priority": 62,
+    "priority": 64,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.es-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -521,7 +521,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.fi-BE-80-vmss",
-    "priority": 63,
+    "priority": 65,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.fi-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -529,7 +529,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.fr-BE-80-vmss",
-    "priority": 64,
+    "priority": 66,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.fr-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -537,7 +537,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.gr-BE-80-vmss",
-    "priority": 65,
+    "priority": 67,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.gr-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -545,7 +545,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.hr-BE-80-vmss",
-    "priority": 66,
+    "priority": 68,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.hr-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -553,7 +553,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.hu-BE-80-vmss",
-    "priority": 67,
+    "priority": 69,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.hu-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -561,7 +561,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ie-BE-80-vmss",
-    "priority": 68,
+    "priority": 70,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ie-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -569,7 +569,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.it-BE-80-vmss",
-    "priority": 69,
+    "priority": 71,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.it-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -577,7 +577,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.li-BE-80-vmss",
-    "priority": 70,
+    "priority": 72,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.li-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -585,7 +585,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.lt-BE-80-vmss",
-    "priority": 71,
+    "priority": 73,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.lt-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -593,7 +593,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.lu-BE-80-vmss",
-    "priority": 72,
+    "priority": 74,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.lu-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -601,7 +601,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.lv-BE-80-vmss",
-    "priority": 73,
+    "priority": 75,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.lv-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -609,7 +609,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.nl-BE-80-vmss",
-    "priority": 74,
+    "priority": 76,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.nl-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -617,7 +617,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.no-BE-80-vmss",
-    "priority": 75,
+    "priority": 77,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.no-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -625,7 +625,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.nz-BE-80-vmss",
-    "priority": 76,
+    "priority": 78,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.nz-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -633,7 +633,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.pl-BE-80-vmss",
-    "priority": 77,
+    "priority": 79,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.pl-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.pt-BE-80-vmss",
-    "priority": 78,
+    "priority": 80,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.pt-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -649,7 +649,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.qa-BE-80-vmss",
-    "priority": 79,
+    "priority": 81,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.qa-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -657,7 +657,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ro-BE-80-vmss",
-    "priority": 80,
+    "priority": 82,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ro-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -665,7 +665,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.ru-BE-80-vmss",
-    "priority": 81,
+    "priority": 83,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.ru-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -673,7 +673,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.se-BE-80-vmss",
-    "priority": 82,
+    "priority": 84,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.se-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -681,7 +681,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.si-BE-80-vmss",
-    "priority": 83,
+    "priority": 85,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.si-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -689,7 +689,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-bizay.sk-BE-80-vmss",
-    "priority": 84,
+    "priority": 86,
     "http_listener_name": "Listener-FE-443-beta-wild-bizay.sk-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -697,7 +697,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-imprimir360.com.mx-BE-80-vmss",
-    "priority": 85,
+    "priority": 87,
     "http_listener_name": "Listener-FE-443-beta-wild-imprimir360.com.mx-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -705,7 +705,7 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-imprimir360.mx-BE-80-vmss",
-    "priority": 86,
+    "priority": 88,
     "http_listener_name": "Listener-FE-443-beta-wild-imprimir360.mx-BE-80-vmss",
     "rule_type": "Basic",
     "backend_address_pool_name": "BACKEND.STORE-BETA-VMSS",
@@ -713,28 +713,28 @@
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
-    "priority": 87,
+    "priority": 89,
     "http_listener_name": "Listener-FE-443-beta-wild-sa.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
     "url_path_map_name": "beta-sa-api-azurewebsites-url-path-map"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
-    "priority": 88,
+    "priority": 90,
     "http_listener_name": "Listener-FE-443-beta-wild-eu.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
     "url_path_map_name": "beta-eu-api-azurewebsites-url-path-map"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
-    "priority": 89,
+    "priority": 91,
     "http_listener_name": "Listener-FE-443-beta-wild-na.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
     "url_path_map_name": "beta-na-api-azurewebsites-url-path-map"
   },
   {
     "name": "Routing-Rule-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
-    "priority": 90,
+    "priority": 92,
     "http_listener_name": "Listener-FE-443-beta-wild-gl.api.bizay.com-BE-443-webapi",
     "rule_type": "PathBasedRouting",
     "url_path_map_name": "beta-gl-api-azurewebsites-url-path-map"
