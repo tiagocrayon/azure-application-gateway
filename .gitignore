@@ -1,5 +1,13 @@
-azure-application-gateway/terraform/.terraform.lock.hcl
-azure-application-gateway/terraform/.terraform/*
-azure-application-gateway/terraform/.terraform/terraform.tfstate
-azure-application-gateway/terraform/.terraform/modules/modules.json
-azure-application-gateway/terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.15.0/windows_386/terraform-provider-azurerm_v4.15.0_x5.exe
+# Ignore Terraform cache & metadata
+.terraform/
+terraform.tfstate.d/
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore sensitive backend config files
+*.tfvars
+*.tfvars.json
+backend-config.tfvars
+
+# Ignore local execution logs
+crash.log

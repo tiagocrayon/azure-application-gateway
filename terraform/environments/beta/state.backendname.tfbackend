@@ -1,0 +1,4 @@
+resource_group_name   = "TiagoIsabelinho" 
+storage_account_name  = "terraformstatestore9876"
+container_name        = "beta"
+key                   = "terraform.tfstate"

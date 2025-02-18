@@ -41,6 +41,7 @@
 ## APPLICATION GATEWAY RESOURCE: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway
 ## RUNNING TERRAFORM IN AUTOMATION: https://developer.hashicorp.com/terraform/tutorials/automation/automate-terraform
 ## DEBUGGING https://developer.hashicorp.com/terraform/internals/debugging 
+## https://developer.hashicorp.com/terraform/language/backend  terraform init -backend-config=environments/beta/state.backendname.tfbackend 
 
 
 # FUTURE PROJECTS
