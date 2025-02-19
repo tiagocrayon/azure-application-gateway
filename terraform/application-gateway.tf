@@ -210,9 +210,8 @@ resource "azurerm_application_gateway" "network" {
   dynamic "ssl_certificate" {
     for_each = local.ssl_certificates
     content {
-      name                   = ssl_certificate.value.name
-      key_vault_secret_id    = ssl_certificate.value.key_vault_secret_id
+      name                   = ssl_certificate.value
+      key_vault_secret_id    = "https://${local.azure_env.keyvault_name}.vault.azure.net/secrets/${ssl_certificate.value}"
     }
   }
-  
 }

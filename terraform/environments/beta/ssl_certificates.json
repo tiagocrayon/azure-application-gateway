@@ -1,262 +1,67 @@
 [
-    {
-        "name": "wild--beta-360imprimir-com-br",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360imprimir-com-br"
-    },
-    {
-        "name": "wild--beta-360imprimir-dev",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360imprimir-dev"
-    },
-    {
-        "name": "wild--beta-360imprimir-com",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360imprimir-com"
-    },
-    {
-        "name": "wild--beta-360imprimir-pt",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360imprimir-pt"
-    },
-    {
-        "name": "wild--beta-360imprimir-com-mx",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360imprimir-com-mx"
-    },
-    {
-        "name": "wild--beta-imprimir360-com-mx",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-imprimir360-com-mx"
-    },
-    {
-        "name": "wild--beta-imprimir360-mx",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-imprimir360-mx"
-    },
-    {
-        "name": "wild--360imprimir-es",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--360imprimir-es"
-    },
-    {
-        "name": "wild--beta-360onlineprint-ca",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360onlineprint-ca"
-    },
-    {
-        "name": "wild--beta-360onlineprint-com",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-360onlineprint-com"
-    },
-    {
-        "name": "wild--bizay-com",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--bizay-com"
-    },
-    {
-        "name": "wild--beta-bizay-com",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com"
-    },
-    {
-        "name": "wild--beta-bizay-ae",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ae"
-    },
-    {
-        "name": "wild--beta-bizay-at",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-at"
-    },
-    {
-        "name": "wild--beta-bizay-au",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-au"
-    },
-    {
-        "name": "wild--beta-bizay-be",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-be"
-    },
-    {
-        "name": "wild--beta-bizay-bg",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-bg"
-    },
-    {
-        "name": "wild--beta-bizay-ca",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ca"
-    },
-    {
-        "name": "wild--beta-bizay-ch",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ch"
-    },
-    {
-        "name": "wild--beta-bizay-cl",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-cl"
-    },
-    {
-        "name": "wild--beta-bizay-co-il",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-il"
-    },
-    {
-        "name": "wild--beta-bizay-co-in",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-in"
-    },
-    {
-        "name": "wild--beta-bizay-co-kr",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-kr"
-    },
-    {
-        "name": "wild--beta-bizay-co-ma",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-ma"
-    },
-    {
-        "name": "wild--beta-bizay-co-nz",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-nz"
-    },
-    {
-        "name": "wild--beta-bizay-co-uk",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-uk"
-    },
-    {
-        "name": "wild--beta-bizay-co-za",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-co-za"
-    },
-    {
-        "name": "wild--beta-bizay-com-ar",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-ar"
-    },
-    {
-        "name": "wild--beta-bizay-com-br",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-br"
-    },
-    {
-        "name": "wild--beta-bizay-com-cn",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-cn"
-    },
-    {
-        "name": "wild--beta-bizay-com-hk",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-hk"
-    },
-    {
-        "name": "wild--beta-bizay-com-mt",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-mt"
-    },
-    {
-        "name": "wild--beta-bizay-com-mx",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-mx"
-    },
-    {
-        "name": "wild--beta-bizay-com-my",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-my"
-    },
-    {
-        "name": "wild--beta-bizay-com-ph",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-ph"
-    },
-    {
-        "name": "wild--beta-bizay-com-ro",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-ro"
-    },
-    {
-        "name": "wild--beta-bizay-com-sg",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-sg"
-    },
-    {
-        "name": "wild--beta-bizay-com-tr",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-com-tr"
-    },
-    {
-        "name": "wild--beta-bizay-cz",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-cz"
-    },
-    {
-        "name": "wild--beta-bizay-de",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-de"
-    },
-    {
-        "name": "wild--beta-bizay-dk",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-dk"
-    },
-    {
-        "name": "wild--beta-bizay-ee",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ee"
-    },
-    {
-        "name": "wild--beta-bizay-es",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-es"
-    },
-    {
-        "name": "wild--beta-bizay-fi",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-fi"
-    },
-    {
-        "name": "wild--beta-bizay-fr",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-fr"
-    },
-    {
-        "name": "wild--beta-bizay-gr",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-gr"
-    },
-    {
-        "name": "wild--beta-bizay-hr",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-hr"
-    },
-    {
-        "name": "wild--beta-bizay-hu",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-hu"
-    },
-    {
-        "name": "wild--beta-bizay-ie",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ie"
-    },
-    {
-        "name": "wild--beta-bizay-it",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-it"
-    },
-    {
-        "name": "wild--beta-bizay-li",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-li"
-    },
-    {
-        "name": "wild--beta-bizay-lt",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-lt"
-    },
-    {
-        "name": "wild--beta-bizay-lu",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-lu"
-    },
-    {
-        "name": "wild--beta-bizay-lv",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-lv"
-    },
-    {
-        "name": "wild--beta-bizay-nl",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-nl"
-    },
-    {
-        "name": "wild--beta-bizay-no",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-no"
-    },
-    {
-        "name": "wild--beta-bizay-nz",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-nz"
-    },
-    {
-        "name": "wild--beta-bizay-pl",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-pl"
-    },
-    {
-        "name": "wild--beta-bizay-pt",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-pt"
-    },
-    {
-        "name": "wild--beta-bizay-qa",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-qa"
-    },
-    {
-        "name": "wild--beta-bizay-ro",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ro"
-    },
-    {
-        "name": "wild--beta-bizay-ru",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-ru"
-    },
-    {
-        "name": "wild--beta-bizay-se",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-se"
-    },
-    {
-        "name": "wild--beta-bizay-si",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-si"
-    },
-    {
-        "name": "wild--beta-bizay-sk",
-        "key_vault_secret_id": "https://lab-bizay-kv-02.vault.azure.net/secrets/wild--beta-bizay-sk"
-    }
+    "wild--beta-360imprimir-com-br",
+    "wild--beta-360imprimir-dev",
+    "wild--beta-360imprimir-com",
+    "wild--beta-360imprimir-pt",
+    "wild--beta-360imprimir-com-mx",
+    "wild--beta-imprimir360-com-mx",
+    "wild--beta-imprimir360-mx",
+    "wild--360imprimir-es",
+    "wild--beta-360onlineprint-ca",
+    "wild--beta-360onlineprint-com",
+    "wild--bizay-com",
+    "wild--beta-bizay-com",
+    "wild--beta-bizay-ae",
+    "wild--beta-bizay-at",
+    "wild--beta-bizay-au",
+    "wild--beta-bizay-be",
+    "wild--beta-bizay-bg",
+    "wild--beta-bizay-ca",
+    "wild--beta-bizay-ch",
+    "wild--beta-bizay-cl",
+    "wild--beta-bizay-co-il",
+    "wild--beta-bizay-co-in",
+    "wild--beta-bizay-co-kr",
+    "wild--beta-bizay-co-ma",
+    "wild--beta-bizay-co-nz",
+    "wild--beta-bizay-co-uk",
+    "wild--beta-bizay-co-za",
+    "wild--beta-bizay-com-ar",
+    "wild--beta-bizay-com-br",
+    "wild--beta-bizay-com-cn",
+    "wild--beta-bizay-com-hk",
+    "wild--beta-bizay-com-mt",
+    "wild--beta-bizay-com-mx",
+    "wild--beta-bizay-com-my",
+    "wild--beta-bizay-com-ph",
+    "wild--beta-bizay-com-ro",
+    "wild--beta-bizay-com-sg",
+    "wild--beta-bizay-com-tr",
+    "wild--beta-bizay-cz",
+    "wild--beta-bizay-de",
+    "wild--beta-bizay-dk",
+    "wild--beta-bizay-ee",
+    "wild--beta-bizay-es",
+    "wild--beta-bizay-fi",
+    "wild--beta-bizay-fr",
+    "wild--beta-bizay-gr",
+    "wild--beta-bizay-hr",
+    "wild--beta-bizay-hu",
+    "wild--beta-bizay-ie",
+    "wild--beta-bizay-it",
+    "wild--beta-bizay-li",
+    "wild--beta-bizay-lt",
+    "wild--beta-bizay-lu",
+    "wild--beta-bizay-lv",
+    "wild--beta-bizay-nl",
+    "wild--beta-bizay-no",
+    "wild--beta-bizay-nz",
+    "wild--beta-bizay-pl",
+    "wild--beta-bizay-pt",
+    "wild--beta-bizay-qa",
+    "wild--beta-bizay-ro",
+    "wild--beta-bizay-ru",
+    "wild--beta-bizay-se",
+    "wild--beta-bizay-si",
+    "wild--beta-bizay-sk"
 ]
